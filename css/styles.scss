@@ -1,0 +1,13 @@
+@charset "utf-8";
+// sCSS Document
+// Powered by Denis FOX | dfox@foxartbox.com
+
+// should be first
+@import "_defaults";
+@import "_vars";
+
+@import "header";
+@import "hero";
+
+// must be the last
+@import "custom";

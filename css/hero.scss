@@ -1,0 +1,70 @@
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 4rem 0;
+
+	&__col {
+		width: calc(50% - .5rem);
+	}
+
+	&__info {
+		box-shadow: 0 2px 5px 0 rgba(#000, .1);
+		border-radius: 4px;
+		padding: 3.25rem 2.8125rem;
+	}
+
+	&__link {
+		color: $c_link;
+		display: inline-block;
+		font-family: $font_aldi_sued_bold;
+		position: relative;
+		text-decoration: none;
+		transition: $transition;
+
+		&::after {
+			border-right: 1px solid $c_link;
+			border-top: 1px solid $c_link;
+			content: "";
+			display: block;
+			height: 5px;
+			left: 100%;
+			margin: 0 0 0 10px;
+			position: absolute;
+			top: 50%;
+			transform: rotate(45deg) translateX(-50%);
+			width: 5px;
+		}
+	}
+
+	&__map {}
+}
+
+.hero_links {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__link {
+		border-radius: 8px;
+		display: inline-block;
+		font-family: $font_aldi_sued_bold;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 1.23;
+		margin: 0 1rem 0 0;
+		padding: 12px;
+		text-decoration: none;
+		transition: $transition;
+
+		&--primary {
+			background-color: $c_link_bg;
+			color: #fff;
+		}
+
+		&--secondary {
+			background-color: $c_highlight;
+			border-radius: 8px;
+			color: $c_link_bg;
+		}
+	}
+}

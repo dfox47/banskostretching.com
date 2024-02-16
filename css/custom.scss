@@ -1,0 +1,88 @@
+// Standart class [START]
+body {
+	color: $c_text;
+	font-family: $font_main;
+}
+
+h1 {
+	color: $c_title;
+	font-family: $font_aldi_sued_bold;
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: .05em;
+	margin: 0 0 1em;
+	text-align: left;
+
+	@media #{$mobile} {
+		margin-top: 30px;
+		text-align: center;
+	}
+}
+
+ol {
+	counter-reset: item;
+	list-style: none;
+
+	li {
+		display: block;
+
+		&::before {
+			content: counters(item, ".") ". ";
+			counter-increment: item;
+		}
+	}
+}
+
+svg {
+	height: auto;
+	width: auto;
+}
+
+ul {
+	//font-family: $font_rosinfra_thin;
+}
+// Standart class [END]
+
+
+
+// ID [START]
+// ID [END]
+
+
+
+// help classes [START]
+.store_info {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 4rem 0;
+
+	&__item {
+		border-radius: .25rem;
+		box-shadow: 0 2px 5px 0 rgba(#000, .1);
+		padding: 1rem;
+	}
+
+	&__title {
+		font-family: $font_aldi_sued_bold;
+		font-size: 1.25rem;
+		line-height: 1.1;
+		margin: 0 0 1rem;
+	}
+}
+
+.store_map {
+	display: block;
+	height: 100%;
+	margin: 0;
+	max-width: 582px;
+	width: 100%;
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 75rem;
+	padding: 0 1rem;
+	width: 100%;
+}
+// help classes [END]
