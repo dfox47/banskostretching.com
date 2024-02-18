@@ -6,12 +6,13 @@ body {
 
 h1 {
 	color: $c_title;
-	font-family: $font_aldi_sued_bold;
-	font-size: 3rem;
+	font-family: $font_lilita_one;
+	font-size: 2.9rem;
 	font-weight: 400;
 	letter-spacing: .05em;
-	margin: 0 0 1em;
-	text-align: left;
+	margin: 1rem 0;
+	text-align: center;
+	text-transform: uppercase;
 
 	@media #{$mobile} {
 		margin-top: 30px;
@@ -51,32 +52,48 @@ ul {
 
 
 // help classes [START]
-.store_info {
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 4rem 0;
+.copyright {
+	margin: 2rem 0;
+	text-align: center;
 
-	&__item {
-		border-radius: .25rem;
-		box-shadow: 0 2px 5px 0 rgba(#000, .1);
-		padding: 1rem;
+	&__date {
+		font-size: 1rem;
 	}
 
-	&__title {
-		font-family: $font_aldi_sued_bold;
-		font-size: 1.25rem;
-		line-height: 1.1;
-		margin: 0 0 1rem;
-	}
+	&__desc {}
 }
 
-.store_map {
-	display: block;
-	height: 100%;
-	margin: 0;
-	max-width: 582px;
+.greetings {
+	font-size: 1.5rem;
+	margin: 0 auto;
+	max-width: 30rem;
+	text-align: center;
 	width: 100%;
+}
+
+.footer {
+	padding: 3rem 0;
+}
+
+.footer_links {
+	display: flex;
+	justify-content: center;
+
+	&__img {
+		height: 100%;
+		max-width: 50px;
+		width: 100%;
+	}
+
+	&__item {
+		margin: 0 1rem;
+	}
+
+	&__link {
+		display: block;
+		height: 50px;
+		width: 50px;
+	}
 }
 
 .wrap {

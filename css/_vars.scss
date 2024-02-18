@@ -20,21 +20,21 @@ $mobile_s:          'only screen and (max-width: 480px)';
 $tablet:            'only screen and (max-width: 1023px)';
 
 // fonts
-$font_main:             'aldi_sued_reg',    Arial, Helvetica, sans-serif;
-$font_aldi_sued_reg:    'aldi_sued_reg',    Arial, Helvetica, sans-serif;
-$font_aldi_sued_bold:   'aldi_sued_bold',   Arial, Helvetica, sans-serif;
+$font_main:             'Ubuntu Condensed',     Arial, Helvetica, sans-serif;
+$font_lilita_one:       'Lilita One',           Arial, Helvetica, sans-serif;
+$font_ubuntu_cond:      'Ubuntu Condensed',     Arial, Helvetica, sans-serif;
 
 
 
 // fonts array [START]
-$fontNames: aldi_sued_bold, aldi_sued_reg;
-
-@each $fontName in $fontNames {
-	@font-face {
-		font-family: '#{$fontName}';
-		src: url('fonts/#{$fontName}.woff2') format('woff2'),
-		url('fonts/#{$fontName}.woff') format('woff'),
-		url('fonts/#{$fontName}.ttf') format('truetype');
-	}
-}
+//$fontNames: aldi_sued_bold, aldi_sued_reg;
+//
+//@each $fontName in $fontNames {
+//	@font-face {
+//		font-family: '#{$fontName}';
+//		src: url('fonts/#{$fontName}.woff2') format('woff2'),
+//		url('fonts/#{$fontName}.woff') format('woff'),
+//		url('fonts/#{$fontName}.ttf') format('truetype');
+//	}
+//}
 // fonts array [END]
