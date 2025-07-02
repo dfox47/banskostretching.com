@@ -1,0 +1,124 @@
+// Standart class [START]
+body {
+	color: $c_text;
+	font-family: $font_main;
+}
+
+h1 {
+	color: $c_title;
+	font-family: $font_lilita_one;
+	font-size: 2.9rem;
+	font-weight: 400;
+	letter-spacing: .05em;
+	margin: 1rem 0;
+	text-align: center;
+	text-transform: uppercase;
+
+	@media #{$mobile} {
+		margin-top: 30px;
+		text-align: center;
+	}
+}
+
+ol {
+	counter-reset: item;
+	list-style: none;
+
+	li {
+		display: block;
+
+		&::before {
+			content: counters(item, ".") ". ";
+			counter-increment: item;
+		}
+	}
+}
+
+svg {
+	height: auto;
+	width: auto;
+}
+
+ul {
+	//font-family: $font_rosinfra_thin;
+}
+// Standart class [END]
+
+
+
+// ID [START]
+// ID [END]
+
+
+
+// help classes [START]
+.copyright {
+	margin: 2rem 0;
+	text-align: center;
+
+	&__date {
+		font-size: 1rem;
+	}
+
+	&__desc {}
+}
+
+.greetings {
+	font-size: 1.5rem;
+	margin: 0 auto;
+	max-width: 30rem;
+	text-align: center;
+	width: 100%;
+}
+
+.footer {
+	padding: 3rem 0;
+}
+
+.footer_links {
+	display: flex;
+	justify-content: center;
+
+	&__img {
+		height: 100%;
+		max-width: 50px;
+		width: 100%;
+	}
+
+	&__item {
+		margin: 0 1rem;
+	}
+
+	&__link {
+		display: block;
+		height: 50px;
+		width: 50px;
+	}
+}
+
+.ig_wrap {
+  position: relative;
+
+  .es-widget {
+    z-index: 1;
+  }
+
+  &::after {
+    background-color: #fff;
+    bottom: 0;
+    content: "";
+    height: 56px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+  }
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 75rem;
+	padding: 0 1rem;
+	width: 100%;
+}
+// help classes [END]
