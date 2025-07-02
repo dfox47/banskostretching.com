@@ -1,30 +1,30 @@
-$i:                     '/images';
-$icons:                 $i + '/icons';
+$i: '/images';
+$icons: $i + '/icons';
 
 // colors
-$c_highlight:       #55c3f0; // 85,195,240
-$c_link:            #0d3a93;
-$c_link_bg:         #00005f; // 0,0,95
-$c_menu:            #71777e;
-$c_primary:         #007acb;
-$c_secondary:       #383882; // 56,56,130
-$c_text:            #101316;
-$c_title:           #101316;
+$c_highlight: #55c3f0; // 85,195,240
+$c_link: #0d3a93;
+$c_link_bg: #00005f; // 0,0,95
+$c_menu: #71777e;
+$c_primary: #007acb;
+$c_secondary: #383882; // 56,56,130
+$c_text: #101316;
+$c_title: #101316;
 
-$transition:        all .3s ease-in-out;
+$transition: all 0.3s ease-in-out;
+
+$spacer: 24px;
 
 // @medias
-$desktop:           'only screen and (max-width: 1279px)';
-$mobile:            'only screen and (max-width: 767px)';
-$mobile_s:          'only screen and (max-width: 480px)';
-$tablet:            'only screen and (max-width: 1023px)';
+$desktop: 'only screen and (max-width: 1279px)';
+$mobile: 'only screen and (max-width: 767px)';
+$mobile_s: 'only screen and (max-width: 480px)';
+$tablet: 'only screen and (max-width: 1023px)';
 
 // fonts
-$font_main:             'Ubuntu Condensed',     Arial, Helvetica, sans-serif;
-$font_lilita_one:       'Lilita One',           Arial, Helvetica, sans-serif;
-$font_ubuntu_cond:      'Ubuntu Condensed',     Arial, Helvetica, sans-serif;
-
-
+$font_main: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
+$font_lilita_one: 'Lilita One', Arial, Helvetica, sans-serif;
+$font_ubuntu_cond: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
 
 // fonts array [START]
 //$fontNames: aldi_sued_bold, aldi_sued_reg;

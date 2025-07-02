@@ -68,31 +68,6 @@ ul {
   width: 100%;
 }
 
-.footer {
-  padding: 3rem 0;
-}
-
-.footer_links {
-  display: flex;
-  justify-content: center;
-
-  &__img {
-    height: 100%;
-    max-width: 50px;
-    width: 100%;
-  }
-
-  &__item {
-    margin: 0 1rem;
-  }
-
-  &__link {
-    display: block;
-    height: 50px;
-    width: 50px;
-  }
-}
-
 .ig_wrap {
   position: relative;
 
@@ -110,11 +85,6 @@ ul {
     width: 100%;
     z-index: 9;
   }
-}
-
-.reviews {
-  font-size: 20px;
-  text-align: center;
 }
 
 .wrap {

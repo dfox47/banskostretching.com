@@ -6,9 +6,11 @@
 @import '_defaults';
 @import '_vars';
 
+@import 'footer';
 @import 'header';
 @import 'hero';
 @import 'owl.carousel';
+@import 'reviews';
 
 // must be the last
 @import 'custom';

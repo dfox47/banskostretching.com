@@ -1,0 +1,19 @@
+.reviews {
+  font-size: 20px;
+  margin: $spacer auto;
+  max-width: 500px;
+  padding: 0 calc($spacer * 2);
+  position: relative;
+  width: 100%;
+
+  &__item {
+    position: relative;
+  }
+
+  &__name {
+    font-size: 0.8em;
+    margin: $spacer 0 0;
+    opacity: 0.7;
+    text-align: right;
+  }
+}
