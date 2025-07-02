@@ -3,6 +3,7 @@ const imgBg = () => {
     if (window.pageYOffset + window.innerHeight > e.offsetTop) {
       e.classList.remove('js-img-bg')
       const imgSrc = e.dataset.src
+
       if (imgSrc) e.style.backgroundImage = 'url(' + imgSrc + ')'
     }
   })

@@ -14,6 +14,12 @@ $iconsDir   = $i . '/icons'; ?>
     <p><span class="js-img-scroll" data-src="<?= $iconsDir; ?>/favicon/favicon.svg"></span></p>
   </div>
 
+  <div class="reviews js-carousel-simple">
+    <div class="reviews__item">1</div>
+    <div class="reviews__item">2</div>
+    <div class="reviews__item">3</div>
+  </div>
+
   <?php // instagram plugin [START]
   ?>
   <div class="ig_wrap">

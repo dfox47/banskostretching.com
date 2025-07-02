@@ -3,11 +3,12 @@
 // Powered by Denis FOX | dfox@foxartbox.com
 
 // should be first
-@import "_defaults";
-@import "_vars";
+@import '_defaults';
+@import '_vars';
 
-@import "header";
-@import "hero";
+@import 'header';
+@import 'hero';
+@import 'owl.carousel';
 
 // must be the last
-@import "custom";
+@import 'custom';

@@ -74,7 +74,7 @@ gulp.task('copy_template_parts', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    // localFolderJs + 'jquery.3.2.1.js',
+    localJs + 'jquery-3.7.1.min.js',
     localJs + '**/*.js'
   ])
     .pipe(concat('all.js'))

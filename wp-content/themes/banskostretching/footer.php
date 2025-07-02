@@ -42,7 +42,7 @@ $iconsDir   = $i . '/icons'; ?>
   </div>
 </footer>
 
-<script src="<?= $themeDir; ?>/all.min.js?v=<?= (date('YmdH')); ?>"></script>
+<script src="<?= $themeDir; ?>/all.min.js?v=<?= (date('YmdHis')); ?>"></script>
 
 </body>
 
