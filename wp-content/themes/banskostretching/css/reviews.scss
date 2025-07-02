@@ -1,6 +1,6 @@
 .reviews {
   font-size: 20px;
-  margin: $spacer auto;
+  margin: $spacer auto calc($spacer * 3);
   max-width: 500px;
   padding: 0 calc($spacer * 2);
   position: relative;
