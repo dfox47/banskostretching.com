@@ -21,11 +21,13 @@ const remoteTheme           = '/public_html/wp-content/themes/banskostretching/'
 const remoteCss             = remoteTheme + 'css/'
 const remoteJs              = remoteTheme + 'js/'
 const remoteTemplateParts   = remoteTheme + 'template-parts/'
+const remoteWoo             = remoteTheme + 'woocommerce/'
 
 const localTheme            = 'wp-content/themes/banskostretching/'
 const localCss              = localTheme + 'css/'
 const localJs               = localTheme + 'js/'
 const localTemplateParts    = localTheme + 'template-parts/'
+const localWoo              = localTheme + 'woocommerce/'
 
 function getFtpConnection() {
   return ftp.create({
@@ -72,6 +74,11 @@ gulp.task('copy_template_parts', function () {
     .pipe(conn.dest(remoteTemplateParts))
 })
 
+gulp.task('copy_woo', function () {
+  return gulp.src(localWoo + '**/*')
+    .pipe(conn.dest(remoteWoo))
+})
+
 gulp.task('js', function () {
   return gulp.src([
     localJs + 'jquery-3.7.1.min.js',
@@ -91,10 +98,11 @@ gulp.task('copy_js', function () {
 })
 
 gulp.task('watch', function() {
-  gulp.watch(localTheme + '*.php',                gulp.series('copy_html'))
-  gulp.watch(localCss + '**/*',                   gulp.series('css', 'copy_css'))
-  gulp.watch(localJs + '**/*.js',                 gulp.series('js', 'copy_js'))
-  gulp.watch(localTemplateParts + '**/*.php',     gulp.series('copy_template_parts'))
+  gulp.watch(localTheme + '*.php',              gulp.series('copy_html'))
+  gulp.watch(localCss + '**/*',                 gulp.series('css', 'copy_css'))
+  gulp.watch(localJs + '**/*.js',               gulp.series('js', 'copy_js'))
+  gulp.watch(localTemplateParts + '**/*.php',   gulp.series('copy_template_parts'))
+  gulp.watch(localWoo + '**/*',                 gulp.series('copy_woo'))
 })
 
 gulp.task('default', gulp.series('watch'))

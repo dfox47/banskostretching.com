@@ -5,23 +5,6 @@ $iconsDir   = $i . '/icons'; ?>
 
 <?php wp_footer(); ?>
 
-<!--<script src="--><? //= $js;
-                    ?><!--/imgBg.js"></script>-->
-<!--<script src="--><? //= $js;
-                    ?><!--/imgScroll.js"></script>-->
-<!--<script src="--><? //= $js;
-                    ?><!--/menuToggle.js"></script>-->
-<!--<script src="--><? //= $js;
-                    ?><!--/owl.carousel.min.js"></script>-->
-<!--<script src="--><? //= $js;
-                    ?><!--/phone.js"></script>-->
-
-<?php // should be last
-?>
-<!--<script defer src="--><? //= $js;
-                          ?><!--/main.js?v--><? //= (date("YmdH"));
-                                              ?><!--"></script>-->
-
 <footer class="footer">
   <div class="wrap">
     <ul class="footer_links">

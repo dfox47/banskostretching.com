@@ -5,7 +5,9 @@ $iconsDir   = $i . '/icons'; ?>
 
 <?php get_header(); ?>
 
-<div class="wrap">
+<div class="hero js-img-bg" data-src="<?= $i; ?>/hero.jpg"></div>
+
+<div class="wrap index.php">
   <h1>Bansko stretching</h1>
 
   <div class="greetings">

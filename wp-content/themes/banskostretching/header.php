@@ -25,12 +25,10 @@ $iconsDir   = $i . '/icons'; ?>
   <!--	<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?= $themeDir; ?>/styles.min.css?v<?= (date("YmdHis")); ?>">
+  <link rel="stylesheet" href="<?= $themeDir; ?>/styles.min.css?v<?= (date("Ymd")); ?>">
 
   <meta name="description" content="Discover the benefits of stretching in Bansko city! Enhance your flexibility, improve your health, and enjoy guided sessions in the stunning mountain surroundings. Join our community for expert tips, routines, and wellness advice.">
 </head>
 
 <body <?php body_class(); ?>>
   <header class="header"></header>
-
-  <div class="hero js-img-bg" data-src="<?= $i; ?>/hero.jpg"></div>
