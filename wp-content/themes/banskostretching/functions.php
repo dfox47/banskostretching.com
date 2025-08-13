@@ -49,3 +49,12 @@ add_action('wp_enqueue_scripts', 'remove_block_library_css');
 
 // support woocommerce
 add_theme_support('woocommerce');
+
+// menu
+function banskostretching_register_menus()
+{
+  register_nav_menus(array(
+    'header-menu' => __('Header Menu', 'banskostretching'),
+  ));
+}
+add_action('after_setup_theme', 'banskostretching_register_menus');

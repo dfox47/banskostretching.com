@@ -10,6 +10,14 @@ $iconsDir   = $i . '/icons'; ?>
 <div class="wrap index.php">
   <h1>Bansko stretching</h1>
 
+  <div class="content-area">
+    <?php
+    while (have_posts()) : the_post();
+      the_content();
+    endwhile;
+    ?>
+  </div>
+
   <div class="greetings">
     <p>Привет!<br>Меня зовут Неля и я готова стать твоим проводником в прекрасный мир стретчинга</p>
 

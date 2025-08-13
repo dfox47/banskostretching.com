@@ -39,9 +39,6 @@ svg {
   width: auto;
 }
 
-ul {
-  //font-family: $font_rosinfra_thin;
-}
 // Standart class [END]
 
 // ID [START]
@@ -84,6 +81,18 @@ ul {
     position: absolute;
     width: 100%;
     z-index: 9;
+  }
+}
+
+.logo {
+  background: url(#{$icons}/favicon/favicon.svg) 0 0 scroll transparent;
+  background-size: contain;
+  display: block;
+  height: 40px;
+  width: 40px;
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
