@@ -1,0 +1,96 @@
+2025-09-29T03:15:01+00:00 DEBUG #7877 - [New Request] GET /wp-json/wp/v2/users
+2025-09-29T03:15:01+00:00 DEBUG #7877 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: a65402b8bc133
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T03:15:02+00:00 DEBUG #7877 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: f921cf745585b
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T07:10:53+00:00 DEBUG #4014 - [New Request] GET /.env
+2025-09-29T07:10:53+00:00 DEBUG #4014 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 84cf9c580e8a1
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T07:10:54+00:00 DEBUG #4014 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 94ee670d377b7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T10:30:56+00:00 DEBUG #8003 - [New Request] GET /
+2025-09-29T10:30:56+00:00 DEBUG #8003 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: c833b797d5d08
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T13:41:11+00:00 DEBUG #5961 - [New Request] GET /robots.txt
+2025-09-29T13:41:11+00:00 DEBUG #5961 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 780521b85c8f2
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T17:01:30+00:00 DEBUG #9328 - [New Request] GET /
+2025-09-29T17:01:30+00:00 DEBUG #9328 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: b2aa1043bf892
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T17:01:31+00:00 DEBUG #9328 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 00d3c7c320198
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T20:23:06+00:00 DEBUG #3929 - [New Request] GET /hello-world/
+2025-09-29T20:23:06+00:00 DEBUG #3929 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: ae51d68b4e6f2
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T20:23:06+00:00 DEBUG #5844 - [New Request] GET /privet-mir/
+2025-09-29T20:23:06+00:00 DEBUG #5844 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 21b9fe65102ab
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-29T20:38:29+00:00 DEBUG #1682 - [New Request] POST /wp-json/wp/v2/users
+2025-09-29T20:38:29+00:00 DEBUG #1682 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: a34dce5477416
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

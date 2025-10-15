@@ -1,0 +1,87 @@
+2025-09-27T01:57:36+00:00 DEBUG #8116 - [New Request] GET /robots.txt
+2025-09-27T01:57:36+00:00 DEBUG #8116 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: e0e13b8f04686
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T01:57:36+00:00 DEBUG #8116 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: f3183fd00ca2f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T05:28:32+00:00 DEBUG #8887 - [New Request] GET /product-category/uncategorized/
+2025-09-27T05:28:32+00:00 DEBUG #8887 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d874c6c34a25b
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T08:42:51+00:00 DEBUG #2824 - [New Request] GET /robots.txt
+2025-09-27T08:42:51+00:00 DEBUG #2824 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 58434b13b22a3
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T11:44:54+00:00 DEBUG #9406 - [New Request] GET /robots.txt
+2025-09-27T11:44:54+00:00 DEBUG #9406 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 451747aec33be
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T11:44:55+00:00 DEBUG #9406 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: e39fcac08796e
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T16:39:32+00:00 DEBUG #7069 - [New Request] GET /product/retro-glass-jug-330-ml/
+2025-09-27T16:39:32+00:00 DEBUG #7069 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 802b0e5af8ddf
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T20:06:12+00:00 DEBUG #7063 - [New Request] GET /
+2025-09-27T20:06:12+00:00 DEBUG #7063 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: c537c60df7326
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T23:09:54+00:00 DEBUG #8612 - [New Request] GET /index.html
+2025-09-27T23:09:54+00:00 DEBUG #8612 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: fef0c8ebb7f75
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-27T23:09:54+00:00 DEBUG #8612 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 398c7e8635501
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

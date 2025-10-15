@@ -1,0 +1,70 @@
+2025-09-23T01:28:29+00:00 DEBUG #4795 - [New Request] GET /index.php/category/uncategorized/
+2025-09-23T01:28:29+00:00 DEBUG #4795 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: a8e50b889abd6
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T04:30:03+00:00 DEBUG #3293 - [New Request] GET /robots.txt
+2025-09-23T04:30:03+00:00 DEBUG #3293 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 929e19c4e0d82
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T09:04:12+00:00 DEBUG #9712 - [New Request] GET /robots.txt
+2025-09-23T09:04:12+00:00 DEBUG #9712 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 9e8af8ff180ba
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T09:04:13+00:00 DEBUG #9712 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d7aa090927391
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T13:02:08+00:00 DEBUG #7796 - [New Request] GET /media/system/js/core.js
+2025-09-23T13:02:08+00:00 DEBUG #7796 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 3bddfa5ed200f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T17:21:51+00:00 DEBUG #7467 - [New Request] GET /robots.txt
+2025-09-23T17:21:51+00:00 DEBUG #7467 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 4a1cdb8392c47
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T20:59:37+00:00 DEBUG #5480 - [New Request] GET /robots.txt
+2025-09-23T20:59:37+00:00 DEBUG #5480 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 84f02a75949d7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-23T20:59:38+00:00 DEBUG #5480 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: e2c1ff5d81af4
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

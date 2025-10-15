@@ -1,0 +1,78 @@
+2025-10-05T00:54:05+00:00 DEBUG #4009 - [New Request] GET /
+2025-10-05T00:54:05+00:00 DEBUG #4009 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 599d401439c97
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T00:54:06+00:00 DEBUG #4009 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 760f6137500c9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T06:41:37+00:00 DEBUG #7899 - [New Request] GET /
+2025-10-05T06:41:37+00:00 DEBUG #7899 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d6eb8abd1e19f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T10:46:05+00:00 DEBUG #4635 - [New Request] GET /
+2025-10-05T10:46:05+00:00 DEBUG #4635 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 4327644503c3a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T10:46:06+00:00 DEBUG #4635 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: bf22038e7aadb
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T14:28:10+00:00 DEBUG #2905 - [New Request] GET /robots.txt
+2025-10-05T14:28:10+00:00 DEBUG #2905 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 0468ee193a728
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T17:44:16+00:00 DEBUG #8467 - [New Request] GET /wp-sitemap.xml
+2025-10-05T17:44:16+00:00 DEBUG #8467 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 04cf1a65ac1c4
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T22:14:31+00:00 DEBUG #3191 - [New Request] POST /xmlrpc.php
+2025-10-05T22:14:31+00:00 DEBUG #3191 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 7da1d007243f2
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-05T22:14:32+00:00 DEBUG #3191 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: fce034d09a552
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

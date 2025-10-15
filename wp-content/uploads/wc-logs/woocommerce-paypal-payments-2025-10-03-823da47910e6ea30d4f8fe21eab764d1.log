@@ -1,0 +1,79 @@
+2025-10-03T00:46:43+00:00 DEBUG #6057 - [New Request] GET /robots.txt
+2025-10-03T00:46:43+00:00 DEBUG #6057 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 2f4a2c62e1994
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T00:46:44+00:00 DEBUG #6057 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 605a9849ae5e7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T04:32:44+00:00 DEBUG #9803 - [New Request] POST /wp-cron.php
+2025-10-03T04:32:44+00:00 DEBUG #9803 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d8c039446f314
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T08:19:04+00:00 DEBUG #1080 - [New Request] GET /product/3-speed-bike/
+2025-10-03T08:19:04+00:00 DEBUG #1080 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 6591d6eced6d2
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T12:35:26+00:00 DEBUG #7905 - [New Request] GET /robots.txt
+2025-10-03T12:35:26+00:00 DEBUG #7905 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 7571508a28b54
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T12:35:26+00:00 DEBUG #7905 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 013c2cbb553dd
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T16:28:34+00:00 DEBUG #9641 - [New Request] GET /robots.txt
+2025-10-03T16:28:34+00:00 DEBUG #9641 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: fba7e9287a15a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T17:53:37+00:00 DEBUG #3897 - [New Request] GET /wp-json/wp/v2/product/31
+2025-10-03T17:53:37+00:00 DEBUG #3897 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: ddcde14c05ed8
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-03T21:24:42+00:00 DEBUG #8655 - [New Request] GET /robots.txt
+2025-10-03T21:24:42+00:00 DEBUG #8655 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 6d50b7d8f233e
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

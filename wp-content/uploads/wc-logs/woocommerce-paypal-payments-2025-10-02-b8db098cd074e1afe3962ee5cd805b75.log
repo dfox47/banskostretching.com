@@ -1,0 +1,302 @@
+2025-10-02T04:00:47+00:00 DEBUG #3136 - [New Request] GET /robots.txt
+2025-10-02T04:00:47+00:00 DEBUG #3136 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: a637a4b668f51
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T04:00:47+00:00 DEBUG #3136 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 22fd53ee41e0d
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T08:30:17+00:00 DEBUG #4665 - [New Request] GET /
+2025-10-02T08:30:17+00:00 DEBUG #4665 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: dd23118bfd19c
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T11:47:54+00:00 DEBUG #4143 - [New Request] GET /robots.txt
+2025-10-02T11:47:54+00:00 DEBUG #4143 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 10b934694046a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T15:21:55+00:00 DEBUG #1026 - [New Request] GET /wp-admin/
+2025-10-02T15:21:55+00:00 DEBUG #1026 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 13d7933965ff9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T15:21:55+00:00 DEBUG #1026 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: eed7731bf6eb9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-02T17:20:36+00:00 DEBUG #1297 - [New Request] GET /wp-admin/themes.php
+2025-10-02T17:20:36+00:00 DEBUG #1297 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 7ccd2b789c225
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:20:36+00:00 WARNING #1297 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759427436,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:21:03+00:00 DEBUG #6049 - [New Request] GET /wp-json/jetpack/v4/sync/spawn-sync
+2025-10-02T17:21:03+00:00 DEBUG #6049 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: b23796e8276f7
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:21:03+00:00 WARNING #6049 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759427462,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:21:03+00:00 INFO #6049 - No customers for payment tokens migration.
+2025-10-02T17:21:03+00:00 DEBUG #6049 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 36ff40571d815
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:21:03+00:00 WARNING #6049 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759427463,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:21:03+00:00 DEBUG #6049 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: 581299f65bd5f
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:21:03+00:00 ERROR #6049 - Failed to delete webhooks: [Error] Unknown error while connecting to PayPal. Status code: 0.
+2025-10-02T17:21:03+00:00 INFO #6049 - Webhooks deleted.
+2025-10-02T17:21:03+00:00 DEBUG #6049 - POST https://api-m.paypal.com/v1/notifications/webhooks
+Request Body: {"url":"https:\/\/banskostretching.com\/wp-json\/paypal\/v1\/incoming","event_types":[{"name":"CHECKOUT.ORDER.APPROVED"},{"name":"CHECKOUT.ORDER.COMPLETED"},{"name":"CHECKOUT.PAYMENT-APPROVAL.REVERSED"},{"name":"PAYMENT.CAPTURE.REFUNDED"},{"name":"PAYMENT.AUTHORIZATION.VOIDED"},{"name":"PAYMENT.CAPTURE.REVERSED"},{"name":"PAYMENT.ORDER.CANCELLED"},{"name":"PAYMENT.CAPTURE.DENIED"},{"name":"PAYMENT.CAPTURE.COMPLETED"},{"name":"VAULT.PAYMENT-TOKEN.CREATED"},{"name":"VAULT.PAYMENT-TOKEN.DELETED"},{"name":"PAYMENT.CAPTURE.PENDING"},{"name":"PAYMENT.SALE.COMPLETED"},{"name":"PAYMENT.SALE.REFUNDED"},{"name":"BILLING.SUBSCRIPTION.CANCELLED"},{"name":"BILLING.PLAN.PRICING-CHANGE.ACTIVATED"},{"name":"CATALOG.PRODUCT.UPDATED"},{"name":"BILLING.PLAN.UPDATED"}]}
+Response Debug ID: eb509299e41ce
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:21:03+00:00 ERROR #6049 - Failed to subscribe webhooks: [Error] Unknown error while connecting to PayPal. Status code: 0.
+2025-10-02T17:22:45+00:00 DEBUG #1393 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-02T17:22:45+00:00 DEBUG #1393 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 46da370212fac
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:22:45+00:00 WARNING #1393 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759427565,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:24:46+00:00 DEBUG #7025 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-02T17:24:46+00:00 DEBUG #7025 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: eb5d27c93c184
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:24:46+00:00 WARNING #7025 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg14.slc","expires":1759427686,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:26:47+00:00 DEBUG #7865 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-02T17:26:47+00:00 DEBUG #7865 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d76f56eb975b3
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:26:47+00:00 WARNING #7865 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759427807,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:28:48+00:00 DEBUG #2839 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-02T17:28:48+00:00 DEBUG #2839 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: ad2d17529f744
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:28:48+00:00 WARNING #2839 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759427928,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:30:49+00:00 DEBUG #4395 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-02T17:30:49+00:00 DEBUG #4395 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 147208165c2ea
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:30:49+00:00 WARNING #4395 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759428049,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:38:16+00:00 DEBUG #2677 - [New Request] GET /
+2025-10-02T17:38:16+00:00 DEBUG #2677 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 61f547796c358
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:38:16+00:00 WARNING #2677 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759428496,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T17:38:17+00:00 DEBUG #6408 - [New Request] GET /
+2025-10-02T17:38:17+00:00 DEBUG #6408 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 4763c1a6ca86d
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T17:38:17+00:00 WARNING #6408 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759428496,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T18:19:39+00:00 DEBUG #2021 - [New Request] GET /hello-world/
+2025-10-02T18:19:39+00:00 DEBUG #2021 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 607ef369f8ff2
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T18:19:39+00:00 WARNING #2021 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759430979,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T21:26:59+00:00 DEBUG #9487 - [New Request] GET /robots.txt
+2025-10-02T21:26:59+00:00 DEBUG #9487 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 2acecd25ef061
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T21:26:59+00:00 WARNING #9487 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759442219,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T22:21:43+00:00 DEBUG #3174 - [New Request] GET /
+2025-10-02T22:21:43+00:00 DEBUG #3174 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 185d6e8109ac9
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T22:21:43+00:00 WARNING #3174 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg14.slc","expires":1759445503,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T22:27:51+00:00 DEBUG #5299 - [New Request] GET /robots.txt
+2025-10-02T22:27:51+00:00 DEBUG #5299 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 4a181432bff4a
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T22:27:51+00:00 WARNING #5299 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg01.phx","expires":1759445871,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:34:39+00:00 DEBUG #6206 - [New Request] GET /robots.txt
+2025-10-02T23:34:39+00:00 DEBUG #6206 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: aa7bcbcf22ec4
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:34:39+00:00 WARNING #6206 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759449879,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:52:01+00:00 DEBUG #3936 - [New Request] POST /wp-cron.php
+2025-10-02T23:52:01+00:00 DEBUG #3936 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 2bcb4edf2b384
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:52:01+00:00 WARNING #3936 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg14.slc","expires":1759450921,"path":"/","domain":"paypal.com","port":null,"host_only":false},{"name":"__cf_bm","value":"z5acZ3ja4H9e_MhU5JMnClTUrEqXW3EooioXwlA_ZGg-1759449121-1.0.1.1-FiDHEvWlqt426IVlyPIZcigv60YHwwboZc489.C.EYo7fX64qIp7N7fWReAwRW9FjizUT.ZWo6HkeLqJHYPEhSodVqpYvxW87hwTqIGn.Y0","expires":1759450921,"path":"/","domain":"api-m.paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:52:01+00:00 DEBUG #5490 - [New Request] GET 
+2025-10-02T23:52:01+00:00 DEBUG #5490 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 6c8cf6e088b81
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:52:01+00:00 WARNING #5490 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759450921,"path":"/","domain":"paypal.com","port":null,"host_only":false},{"name":"__cf_bm","value":"peE9T9Nz7iV4pfL.c1mJiwoOAAt5Hy6zIvjZhO.GrXs-1759449121-1.0.1.1-deTbkuOvl6kQUEaSaI7hedcBjwlZO9D9gsNqtGZovjZnE6v9L0QWTaqVn4lxVYqqHIOYs5NZI9y8MBMNYs51aRQdsw4o8.ET_kQrGO7UWy4","expires":1759450921,"path":"/","domain":"api-m.paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:52:01+00:00 DEBUG #5490 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: c6e93d6da1fcf
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:52:01+00:00 WARNING #5490 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759450921,"path":"/","domain":"paypal.com","port":null,"host_only":false},{"name":"__cf_bm","value":"sSEx2eQg1FdITP1s8Qdbil9_vgKxksuq9phOdsdyaZQ-1759449121-1.0.1.1-OJqz8Ogzjd8v70Fdb7GRacrlcESP3UYfci1hwQBI22Y1sFtg0GXL6JF6WlCM8gjEmHgrM2hT8KotdFcjZ2hNDFAJoONW7GjcCqGcTvj9UqQ","expires":1759450921,"path":"/","domain":"api-m.paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:52:01+00:00 DEBUG #5490 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: af001de445dee
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:52:01+00:00 WARNING #5490 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg14.slc","expires":1759450921,"path":"/","domain":"paypal.com","port":null,"host_only":false},{"name":"__cf_bm","value":"dRxbx4tII83wKQO_0ZKqYd.aTkz4_vtZ.fRR2h0uwmk-1759449121-1.0.1.1-ZBB2cHMJIEiHW.FTNMrfI85MLu_kpBH3i6obd9IFdnUBzmCDWF4LhXb8LeGL8m1Yp57FAMcbvvOTRFpDbb1.4vjoy.brPikURjmHN_U4PoM","expires":1759450921,"path":"/","domain":"api-m.paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:52:02+00:00 DEBUG #5490 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 5d0c3fe3b4269
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:52:02+00:00 WARNING #5490 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759450922,"path":"/","domain":"paypal.com","port":null,"host_only":false},{"name":"__cf_bm","value":"dPzc2VY_bzfmq2r1vy4ocNwce5dPzI1YoTwisF.gI6E-1759449122-1.0.1.1-rn4b9vHo65k1gd60D098jNoKYYaoiQtrb3uX0cWH9c97O76kvyWvbZ9AcvjPm3KOrs6uC4Ylk8ZCA7mQPuQ0.oHNkmAxyO6jNQi_3pyCjl4","expires":1759450922,"path":"/","domain":"api-m.paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2025-10-02T23:53:27+00:00 DEBUG #9050 - [New Request] POST /wp-cron.php
+2025-10-02T23:53:27+00:00 DEBUG #9050 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 7f98120c96d4e
+Response: Array
+(
+    [code] => 401
+    [message] => Unauthorized
+)
+
+Response Body: {"error":"invalid_token","error_description":"Access Token not found in cache"}
+2025-10-02T23:53:27+00:00 WARNING #9050 - [Error] Unknown error while connecting to PayPal. Status code: 0. CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer A21AANRBODon-yca4ZXD5ZZcaq8a9I3R5Gzkotdi_8PVogcwzJ2xLz0ccuD2jSHzD4YQSk_mVOb7d6fdqUa8UgO97DaRZbA3A","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"error":"invalid_token","error_description":"Access Token not found in cache"}","response":{"code":401,"message":"Unauthorized"},"cookies":[{"name":"l7_az","value":"ccg13.slc","expires":1759451007,"path":"/","domain":"paypal.com","port":null,"host_only":false}],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}

@@ -1,0 +1,320 @@
+2025-09-25T00:24:24+00:00 DEBUG #6320 - [New Request] GET /
+2025-09-25T00:24:24+00:00 DEBUG #6320 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 6331e419ca34b
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T03:39:18+00:00 DEBUG #6169 - [New Request] GET /
+2025-09-25T03:39:18+00:00 DEBUG #6169 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 12a7fd1672e65
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T07:02:14+00:00 DEBUG #5551 - [New Request] GET /
+2025-09-25T07:02:14+00:00 DEBUG #5551 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 07cbb47e990a6
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T07:02:15+00:00 DEBUG #5551 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: f0a92587e7074
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T10:02:26+00:00 DEBUG #2852 - [New Request] GET /cart-2
+2025-09-25T10:02:26+00:00 DEBUG #2852 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: d285fdcd7b99a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:08:09+00:00 DEBUG #5277 - [New Request] GET /
+2025-09-25T11:08:09+00:00 DEBUG #5277 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 669fe064fe3eb
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:27+00:00 DEBUG #1612 - [New Request] GET /wp-json/jetpack/v4/sync/spawn-sync
+2025-09-25T11:38:27+00:00 DEBUG #1612 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 09cbff90841e4
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:27+00:00 INFO #1612 - No customers for payment tokens migration.
+2025-09-25T11:38:28+00:00 DEBUG #1612 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 2149ad1f7370a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:28+00:00 DEBUG #1612 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: b7950f310d15c
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:28+00:00 DEBUG #7315 - [New Request] POST /wp-admin/admin-ajax.php
+2025-09-25T11:38:28+00:00 DEBUG #7315 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 80253680e2568
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:28+00:00 INFO #7315 - No customers for payment tokens migration.
+2025-09-25T11:38:29+00:00 DEBUG #1612 - DELETE https://api-m.paypal.com/v1/notifications/webhooks/4LG98085YK0727724
+Response Debug ID: 674ca7f47db42
+Response: Array
+(
+    [code] => 204
+    [message] => No Content
+)
+
+2025-09-25T11:38:29+00:00 INFO #1612 - Webhooks deleted.
+2025-09-25T11:38:29+00:00 DEBUG #7315 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 197c791526c98
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:29+00:00 DEBUG #1612 - POST https://api-m.paypal.com/v1/notifications/webhooks
+Request Body: {"url":"https:\/\/banskostretching.com\/wp-json\/paypal\/v1\/incoming","event_types":[{"name":"CHECKOUT.ORDER.APPROVED"},{"name":"CHECKOUT.ORDER.COMPLETED"},{"name":"CHECKOUT.PAYMENT-APPROVAL.REVERSED"},{"name":"PAYMENT.CAPTURE.REFUNDED"},{"name":"PAYMENT.AUTHORIZATION.VOIDED"},{"name":"PAYMENT.CAPTURE.REVERSED"},{"name":"PAYMENT.ORDER.CANCELLED"},{"name":"PAYMENT.CAPTURE.DENIED"},{"name":"PAYMENT.CAPTURE.COMPLETED"},{"name":"VAULT.PAYMENT-TOKEN.CREATED"},{"name":"VAULT.PAYMENT-TOKEN.DELETED"},{"name":"PAYMENT.CAPTURE.PENDING"},{"name":"PAYMENT.SALE.COMPLETED"},{"name":"PAYMENT.SALE.REFUNDED"},{"name":"BILLING.SUBSCRIPTION.CANCELLED"},{"name":"BILLING.PLAN.PRICING-CHANGE.ACTIVATED"},{"name":"CATALOG.PRODUCT.UPDATED"},{"name":"BILLING.PLAN.UPDATED"}]}
+Response Debug ID: dffdc311dd4c7
+Response: Array
+(
+    [code] => 201
+    [message] => Created
+)
+
+2025-09-25T11:38:29+00:00 INFO #1612 - Webhooks subscribed.
+2025-09-25T11:38:29+00:00 DEBUG #7315 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: 2dcf578cf7f87
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:38:29+00:00 DEBUG #7315 - DELETE https://api-m.paypal.com/v1/notifications/webhooks/88B648822K6396152
+Response Debug ID: e381b25aa87bb
+Response: Array
+(
+    [code] => 204
+    [message] => No Content
+)
+
+2025-09-25T11:38:29+00:00 INFO #7315 - Webhooks deleted.
+2025-09-25T11:38:30+00:00 DEBUG #7315 - POST https://api-m.paypal.com/v1/notifications/webhooks
+Request Body: {"url":"https:\/\/banskostretching.com\/wp-json\/paypal\/v1\/incoming","event_types":[{"name":"CHECKOUT.ORDER.APPROVED"},{"name":"CHECKOUT.ORDER.COMPLETED"},{"name":"CHECKOUT.PAYMENT-APPROVAL.REVERSED"},{"name":"PAYMENT.CAPTURE.REFUNDED"},{"name":"PAYMENT.AUTHORIZATION.VOIDED"},{"name":"PAYMENT.CAPTURE.REVERSED"},{"name":"PAYMENT.ORDER.CANCELLED"},{"name":"PAYMENT.CAPTURE.DENIED"},{"name":"PAYMENT.CAPTURE.COMPLETED"},{"name":"VAULT.PAYMENT-TOKEN.CREATED"},{"name":"VAULT.PAYMENT-TOKEN.DELETED"},{"name":"PAYMENT.CAPTURE.PENDING"},{"name":"PAYMENT.SALE.COMPLETED"},{"name":"PAYMENT.SALE.REFUNDED"},{"name":"BILLING.SUBSCRIPTION.CANCELLED"},{"name":"BILLING.PLAN.PRICING-CHANGE.ACTIVATED"},{"name":"CATALOG.PRODUCT.UPDATED"},{"name":"BILLING.PLAN.UPDATED"}]}
+Response Debug ID: c70378d5fb9e1
+Response: Array
+(
+    [code] => 201
+    [message] => Created
+)
+
+2025-09-25T11:38:30+00:00 INFO #7315 - Webhooks subscribed.
+2025-09-25T11:40:12+00:00 DEBUG #5432 - [New Request] GET /cart/
+2025-09-25T11:40:12+00:00 DEBUG #5432 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 05e57c5037558
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:48:54+00:00 DEBUG #2142 - [New Request] GET /checkout/
+2025-09-25T11:48:54+00:00 DEBUG #2142 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 2e8b52ce1127c
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:49:11+00:00 DEBUG #7247 - [New Request] POST /
+2025-09-25T11:49:11+00:00 DEBUG #7247 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"course 2","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"something","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/course-2\/","cart_item_key":"d67d8ab4f4c10bf22aa353e27879133c"}],"custom_id":"pcp_customer_1"}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/checkout\/","cancel_url":"https:\/\/banskostretching.com\/checkout\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 2d16d448a17bf
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"issue":"NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","description":"The API caller or the merchant on whose behalf the API call is initiated is not allowed to vault the given source. Please contact PayPal customer support for assistance."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"2d16d448a17bf","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","rel":"information_link","method":"GET"}]}
+2025-09-25T11:49:11+00:00 WARNING #7247 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:11+00:00 ERROR #7247 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:11+00:00 ERROR #7247 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:31+00:00 DEBUG #6565 - [New Request] GET /cart/
+2025-09-25T11:49:31+00:00 DEBUG #6565 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 8071eae606685
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T11:49:33+00:00 DEBUG #7503 - [New Request] POST /
+2025-09-25T11:49:33+00:00 DEBUG #7503 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"course 2","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"something","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/course-2\/","cart_item_key":"d67d8ab4f4c10bf22aa353e27879133c"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 1ed51ee84a7b3
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"issue":"NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","description":"The API caller or the merchant on whose behalf the API call is initiated is not allowed to vault the given source. Please contact PayPal customer support for assistance."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"1ed51ee84a7b3","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","rel":"information_link","method":"GET"}]}
+2025-09-25T11:49:33+00:00 WARNING #7503 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:33+00:00 ERROR #7503 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:33+00:00 ERROR #7503 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T11:49:55+00:00 DEBUG #7837 - [New Request] GET /product/course-2/
+2025-09-25T11:49:55+00:00 DEBUG #7837 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 852fb527baac9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T12:02:03+00:00 DEBUG #5331 - [New Request] GET /cart/
+2025-09-25T12:02:03+00:00 DEBUG #5331 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 896e5e4ecddb8
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T12:12:40+00:00 DEBUG #7842 - [New Request] GET /product/course-2/
+2025-09-25T12:12:40+00:00 DEBUG #7842 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: da4395503725f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T12:15:44+00:00 DEBUG #1957 - [New Request] POST /
+2025-09-25T12:15:44+00:00 DEBUG #1957 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"course 2","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"something","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/course-2\/","cart_item_key":"d67d8ab4f4c10bf22aa353e27879133c"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 192eaa7ae585e
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"issue":"NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","description":"The API caller or the merchant on whose behalf the API call is initiated is not allowed to vault the given source. Please contact PayPal customer support for assistance."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"192eaa7ae585e","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","rel":"information_link","method":"GET"}]}
+2025-09-25T12:15:44+00:00 WARNING #1957 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:15:44+00:00 ERROR #1957 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:15:44+00:00 ERROR #1957 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:15:49+00:00 DEBUG #8254 - [New Request] POST /
+2025-09-25T12:15:49+00:00 DEBUG #8254 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"course 2","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"something","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/course-2\/","cart_item_key":"d67d8ab4f4c10bf22aa353e27879133c"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 55cda11caf07b
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"issue":"NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","description":"The API caller or the merchant on whose behalf the API call is initiated is not allowed to vault the given source. Please contact PayPal customer support for assistance."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"55cda11caf07b","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","rel":"information_link","method":"GET"}]}
+2025-09-25T12:15:49+00:00 WARNING #8254 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:15:49+00:00 ERROR #8254 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:15:49+00:00 ERROR #8254 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:16:00+00:00 DEBUG #9597 - [New Request] POST /
+2025-09-25T12:16:00+00:00 DEBUG #9597 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"course 2","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"something","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/course-2\/","cart_item_key":"d67d8ab4f4c10bf22aa353e27879133c"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 7fb672728ce0c
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"issue":"NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","description":"The API caller or the merchant on whose behalf the API call is initiated is not allowed to vault the given source. Please contact PayPal customer support for assistance."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"7fb672728ce0c","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE","rel":"information_link","method":"GET"}]}
+2025-09-25T12:16:00+00:00 WARNING #9597 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:16:00+00:00 ERROR #9597 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T12:16:00+00:00 ERROR #9597 - Order creation failed: [UNPROCESSABLE_ENTITY] The requested action could not be performed, semantically incorrect, or failed business validation. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#NOT_ENABLED_TO_VAULT_PAYMENT_SOURCE
+2025-09-25T14:41:51+00:00 DEBUG #3105 - [New Request] GET /sample-page
+2025-09-25T14:41:51+00:00 DEBUG #3105 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 03f29cb4fd222
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T14:58:11+00:00 DEBUG #8525 - [New Request] GET /wp-json/sure-triggers/v1
+2025-09-25T14:58:11+00:00 DEBUG #8525 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: f0e8f91b13573
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T17:52:02+00:00 DEBUG #5432 - [New Request] GET /robots.txt
+2025-09-25T17:52:02+00:00 DEBUG #5432 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: a2c3e7855f9db
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T17:52:02+00:00 DEBUG #5432 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 5897092c16fc2
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T21:46:54+00:00 DEBUG #8558 - [New Request] GET /robots.txt
+2025-09-25T21:46:54+00:00 DEBUG #8558 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 0d95ce86d8167
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-09-25T23:41:54+00:00 DEBUG #6882 - [New Request] GET 
+2025-09-25T23:41:54+00:00 DEBUG #6882 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: 861ff60dd4cdb
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

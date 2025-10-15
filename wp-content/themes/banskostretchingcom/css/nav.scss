@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: $spacer 0;
+  width: 100%;
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: $c_primary;
+      display: block;
+      padding: calc($spacer / 2);
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $c_highlight;
+        color: #fff;
+      }
+    }
+  }
+}

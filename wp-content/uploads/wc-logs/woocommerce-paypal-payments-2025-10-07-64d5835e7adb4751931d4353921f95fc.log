@@ -1,0 +1,216 @@
+2025-10-07T10:46:29+00:00 DEBUG #5112 - [New Request] GET /cart/
+2025-10-07T10:46:29+00:00 DEBUG #5112 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 905d39142aa68
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:10:42+00:00 DEBUG #7357 - [New Request] GET /cart/
+2025-10-07T12:10:42+00:00 DEBUG #7357 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 00a2baad0f0a9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:10:51+00:00 DEBUG #4700 - [New Request] POST /wp-json/wc/store/v1/batch
+2025-10-07T12:10:51+00:00 DEBUG #4700 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: e973e5cd1b6b7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:13:30+00:00 DEBUG #7274 - [New Request] GET /cart/
+2025-10-07T12:13:30+00:00 DEBUG #7274 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: a928ec53d1e60
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:14:36+00:00 DEBUG #6397 - [New Request] GET /cart/
+2025-10-07T12:14:36+00:00 DEBUG #6397 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 0e1dcb99030b1
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:14:44+00:00 DEBUG #2127 - [New Request] GET /cart/
+2025-10-07T12:14:44+00:00 DEBUG #2127 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 918551feab33b
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:14:57+00:00 DEBUG #4372 - [New Request] GET /product/tested-product/
+2025-10-07T12:14:57+00:00 DEBUG #4372 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 8aade9fbf4aae
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:15:05+00:00 DEBUG #5882 - [New Request] GET /product/tested-product/
+2025-10-07T12:15:05+00:00 DEBUG #5882 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 810a0abf0f3ac
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:15:12+00:00 DEBUG #3869 - [New Request] GET /cart/
+2025-10-07T12:15:12+00:00 DEBUG #3869 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 347a209bafea9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:15:22+00:00 DEBUG #9098 - [New Request] POST /
+2025-10-07T12:15:22+00:00 DEBUG #9098 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 87328a2019263
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:15:22+00:00 DEBUG #9098 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg","cart_item_key":"3295c76acbf4caaed33c36b1b5fc2cb1"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 5cb702c1eddb2
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"5cb702c1eddb2","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-07T12:15:22+00:00 WARNING #9098 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:15:22+00:00 ERROR #9098 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:15:22+00:00 ERROR #9098 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:18:11+00:00 DEBUG #4112 - [New Request] GET /wp-json/wc/v3/wc_paypal/webhooks
+2025-10-07T12:18:11+00:00 DEBUG #4112 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: 46d4e2891589f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:18:20+00:00 DEBUG #7767 - [New Request] GET /cart/
+2025-10-07T12:18:20+00:00 DEBUG #7767 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: b577c4ab4588b
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:18:23+00:00 DEBUG #5086 - [New Request] POST /
+2025-10-07T12:18:23+00:00 DEBUG #5086 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg","cart_item_key":"3295c76acbf4caaed33c36b1b5fc2cb1"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: bbd70231daa04
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"bbd70231daa04","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-07T12:18:23+00:00 WARNING #5086 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:18:23+00:00 ERROR #5086 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:18:23+00:00 ERROR #5086 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:18:29+00:00 DEBUG #4326 - [New Request] GET /wp-json/wc/v3/wc_paypal/webhooks
+2025-10-07T12:18:29+00:00 DEBUG #4326 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: f095f6549e879
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:20:05+00:00 DEBUG #4131 - [New Request] GET /checkout/
+2025-10-07T12:20:05+00:00 DEBUG #4131 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 6d8de086b5d0d
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:20:12+00:00 DEBUG #4391 - [New Request] POST /wp-json/wc/store/v1/checkout
+2025-10-07T12:20:12+00:00 DEBUG #4391 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg"}],"custom_id":"65","invoice_id":"fddcad-65"}],"payer":{"email_address":"dfox@foxartbox.com","name":{"given_name":"Denis","surname":"FOX"},"address":{"country_code":"BG","address_line_1":"Bansko","address_line_2":"Stragite 2","admin_area_1":"BG-01","admin_area_2":"Bansko","postal_code":"2770"},"phone":{"phone_type":"HOME","phone_number":{"national_number":"0882744430"}}},"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/?wc-ajax=ppc-return-url","cancel_url":"https:\/\/banskostretching.com\/checkout\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED"}}}}
+Response Debug ID: 3aaaa8d7e47b6
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"3aaaa8d7e47b6","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-07T12:20:12+00:00 WARNING #4391 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:20:12+00:00 ERROR #4391 - Payment failed: Failed to process the payment. Please try again or contact the shop admin. [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED PayPalGateway.php:585 PAYEE_ACCOUNT_RESTRICTED /purchase_units/@reference_id=='default'/payee The merchant account is restricted.<br> OrderEndpoint.php:191
+2025-10-07T12:21:33+00:00 DEBUG #7342 - [New Request] GET /product/tested-product/
+2025-10-07T12:21:33+00:00 DEBUG #7342 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: a127e7399eeae
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:24:46+00:00 DEBUG #6709 - [New Request] POST /product/tested-product/
+2025-10-07T12:24:46+00:00 DEBUG #6709 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: a3a2713439397
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:24:54+00:00 DEBUG #9045 - [New Request] POST /wp-json/wc/store/v1/batch
+2025-10-07T12:24:54+00:00 DEBUG #9045 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: d5184a6873e4f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-07T12:24:56+00:00 DEBUG #7220 - [New Request] POST /
+2025-10-07T12:24:56+00:00 DEBUG #7220 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.01","breakdown":{"item_total":{"currency_code":"EUR","value":"0.01"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":1,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg","cart_item_key":"3295c76acbf4caaed33c36b1b5fc2cb1"}]}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/cart\/","cancel_url":"https:\/\/banskostretching.com\/cart\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: 7eb4741430f82
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"7eb4741430f82","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-07T12:24:56+00:00 WARNING #7220 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:24:56+00:00 ERROR #7220 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:24:56+00:00 ERROR #7220 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-07T12:27:47+00:00 DEBUG #4641 - [New Request] GET /product/tested-product/
+2025-10-07T12:27:47+00:00 DEBUG #4641 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 03d871987bda9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

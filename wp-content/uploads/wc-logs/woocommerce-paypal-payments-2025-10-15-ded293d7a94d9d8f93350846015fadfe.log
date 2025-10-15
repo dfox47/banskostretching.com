@@ -1,0 +1,18 @@
+2025-10-15T18:38:23+00:00 DEBUG #2966 - [New Request] GET /cart/
+2025-10-15T18:38:23+00:00 DEBUG #2966 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 337ce4a90e7c7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:38:53+00:00 DEBUG #4128 - [New Request] GET /cart/
+2025-10-15T18:38:53+00:00 DEBUG #4128 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: f2b2a1570dc52
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+

@@ -421,7 +421,7 @@ class Quiz {
 			return;
 		}
 		// submit quiz attempts.
-		self::tutor_quiz_attemp_submit();
+		self::tutor_quiz_attempt_submit();
 
 		wp_safe_redirect( get_the_permalink() );
 		die();
@@ -440,7 +440,7 @@ class Quiz {
 		}
 		tutor_utils()->checking_nonce();
 		// submit quiz attempts.
-		if ( self::tutor_quiz_attemp_submit() ) {
+		if ( self::tutor_quiz_attempt_submit() ) {
 			wp_send_json_success();
 		} else {
 			wp_send_json_error();
@@ -455,7 +455,7 @@ class Quiz {
 	 *
 	 * @return true | false
 	 */
-	public static function tutor_quiz_attemp_submit() {
+	public static function tutor_quiz_attempt_submit() {
 		// Check logged in.
 		if ( ! is_user_logged_in() ) {
 			die( 'Please sign in to do this operation' );
@@ -469,6 +469,10 @@ class Quiz {
 		$attempt_id = Input::post( 'attempt_id', 0, Input::TYPE_INT );
 		$attempt    = tutor_utils()->get_attempt( $attempt_id );
 		$course_id  = CourseModel::get_course_by_quiz( $attempt->quiz_id )->ID;
+
+		if ( QuizModel::ATTEMPT_TIMEOUT === $attempt->attempt_status ) {
+			return false;
+		}
 
 		// Sanitize data by helper method.
 		$attempt_answers = isset( $_POST['attempt'] ) ? tutor_sanitize_data( $_POST['attempt'] ) : false; //phpcs:ignore
@@ -508,7 +512,7 @@ class Quiz {
 			$question_ids = tutor_utils()->avalue_dot( 'quiz_question_ids', $attempt_answer );
 			$question_ids = array_filter(
 				$question_ids,
-				function( $id ) {
+				function ( $id ) {
 					return (int) $id;
 				}
 			);
@@ -577,7 +581,7 @@ class Quiz {
 
 						$given_answer         = array_filter(
 							$given_answer,
-							function( $id ) {
+							function ( $id ) {
 								return is_numeric( $id ) && $id > 0;
 							}
 						);
@@ -1208,4 +1212,52 @@ class Quiz {
 		}
 	}
 
+	/**
+	 * Get all quiz attempts for a user in a specific course.
+	 *
+	 * @since 3.8.1
+	 *
+	 * @param int $course_id The ID of the course.
+	 * @param int $user_id The ID of the user.
+	 *
+	 * @return array Returns an array of quiz attempt objects with their answers, or an empty array on error.
+	 */
+	public function get_quiz_attempts_and_answers_by_course_id( int $course_id ): array {
+		global $wpdb;
+
+		$results = QueryHelper::get_all( $wpdb->tutor_quiz_attempts, array( 'course_id' => $course_id ), 'course_id', -1 );
+
+		if ( empty( $results ) ) {
+			return array();
+		}
+
+		return array_map(
+			function ( $item ) {
+				$item->quiz_attempt_answers = $this->get_quiz_attempt_answers_by_attempt_id( $item->attempt_id );
+				return $item;
+			},
+			$results
+		);
+	}
+
+	/**
+	 * Get all quiz attempt answers for a specific quiz attempt.
+	 *
+	 * @since 3.8.1
+	 *
+	 * @param int $attempt_id The ID of the quiz attempt.
+	 *
+	 * @return array Returns an array of quiz attempt answers objects, or an empty array on error.
+	 */
+	private function get_quiz_attempt_answers_by_attempt_id( int $attempt_id ): array {
+		global $wpdb;
+
+		$results = QueryHelper::get_all( $wpdb->tutor_quiz_attempt_answers, array( 'quiz_attempt_id' => $attempt_id ), 'quiz_attempt_id', -1 );
+
+		if ( empty( $results ) ) {
+			return array();
+		}
+
+		return $results;
+	}
 }
