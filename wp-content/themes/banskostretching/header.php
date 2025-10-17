@@ -32,16 +32,14 @@ $iconsDir   = $i . '/icons'; ?>
 
 <body <?php body_class(); ?>>
   <header class="header">
-    <?php if (!is_front_page()) { ?>
       <nav class="nav">
         <a class="logo" href="/"></a>
 
         <?php wp_nav_menu(array(
-          'theme_location' => 'header-menu',
+          'theme_location' => 'primary',
           'menu_class'     => 'nav__menu',
           'container'      => false,
           'fallback_cb'    => false
         )); ?>
       </nav>
-    <?php } ?>
   </header>

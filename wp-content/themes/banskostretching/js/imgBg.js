@@ -1,16 +1,16 @@
 const imgBg = () => {
   document.querySelectorAll('.js-img-bg').forEach((e) => {
     if (window.pageYOffset + window.innerHeight > e.offsetTop) {
-      e.classList.remove('js-img-bg')
-      const imgSrc = e.dataset.src
+      e.classList.remove('js-img-bg');
+      const imgSrc = e.dataset.src;
 
-      if (imgSrc) e.style.backgroundImage = 'url(' + imgSrc + ')'
+      if (imgSrc) e.style.backgroundImage = 'url(' + imgSrc + ')';
     }
-  })
-}
+  });
+};
 
-imgBg()
+imgBg();
 
-window.addEventListener('orientationChange', imgBg)
-window.addEventListener('resize', imgBg)
-window.addEventListener('scroll', imgBg)
+window.addEventListener('orientationChange', imgBg);
+window.addEventListener('resize', imgBg);
+window.addEventListener('scroll', imgBg);
