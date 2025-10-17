@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="primary" class="site-main xxxx">
+<main id="primary" class="site-main single.php">
   <?php while (have_posts()) :
     the_post();
 
@@ -16,7 +16,6 @@
     if (comments_open() || get_comments_number()) :
       comments_template();
     endif;
-
   endwhile; ?>
 </main>
 

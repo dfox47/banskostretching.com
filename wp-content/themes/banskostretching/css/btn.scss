@@ -1,0 +1,26 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &--primary {
+    background-color: $c_primary;
+    color: #fff;
+    font-weight: 700;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--secondary {
+    font-weight: 300;
+  }
+}
+
+.wc-block-components-button {
+  @extend .btn;
+  @extend .btn--primary;
+}

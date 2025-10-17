@@ -22,7 +22,6 @@ $iconsDir   = $i . '/icons'; ?>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--	<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?= $themeDir; ?>/styles.min.css?v<?= (date("YmdHis")); ?>">
@@ -32,14 +31,14 @@ $iconsDir   = $i . '/icons'; ?>
 
 <body <?php body_class(); ?>>
   <header class="header">
-      <nav class="nav">
-        <a class="logo" href="/"></a>
+    <nav class="nav">
+      <a class="logo" href="/"></a>
 
-        <?php wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'menu_class'     => 'nav__menu',
-          'container'      => false,
-          'fallback_cb'    => false
-        )); ?>
-      </nav>
+      <?php wp_nav_menu(array(
+        'theme_location' => 'primary',
+        'menu_class'     => 'nav__menu',
+        'container'      => false,
+        'fallback_cb'    => false
+      )); ?>
+    </nav>
   </header>
