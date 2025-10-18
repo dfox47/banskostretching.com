@@ -1,3 +1,5 @@
+<p class="text-center"><span class="js-img-scroll" data-src="<?= $iconsDir; ?>/favicon/favicon.svg"></span></p>
+
 <h3>Отзывы</h3>
 
 <div class="reviews js-carousel-simple">

@@ -30,15 +30,24 @@ $iconsDir   = $i . '/icons'; ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="header">
-    <nav class="nav">
-      <a class="logo" href="/"></a>
+  <div class="wrap">
+    <header class="header">
+      <nav class="nav">
+        <a class="logo" href="/"></a>
 
-      <?php wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'menu_class'     => 'nav__menu',
-        'container'      => false,
-        'fallback_cb'    => false
-      )); ?>
-    </nav>
-  </header>
+        <?php wp_nav_menu(array(
+          'theme_location' => 'primary',
+          'menu_class'     => 'nav__menu',
+          'container'      => false,
+          'fallback_cb'    => false
+        )); ?>
+      </nav>
+
+      <?php // language change
+      include_once('template-parts/lang_change.php'); ?>
+    </header>
+  </div>
+
+  <?php if (is_front_page()) { ?>
+    <div class="hero js-img-bg" data-src="<?= $i; ?>/hero.jpg"></div>
+  <?php } ?>

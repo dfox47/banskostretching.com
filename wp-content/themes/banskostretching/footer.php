@@ -5,11 +5,19 @@ $iconsDir   = $i . '/icons'; ?>
 
 <?php wp_footer(); ?>
 
+<?php if (is_front_page()) {
+  // reviews
+  include_once('template-parts/reviews.php');
+
+  // instagram
+  include_once('template-parts/instagram_widget.php');
+} ?>
+
 <footer class="footer">
   <div class="wrap">
     <ul class="footer_links">
       <li class="footer_links__item">
-        <a class="footer_links__link" href="//www.instagram.com/banskostretching/" target="_blank" title="instagram"><span class="footer_links__img js-img-scroll" data-src="<?= $iconsDir; ?>/instagram.svg" title="instagram"></span></a>
+        <a class="footer_links__link" href="//www.instagram.com/stretching_nelly/" target="_blank" title="instagram"><span class="footer_links__img js-img-scroll" data-src="<?= $iconsDir; ?>/instagram.svg" title="instagram"></span></a>
       </li>
 
       <li>

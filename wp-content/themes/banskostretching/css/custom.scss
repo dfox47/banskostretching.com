@@ -65,6 +65,13 @@ svg {
   width: 100%;
 }
 
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: $spacer 0;
+}
+
 .ig_wrap {
   position: relative;
 
@@ -94,6 +101,12 @@ svg {
   &:hover {
     opacity: 0.5;
   }
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.wc-block-components-button {
+  @extend .btn;
+  @extend .btn--primary;
 }
 
 .wrap {

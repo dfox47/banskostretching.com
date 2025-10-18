@@ -1,0 +1,54 @@
+.lang_change {
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    .lang_change {
+      &__list {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $c_border;
+    display: block;
+    width: 100%;
+
+    &:last-child {
+      border: 0 none;
+    }
+  }
+
+  &__link {
+    color: #000;
+    display: block;
+    padding: 0.4em 0.7em;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &--current {
+      border: 1px solid $c_border;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  &__list {
+    border: 1px solid $c_border;
+    border-top: 0 none;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+}
