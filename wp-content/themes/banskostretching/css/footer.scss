@@ -22,3 +22,14 @@
     width: 50px;
   }
 }
+
+.footer_menu {
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  margin: $spacer 0;
+
+  a {
+    color: $c_text;
+  }
+}

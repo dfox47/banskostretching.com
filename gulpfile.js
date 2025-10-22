@@ -18,26 +18,26 @@ const password      = config.password
 const port          = config.port
 const user          = config.user
 
-const remoteTheme           = '/domains/foxartbox.com/public_html/subdomains/t1/'
+const remoteTheme           = '/public_html/wp-content/themes/banskostretching/'
 const remoteCss             = remoteTheme + 'css/'
 const remoteJs              = remoteTheme + 'js/'
 const remoteTemplateParts   = remoteTheme + 'template-parts/'
 
-const localTheme            = ''
+const localTheme            = 'wp-content/themes/banskostretching/'
 const localCss              = localTheme + 'css/'
 const localJs               = localTheme + 'js/'
 const localTemplateParts    = localTheme + 'template-parts/'
 
 function getFtpConnection() {
-	return ftp.create({
-		host:           host,
-		log:            gutil.log,
-		password:       password,
-		parallel:       3,
-		port:           port,
-		timeout:        99999999,
-		user:           user
-	});
+  return ftp.create({
+    host:           host,
+    log:            gutil.log,
+    password:       password,
+    parallel:       3,
+    port:           port,
+    timeout:        99999999,
+    user:           user
+  });
 }
 
 const conn = getFtpConnection()
@@ -45,58 +45,58 @@ const conn = getFtpConnection()
 
 
 gulp.task('dist', function () {
-	return gulp.src(localTheme + '**/*')
-		.pipe(conn.dest(localTheme))
+  return gulp.src(localTheme + '**/*')
+    .pipe(conn.dest(localTheme))
 })
 
 gulp.task('css', function () {
-	return gulp.src(localCss + 'styles.scss')
-		.pipe(sass())
-		.pipe(cssMinify())
-		.pipe(rename({
-			suffix: ".min"
-		}))
-		.pipe(conn.dest(remoteTheme))
+  return gulp.src(localCss + 'styles.scss')
+    .pipe(sass())
+    .pipe(cssMinify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(conn.dest(remoteTheme))
 })
 
 gulp.task('copy_css', function () {
-	return gulp.src(localCss + '**/*')
-		.pipe(conn.dest(remoteCss))
+  return gulp.src(localCss + '**/*')
+    .pipe(conn.dest(remoteCss))
 })
 
 gulp.task('copy_html', function () {
-	return gulp.src(localTheme + '*.php')
-		.pipe(conn.dest(remoteTheme))
+  return gulp.src(localTheme + '*.php')
+    .pipe(conn.dest(remoteTheme))
 })
 
 gulp.task('copy_template_parts', function () {
-	return gulp.src(localTemplateParts + '*.php')
-		.pipe(conn.dest(remoteTemplateParts))
+  return gulp.src(localTemplateParts + '*.php')
+    .pipe(conn.dest(remoteTemplateParts))
 })
 
 gulp.task('js', function () {
-	return gulp.src([
-		// localFolderJs + 'jquery.3.2.1.js',
-		localJs + '**/*.js'
-	])
-		.pipe(concat('all.js'))
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: ".min"
-		}))
-		.pipe(conn.dest(remoteTheme))
+  return gulp.src([
+    // localFolderJs + 'jquery.3.2.1.js',
+    localJs + '**/*.js'
+  ])
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(conn.dest(remoteTheme))
 })
 
 gulp.task('copy_js', function () {
-	return gulp.src(localJs + '**/*.js')
-		.pipe(conn.dest(remoteJs))
+  return gulp.src(localJs + '**/*.js')
+    .pipe(conn.dest(remoteJs))
 })
 
 gulp.task('watch', function() {
-	gulp.watch(localTheme + '*.php',                gulp.series('copy_html'))
-	gulp.watch(localCss + '**/*',                   gulp.series('css', 'copy_css'))
-	gulp.watch(localJs + '**/*.js',                 gulp.series('js', 'copy_js'))
-	gulp.watch(localTemplateParts + '**/*.php',      gulp.series('copy_template_parts'))
+  gulp.watch(localTheme + '*.php',                gulp.series('copy_html'))
+  gulp.watch(localCss + '**/*',                   gulp.series('css', 'copy_css'))
+  gulp.watch(localJs + '**/*.js',                 gulp.series('js', 'copy_js'))
+  gulp.watch(localTemplateParts + '**/*.php',      gulp.series('copy_template_parts'))
 })
 
 gulp.task('default', gulp.series('watch'))

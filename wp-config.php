@@ -98,10 +98,22 @@ define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
 
-/** Absolute path to the WordPress directory. */
+// Absolute path to the WordPress directory.
 if (! defined('ABSPATH')) {
   define('ABSPATH', __DIR__ . '/');
 }
 
-/** Sets up WordPress vars and included files. */
+// Sets up WordPress vars and included files.
 require_once ABSPATH . 'wp-settings.php';
+
+// all images from one folder /uploads/
+function shared_upload_dir($uploads)
+{
+  // Use main site's uploads folder
+  $uploads['path'] = WP_CONTENT_DIR . '/uploads';
+  $uploads['url']  = content_url('/uploads');
+  $uploads['basedir'] = $uploads['path'];
+  $uploads['baseurl'] = $uploads['url'];
+  return $uploads;
+}
+add_filter('upload_dir', 'shared_upload_dir');

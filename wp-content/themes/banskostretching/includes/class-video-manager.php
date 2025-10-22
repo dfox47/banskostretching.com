@@ -140,12 +140,31 @@ class BanskoStretching_Video_Manager {
         
         // Проверяем доступ пользователя к курсу
         if (!$this->user_has_course_access($user_id, $product_id)) {
-            return '<div style="background: #ffe0e0; border: 2px solid #ffc0c0; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0;">
+            $product = wc_get_product($product_id);
+            $add_to_cart_url = '';
+            
+            if ($product && $product->is_purchasable()) {
+                $add_to_cart_url = wc_get_cart_url() . '?add-to-cart=' . $product_id;
+            }
+            
+            $output = '<div style="background: #ffe0e0; border: 2px solid #ffc0c0; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0;">
                         <h4>🔒 Доступ ограничен</h4>
-                        <p>Для просмотра этого урока необходимо приобрести курс.</p>
-                        <a href="' . get_permalink($product_id) . '" style="background: #007cba; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">Купить курс</a>
-                    </div>';
+                        <p>Для просмотра этого урока необходимо приобрести курс.</p>';
+            
+            if ($add_to_cart_url) {
+                $output .= '<form method="post" style="display: inline-block; margin: 10px 5px;" class="video-add-to-cart-form">
+                            <input type="hidden" name="add-to-cart" value="' . esc_attr($product_id) . '" />
+                            <button type="submit" class="video-add-to-cart-btn" data-product-id="' . esc_attr($product_id) . '" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                                🛒 Добавить в корзину
+                            </button>
+                        </form>';
+            }
+            
+            $output .= '</div>';
+            
+            return $output;
         }
+        
         
         // Если доступ есть, показываем видео
         if (empty($vimeo_id)) {

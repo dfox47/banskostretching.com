@@ -1,0 +1,18 @@
+2025-10-18T12:14:39+00:00 DEBUG #3001 - [New Request] GET /wp-admin/plugins.php
+2025-10-18T12:14:39+00:00 DEBUG #3001 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 3e500bc8034a6
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-18T12:14:39+00:00 DEBUG #3001 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: f9c3221b728a9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-18T12:14:39+00:00 INFO #3001 - Webhooks deleted.

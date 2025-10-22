@@ -16,3 +16,104 @@ Response: Array
     [message] => OK
 )
 
+2025-10-15T18:53:57+00:00 DEBUG #9463 - [New Request] POST /wp-admin/admin-ajax.php
+2025-10-15T18:53:57+00:00 DEBUG #9463 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: be1aecca48bb9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:53:57+00:00 DEBUG #9463 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: ec45cb67cccea
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:53:57+00:00 INFO #9463 - No customers for payment tokens migration.
+2025-10-15T18:53:58+00:00 DEBUG #9463 - GET https://api-m.paypal.com/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/4VTWFBLQVPGEJ
+Response Debug ID: beccc14984ce9
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:53:58+00:00 DEBUG #9463 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: c193dfd29d7af
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:53:58+00:00 DEBUG #9463 - DELETE https://api-m.paypal.com/v1/notifications/webhooks/1GB69879PA401943K
+Response Debug ID: 158939f5857de
+Response: Array
+(
+    [code] => 204
+    [message] => No Content
+)
+
+2025-10-15T18:53:58+00:00 INFO #9463 - Webhooks deleted.
+2025-10-15T18:53:59+00:00 DEBUG #9463 - POST https://api-m.paypal.com/v1/notifications/webhooks
+Request Body: {"url":"https:\/\/banskostretching.com\/wp-json\/paypal\/v1\/incoming","event_types":[{"name":"CHECKOUT.ORDER.APPROVED"},{"name":"CHECKOUT.ORDER.COMPLETED"},{"name":"CHECKOUT.PAYMENT-APPROVAL.REVERSED"},{"name":"PAYMENT.CAPTURE.REFUNDED"},{"name":"PAYMENT.AUTHORIZATION.VOIDED"},{"name":"PAYMENT.CAPTURE.REVERSED"},{"name":"PAYMENT.ORDER.CANCELLED"},{"name":"PAYMENT.CAPTURE.DENIED"},{"name":"PAYMENT.CAPTURE.COMPLETED"},{"name":"VAULT.PAYMENT-TOKEN.CREATED"},{"name":"VAULT.PAYMENT-TOKEN.DELETED"},{"name":"PAYMENT.CAPTURE.PENDING"},{"name":"PAYMENT.SALE.COMPLETED"},{"name":"PAYMENT.SALE.REFUNDED"},{"name":"BILLING.SUBSCRIPTION.CANCELLED"},{"name":"BILLING.PLAN.PRICING-CHANGE.ACTIVATED"},{"name":"CATALOG.PRODUCT.UPDATED"},{"name":"BILLING.PLAN.UPDATED"}]}
+Response Debug ID: 4721aef518b3f
+Response: Array
+(
+    [code] => 201
+    [message] => Created
+)
+
+2025-10-15T18:53:59+00:00 DEBUG #9463 - POST https://api-m.paypal.com/v1/notifications/simulate-event
+Request Body: {"webhook_id":"08526343MY2692053","event_type":"CHECKOUT.ORDER.APPROVED","resource_version":"2.0"}
+Response Debug ID: 7e6ec93e45132
+Response: Array
+(
+    [code] => 202
+    [message] => Accepted
+)
+
+2025-10-15T18:53:59+00:00 INFO #9463 - Webhooks subscribed.
+2025-10-15T18:54:03+00:00 DEBUG #2007 - [New Request] POST /wp-json/paypal/v1/incoming
+2025-10-15T18:54:03+00:00 DEBUG #2007 - Webhook WH-COC11055RA711503B-4YM959094A144403T received of type CHECKOUT.ORDER.APPROVED and by resource "checkout-order"
+2025-10-15T18:54:03+00:00 INFO #2007 - Received simulated webhook.
+2025-10-15T18:57:38+00:00 DEBUG #9659 - [New Request] GET /cart/
+2025-10-15T18:57:38+00:00 DEBUG #9659 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 671a198a2aa24
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:57:48+00:00 DEBUG #9805 - [New Request] GET /checkout/
+2025-10-15T18:57:48+00:00 DEBUG #9805 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: f8d1f0c88cd2a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:59:08+00:00 DEBUG #4617 - [New Request] POST /wp-json/wp/v2/plugins/woocommerce-paypal-payments/woocommerce-paypal-payments
+2025-10-15T18:59:08+00:00 DEBUG #4617 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: f892e97a6572e
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-15T18:59:08+00:00 DEBUG #4617 - DELETE https://api-m.paypal.com/v1/notifications/webhooks/08526343MY2692053
+Response Debug ID: b908c12cb9996
+Response: Array
+(
+    [code] => 204
+    [message] => No Content
+)
+
+2025-10-15T18:59:09+00:00 INFO #4617 - Webhooks deleted.

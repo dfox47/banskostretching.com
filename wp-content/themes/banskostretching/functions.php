@@ -216,3 +216,9 @@ add_action('admin_init', 'check_woocommerce_status');
 
 // Функции для работы с видео перенесены в класс BanskoStretching_Video_Manager
 // Глобальные функции для обратной совместимости подключаются автоматически
+
+function register_menu_footer()
+{
+  register_nav_menu('footer', __('Footer Menu', 'banskostretching'));
+}
+add_action('after_setup_theme', 'register_menu_footer');

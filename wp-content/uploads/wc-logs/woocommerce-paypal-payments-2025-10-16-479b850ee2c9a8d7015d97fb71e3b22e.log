@@ -1,0 +1,108 @@
+2025-10-16T16:30:33+00:00 DEBUG #7258 - [New Request] GET /checkout/
+2025-10-16T16:30:33+00:00 DEBUG #7258 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 1166b0bad525e
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:31:24+00:00 DEBUG #7710 - [New Request] GET /checkout/
+2025-10-16T16:31:24+00:00 DEBUG #7710 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 06d1f489425b1
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:31:59+00:00 DEBUG #6379 - [New Request] POST /wp-json/wc/store/v1/checkout
+2025-10-16T16:31:59+00:00 DEBUG #6379 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials
+Response Debug ID: 1da1224ee099f
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:32:00+00:00 DEBUG #6379 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.03","breakdown":{"item_total":{"currency_code":"EUR","value":"0.03"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":3,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg"}],"custom_id":"72","invoice_id":"fddcad-72"}],"payer":{"email_address":"dfox@foxartbox.com","name":{"given_name":"Denis","surname":"FOX"},"address":{"country_code":"BG","address_line_1":"Bansko","address_line_2":"Stragite 2","admin_area_1":"BG-01","admin_area_2":"Bansko","postal_code":"2770"},"phone":{"phone_type":"HOME","phone_number":{"national_number":"0882744430"}}},"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/?wc-ajax=ppc-return-url","cancel_url":"https:\/\/banskostretching.com\/checkout\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED"}}}}
+Response Debug ID: 5fa6b14591e4e
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"5fa6b14591e4e","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-16T16:32:00+00:00 WARNING #6379 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-16T16:32:00+00:00 ERROR #6379 - Payment failed: Failed to process the payment. Please try again or contact the shop admin. [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED PayPalGateway.php:589 PAYEE_ACCOUNT_RESTRICTED /purchase_units/@reference_id=='default'/payee The merchant account is restricted.<br> OrderEndpoint.php:191
+2025-10-16T16:32:05+00:00 DEBUG #9381 - [New Request] GET /checkout/
+2025-10-16T16:32:05+00:00 DEBUG #9381 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: d8331eba9cf55
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:32:18+00:00 DEBUG #8597 - [New Request] GET /wp-json/wc/v3/wc_paypal/webhooks
+2025-10-16T16:32:18+00:00 DEBUG #8597 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: 6c43295369bd7
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:32:41+00:00 DEBUG #2814 - [New Request] GET /checkout/
+2025-10-16T16:32:41+00:00 DEBUG #2814 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: a3d9e9747e812
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:32:55+00:00 DEBUG #5351 - [New Request] GET /checkout/
+2025-10-16T16:32:55+00:00 DEBUG #5351 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: 401309d163a7a
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:33:07+00:00 DEBUG #8327 - [New Request] POST /wp-json/wc/store/v1/checkout
+2025-10-16T16:33:07+00:00 DEBUG #8327 - POST https://api-m.paypal.com/v1/oauth2/token?grant_type=client_credentials&response_type=id_token
+Response Debug ID: db3016a1c1089
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:33:13+00:00 DEBUG #5479 - [New Request] POST /
+2025-10-16T16:33:13+00:00 DEBUG #5479 - POST https://api-m.paypal.com/v2/checkout/orders
+Request Body: {"intent":"CAPTURE","purchase_units":[{"reference_id":"default","amount":{"currency_code":"EUR","value":"0.03","breakdown":{"item_total":{"currency_code":"EUR","value":"0.03"},"shipping":{"currency_code":"EUR","value":"0.00"},"tax_total":{"currency_code":"EUR","value":"0.00"}}},"description":"","items":[{"name":"Tested product","unit_amount":{"currency_code":"EUR","value":"0.01"},"quantity":3,"description":"","sku":"","category":"DIGITAL_GOODS","url":"https:\/\/banskostretching.com\/product\/tested-product\/","image_url":"https:\/\/banskostretching.com\/wp-content\/uploads\/2025\/10\/stretching-full-4.jpg","cart_item_key":"3295c76acbf4caaed33c36b1b5fc2cb1"}],"custom_id":"pcp_customer_1"}],"payment_source":{"paypal":{"experience_context":{"return_url":"https:\/\/banskostretching.com\/checkout\/","cancel_url":"https:\/\/banskostretching.com\/checkout\/","locale":"en-US","landing_page":"NO_PREFERENCE","shipping_preference":"NO_SHIPPING","user_action":"PAY_NOW","payment_method_preference":"UNRESTRICTED","contact_preference":"NO_CONTACT_INFO"},"attributes":{"vault":{"store_in_vault":"ON_SUCCESS","usage_type":"MERCHANT","permit_multiple_payment_tokens":false}}}}}
+Response Debug ID: e80dedfbfcffb
+Response: Array
+(
+    [code] => 422
+    [message] => Unprocessable Entity
+)
+
+Response Body: {"name":"UNPROCESSABLE_ENTITY","details":[{"field":"/purchase_units/@reference_id=='default'/payee","location":"body","issue":"PAYEE_ACCOUNT_RESTRICTED","description":"The merchant account is restricted."}],"message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"e80dedfbfcffb","links":[{"href":"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED","rel":"information_link","method":"GET"}]}
+2025-10-16T16:33:13+00:00 WARNING #5479 - Failed to create order. PayPal API response: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-16T16:33:13+00:00 ERROR #5479 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-16T16:33:13+00:00 ERROR #5479 - Order creation failed: [UNPROCESSABLE_ENTITY] There was a problem processing this transaction. Please reach out to the store owner. https://developer.paypal.com/api/rest/reference/orders/v2/errors/#PAYEE_ACCOUNT_RESTRICTED
+2025-10-16T16:33:37+00:00 DEBUG #7252 - [New Request] POST /wp-json/wp/v2/plugins/woocommerce-paypal-payments/woocommerce-paypal-payments
+2025-10-16T16:33:37+00:00 DEBUG #7252 - GET https://api-m.paypal.com/v1/notifications/webhooks
+Response Debug ID: 241c30c2ca0cc
+Response: Array
+(
+    [code] => 200
+    [message] => OK
+)
+
+2025-10-16T16:33:37+00:00 INFO #7252 - Webhooks deleted.
