@@ -76,11 +76,11 @@ gulp.task('copy_template_parts', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    // localFolderJs + 'jquery.3.2.1.js',
+    // localJs + 'jquery-3.7.1.min.js',
     localJs + '**/*.js'
   ])
     .pipe(concat('all.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename({
       suffix: ".min"
     }))
@@ -96,7 +96,7 @@ gulp.task('watch', function() {
   gulp.watch(localTheme + '*.php',                gulp.series('copy_html'))
   gulp.watch(localCss + '**/*',                   gulp.series('css', 'copy_css'))
   gulp.watch(localJs + '**/*.js',                 gulp.series('js', 'copy_js'))
-  gulp.watch(localTemplateParts + '**/*.php',      gulp.series('copy_template_parts'))
+  gulp.watch(localTemplateParts + '**/*.php',     gulp.series('copy_template_parts'))
 })
 
 gulp.task('default', gulp.series('watch'))

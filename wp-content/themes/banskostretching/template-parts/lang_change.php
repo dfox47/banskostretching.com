@@ -13,13 +13,13 @@ if ($lang == 'ru-RU') {
 
   <ul class="lang_change__list">
     <?php if ($langShort !== 'ru') { ?>
-      <li class="lang_change__item"><a class="lang_change__link lang_change__link--ru" href="/">ru</a></li>
+      <li class="lang_change__item"><a class="lang_change__link lang_change__link--ru js-lang-change-link" href="/" data-lang="ru">ru</a></li>
     <?php }
     if ($langShort !== 'en') { ?>
-      <li class="lang_change__item"><a class="lang_change__link lang_change__link--en" href="/en">en</a></li>
+      <li class="lang_change__item"><a class="lang_change__link lang_change__link--en js-lang-change-link" href="/en" data-lang="en">en</a></li>
     <?php }
     if ($langShort !== 'ua') { ?>
-      <li class="lang_change__item"><a class="lang_change__link lang_change__link--ua" href="/ua">ua</a></li>
+      <li class="lang_change__item"><a class="lang_change__link lang_change__link--ua js-lang-change-link" href="/ua" data-lang="ua">ua</a></li>
     <?php } ?>
   </ul>
 </div>
