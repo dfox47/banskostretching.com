@@ -1,13 +1,13 @@
 {
   "add_to_cart": "Add to cart",
-  "course_level": "Difficulty level",
-  "price": "Price",
   "cart_title": "Cart",
   "checkout": "Checkout",
   "course_duration": "Course duration",
+  "course_level": "Difficulty level",
   "course_level_advanced": "Advanced",
   "course_level_all_levels": "All levels",
   "course_level_beginner": "Beginner",
   "course_level_intermediate": "Intermediate",
+  "price": "Price",
   "welcome": "Welcome to our store!"
 }
