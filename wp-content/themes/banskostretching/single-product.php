@@ -1,16 +1,8 @@
-<?php
+<?php get_header(); ?>
 
-/**
- * Single Product Template
- */
-
-get_header(); ?>
-
-<main id="primary" class="site-main">
+<main class="wrap single-product">
   <?php while (have_posts()) : the_post(); ?>
-    <?php
-    // Принудительно инициализируем продукт
-    global $product;
+    <?php global $product;
 
     if (!$product || !is_a($product, 'WC_Product')) {
       $product = wc_get_product(get_the_ID());
@@ -18,11 +10,10 @@ get_header(); ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <header class="entry-header">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        <?php the_title('<h1>', '</h1>'); ?>
       </header>
 
       <div class="entry-content">
-
         <?php if (has_post_thumbnail()) : ?>
           <div class="product-image">
             <?php the_post_thumbnail('large'); ?>
@@ -31,9 +22,7 @@ get_header(); ?>
 
         <?php global $product;
         if ($product) : ?>
-          <div class="product-price">
-            <p><strong>Цена: <?php echo $product->get_price_html(); ?></strong></p>
-          </div>
+          <p class="product_price">Цена: <?= $product->get_price_html(); ?></p>
         <?php endif; ?>
 
         <div class="product-description">
@@ -47,9 +36,9 @@ get_header(); ?>
 
           if ($course_duration) : ?>
             <div class="course-duration">
-              <h3>Продолжительность курса</h3>
+              <h3>Продолжительность курса | <?php echo __t('cart_title'); ?></h3>
 
-              <p><?php echo esc_html($course_duration); ?></p>
+              <p><?= esc_html($course_duration); ?></p>
             </div>
           <?php endif; ?>
 
@@ -58,16 +47,18 @@ get_header(); ?>
 
           if ($course_level) :
             $level_labels = array(
-              'beginner' => 'Начинающий',
-              'intermediate' => 'Средний',
               'advanced' => 'Продвинутый',
-              'all_levels' => 'Все уровни'
+              'all_levels' => 'Все уровни',
+              'beginner' => 'Начинающий',
+              'intermediate' => 'Средний'
             );
+
             $level_text = isset($level_labels[$course_level]) ? $level_labels[$course_level] : $course_level; ?>
+
             <div class="course-level">
               <h3>Уровень сложности</h3>
 
-              <p><?php echo esc_html($level_text); ?></p>
+              <p><?= esc_html($level_text); ?></p>
             </div>
           <?php endif; ?>
 
@@ -81,7 +72,7 @@ get_header(); ?>
               <ul>
                 <?php foreach ($what_you_learn as $item) : ?>
                   <?php if (isset($item['learning_point']) && !empty($item['learning_point'])) : ?>
-                    <li><?php echo esc_html($item['learning_point']); ?></li>
+                    <li><?= esc_html($item['learning_point']); ?></li>
                   <?php endif; ?>
                 <?php endforeach; ?>
               </ul>
@@ -96,7 +87,7 @@ get_header(); ?>
         <?php if ($product && $product->is_purchasable()) : ?>
           <div class="product-purchase">
             <form class="cart" method="post">
-              <button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>">
+              <button type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
                 [Добавить в корзину]
               </button>
             </form>

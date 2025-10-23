@@ -45,6 +45,10 @@ svg {
 // ID [END]
 
 // help classes [START]
+.cart_link {
+  margin: 0 calc($spacer / 2);
+}
+
 .copyright {
   margin: 2rem 0;
   text-align: center;
@@ -70,6 +74,11 @@ svg {
   display: flex;
   justify-content: space-between;
   margin: $spacer 0;
+}
+
+.header_right {
+  align-items: center;
+  display: flex;
 }
 
 .ig_wrap {

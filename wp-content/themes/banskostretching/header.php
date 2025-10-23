@@ -30,7 +30,7 @@ $iconsDir   = $i . '/icons'; ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <div class="wrap">
+  <div class="wrap <?php echo $current_lang = get_locale(); ?>">
     <header class="header">
       <nav class="nav">
         <a class="logo" href="/"></a>
@@ -43,8 +43,12 @@ $iconsDir   = $i . '/icons'; ?>
         )); ?>
       </nav>
 
-      <?php // language change
-      include_once('template-parts/lang_change.php'); ?>
+      <div class="header_right">
+        <a class="button cart_link" href="/cart"><span class="js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span></a>
+
+        <?php // language change
+        include_once('template-parts/lang_change.php'); ?>
+      </div>
     </header>
   </div>
 
