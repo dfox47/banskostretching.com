@@ -1,5 +1,13 @@
 {
+  "add_to_cart": "Добавить в корзину",
+  "course_level": "Уровень сложности",
+  "price": "Цена",
   "cart_title": "Корзина",
   "checkout": "Оформление заказа",
+  "course_duration": "Продолжительность курса",
+  "course_level_advanced": "Продвинутый",
+  "course_level_all_levels": "Все уровни",
+  "course_level_beginner": "Начинающий",
+  "course_level_intermediate": "Средний",
   "welcome": "Добро пожаловать!"
 }

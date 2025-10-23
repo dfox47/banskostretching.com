@@ -46,7 +46,28 @@ svg {
 
 // help classes [START]
 .cart_link {
-  margin: 0 calc($spacer / 2);
+  position: relative;
+
+  &--icon {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--count {
+    align-items: center;
+    background-color: $c_primary;
+    border-radius: 50%;
+    bottom: 4px;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    min-height: 20px;
+    min-width: 20px;
+    position: absolute;
+    right: 4px;
+    z-index: 3;
+  }
 }
 
 .copyright {
@@ -55,9 +76,6 @@ svg {
 
   &__date {
     font-size: 1rem;
-  }
-
-  &__desc {
   }
 }
 

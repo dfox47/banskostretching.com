@@ -1,5 +1,13 @@
 {
+  "add_to_cart": "Додати до кошику",
+  "course_level": "Рівень складності",
+  "price": "Ціна",
   "cart_title": "Кошик",
   "checkout": "Оформлення замовлення",
+  "course_duration": "Тривалість курсу",
+  "course_level_advanced": "Просунутий",
+  "course_level_all_levels": "Усі рівні",
+  "course_level_beginner": "Початківець",
+  "course_level_intermediate": "Середній",
   "welcome": "Ласкаво просимо!"
 }

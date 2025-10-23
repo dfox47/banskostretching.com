@@ -30,7 +30,7 @@ $iconsDir   = $i . '/icons'; ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <div class="wrap <?php echo $current_lang = get_locale(); ?>">
+  <div class="wrap">
     <header class="header">
       <nav class="nav">
         <a class="logo" href="/"></a>
@@ -44,7 +44,27 @@ $iconsDir   = $i . '/icons'; ?>
       </nav>
 
       <div class="header_right">
-        <a class="button cart_link" href="/cart"><span class="js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span></a>
+        <?php // cart link
+        $lang       = get_bloginfo('language');
+        $langShort  = 'en';
+
+        if ($lang == 'ru-RU') {
+          $langShort = 'ru';
+        } else if ($lang == 'uk') {
+          $langShort = 'ua';
+        }
+
+        // amount in cart
+        $cartCount = WC()->cart->get_cart_contents_count(); ?>
+
+        <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>/cart">
+          <span class="cart_link--icon js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span>
+          <?php if ($cartCount > 0) { ?>
+            <span class="cart_link--count">
+              <?= $cartCount; ?>
+            </span>
+          <?php } ?>
+        </a>
 
         <?php // language change
         include_once('template-parts/lang_change.php'); ?>

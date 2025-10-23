@@ -9,9 +9,7 @@
     } ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <header class="entry-header">
-        <?php the_title('<h1>', '</h1>'); ?>
-      </header>
+      <?php the_title('<h1>', '</h1>'); ?>
 
       <div class="entry-content">
         <?php if (has_post_thumbnail()) : ?>
@@ -22,7 +20,7 @@
 
         <?php global $product;
         if ($product) : ?>
-          <p class="product_price">Цена: <?= $product->get_price_html(); ?></p>
+          <p class="product_price"><?= __t('price'); ?>: <?= $product->get_price_html(); ?></p>
         <?php endif; ?>
 
         <div class="product-description">
@@ -31,12 +29,11 @@
 
         <?php // Отображаем ACF поля курса
         if (function_exists('get_field')) :
-          // Продолжительность курса
           $course_duration = get_field('course_duration');
 
           if ($course_duration) : ?>
             <div class="course-duration">
-              <h3>Продолжительность курса | <?php echo __t('cart_title'); ?></h3>
+              <h3><?= __t('course_duration'); ?></h3>
 
               <p><?= esc_html($course_duration); ?></p>
             </div>
@@ -47,16 +44,16 @@
 
           if ($course_level) :
             $level_labels = array(
-              'advanced' => 'Продвинутый',
-              'all_levels' => 'Все уровни',
-              'beginner' => 'Начинающий',
-              'intermediate' => 'Средний'
+              'advanced' => __t('course_level_advanced'),
+              'all_levels' => __t('course_level_all_levels'),
+              'beginner' => __t('course_level_beginner'),
+              'intermediate' => __t('course_level_intermediate')
             );
 
             $level_text = isset($level_labels[$course_level]) ? $level_labels[$course_level] : $course_level; ?>
 
             <div class="course-level">
-              <h3>Уровень сложности</h3>
+              <h3><?= __t('course_level'); ?></h3>
 
               <p><?= esc_html($level_text); ?></p>
             </div>
@@ -87,8 +84,8 @@
         <?php if ($product && $product->is_purchasable()) : ?>
           <div class="product-purchase">
             <form class="cart" method="post">
-              <button type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
-                [Добавить в корзину]
+              <button class="btn btn--primary" type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
+                <?= __t('add_to_cart'); ?>
               </button>
             </form>
           </div>

@@ -3,9 +3,15 @@
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
+  font-size: 16px;
+  padding: calc($spacer / 2) $spacer;
   text-decoration: none;
   text-transform: uppercase;
   transition: $transition;
+
+  &--cart {
+    padding: 0.5em 1em;
+  }
 
   &--primary {
     background-color: $c_primary;
