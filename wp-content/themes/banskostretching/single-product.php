@@ -39,7 +39,7 @@
             </div>
           <?php endif; ?>
 
-          <?php // Уровень сложности
+          <?php // Course level
           $course_level = get_field('course_level');
 
           if ($course_level) :
