@@ -13,8 +13,13 @@ $iconsDir   = $i . '/icons'; ?>
   include_once('template-parts/instagram_widget.php');
 } ?>
 
+
 <footer class="footer">
   <div class="wrap">
+    <div class="footer__lang">
+      <?php include_once('template-parts/lang_change.php'); ?>
+    </div>
+
     <ul class="footer_links">
       <li class="footer_links__item">
         <a class="footer_links__link" href="//www.instagram.com/stretching_nelly/" target="_blank" title="instagram"><span class="footer_links__img js-img-scroll" data-src="<?= $iconsDir; ?>/instagram.svg" title="instagram"></span></a>

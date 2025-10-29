@@ -35,7 +35,7 @@ $iconsDir   = $i . '/icons'; ?>
     <header class="header">
       <div class="header__wrap">
         <div class="header__burger">
-          <button class="b-btn js-sidebar-open">
+          <button class="b-btn b-btn--small js-sidebar-open">
             <i class="b-icon b-icon--burger"></i>
   
             <span>Menu</span>
@@ -69,8 +69,7 @@ $iconsDir   = $i . '/icons'; ?>
             <?php } ?>
           </a>
 
-          <?php // language change
-          include_once('template-parts/lang_change.php'); ?>
+          <?php include_once('template-parts/header_user_menu.php'); ?>
         </div>
       </div>
     </header>

@@ -51,3 +51,80 @@
     margin: 0 auto;
   }
 }
+
+.header-user-menu {
+  position: relative;
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $c_rich_black_20;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 24px);
+    right: 0;
+    background-color: #fff;
+    width: 277px;
+    padding: 32px;
+    border: 1px solid $c_rich_black_20;
+    border-radius: 32px;
+    display: none;
+
+    &::before {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
+
+    .nav__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      li {
+        width: 100%;
+
+        a,
+        a:visited {
+          color: $c_link;
+          text-decoration: none;
+          position: relative;
+          height: 36px;
+          padding: 0 16px;
+          transition: $transition;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          position: relative;
+          z-index: 2;
+
+          &:hover {
+            opacity: 0.8;
+            background-color: #f6f6f6;
+          }
+        }
+
+        &:last-child {
+          a,
+          a:visited {
+            border-top: 1px solid $c_rich_black_20;
+            color: $c_burgundy;
+            border-radius: 0;
+
+            &:hover {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

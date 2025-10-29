@@ -9,6 +9,8 @@
   background: transparent;
   border: 1px solid $c_rich_black_20;
   outline: none;
+  color: $c_text;
+  text-decoration: none;
   border-radius: 32px;
   transition: $transition;
   cursor: pointer;
@@ -18,6 +20,14 @@
   &:active {
     background: transparent;
     opacity: 0.8;
+  }
+
+  &--small {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 24px;
+    gap: 8px;
   }
 }
 

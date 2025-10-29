@@ -1,5 +1,12 @@
 .footer {
   padding: 3rem 0;
+  border-top: 1px solid $c_border;
+
+  &__lang {
+    margin: 0 auto 24px;
+    text-align: center;
+    width: 60px;
+  }
 }
 
 .footer_links {
