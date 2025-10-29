@@ -8,6 +8,9 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: $transition;
+  color: $c_text;
+  text-transform: none;
+  text-decoration: none;
 
   &--cart {
     padding: 0.5em 1em;

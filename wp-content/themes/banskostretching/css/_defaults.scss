@@ -223,3 +223,18 @@ $fontSizes: 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
   text-transform: uppercase;
 }
 // help classes [END]
+
+
+.site-main {
+  padding-top: 116px;
+
+  @media ($media_mobile) {
+    padding-top: 104px;
+  }
+}
+
+.container {
+  max-width: $wrap;
+  margin: 0 auto;
+  padding: 0 $wrap_padding;
+}

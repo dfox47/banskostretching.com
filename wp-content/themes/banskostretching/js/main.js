@@ -29,4 +29,14 @@ $(document).ready(function() {
     $('.js-sidebar').removeClass('is-open')
     $('html').removeClass('overflow-hidden')
   })
+
+  $('.js-header-user-menu-avatar').on('click', function(e) {
+    e.preventDefault()
+    $('.js-header-user-menu-dropdown').toggleClass('is-active').fadeToggle(300)
+  })
+
+  $('.js-header-user-menu-dropdown').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('is-active').fadeToggle(300)
+  })
 })
