@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="wrap single-product">
+<main class="container single-product">
   <?php while (have_posts()) : the_post(); ?>
     <?php global $product;
 

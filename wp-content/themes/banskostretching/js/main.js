@@ -36,7 +36,6 @@ $(document).ready(function() {
   })
 
   $('.js-header-user-menu-dropdown').on('click', function(e) {
-    e.preventDefault()
     $(this).toggleClass('is-active').fadeToggle(300)
   })
 })
