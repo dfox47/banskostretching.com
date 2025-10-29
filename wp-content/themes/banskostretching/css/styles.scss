@@ -3,16 +3,18 @@
 // Powered by Denis FOX | dfox@foxartbox.com
 
 // // should be first
-@import '_defaults';
-@import '_vars';
+@import "_defaults";
+@import "vars";
+@import "ui";
 
-@import 'btn';
-@import 'footer';
-@import 'hero';
-@import 'lang_change';
-@import 'nav';
-@import 'owl.carousel';
-@import 'reviews';
+@import "btn";
+@import "footer";
+@import "hero";
+@import "header";
+@import "sidebar";
+@import "lang_change";
+@import "owl.carousel";
+@import "reviews";
 
 // // must be the last
-@import 'custom';
+@import "custom";

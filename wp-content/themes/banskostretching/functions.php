@@ -154,10 +154,10 @@ add_action('widgets_init', 'banskostretching_widgets_init');
  */
 function banskostretching_scripts()
 {
-  wp_enqueue_style('banskostretching-style', get_stylesheet_uri(), array('tailwindcss'), _S_VERSION);
+  // wp_enqueue_style('banskostretching-style', get_stylesheet_uri(), array('tailwindcss'), _S_VERSION);
   wp_style_add_data('banskostretching-style', 'rtl', 'replace');
 
-  wp_enqueue_script('banskostretching-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+  // wp_enqueue_script('banskostretching-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
   // Подключаем WooCommerce скрипты для корзины
   if (class_exists('WooCommerce')) {

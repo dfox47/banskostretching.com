@@ -15,12 +15,6 @@ $iconsDir   = $i . '/icons'; ?>
 
 <footer class="footer">
   <div class="wrap">
-    <?php // footer menu
-    wp_nav_menu(array(
-      'theme_location' => 'footer',
-      'menu_class'     => 'footer_menu',
-    )); ?>
-
     <ul class="footer_links">
       <li class="footer_links__item">
         <a class="footer_links__link" href="//www.instagram.com/stretching_nelly/" target="_blank" title="instagram"><span class="footer_links__img js-img-scroll" data-src="<?= $iconsDir; ?>/instagram.svg" title="instagram"></span></a>
@@ -38,6 +32,8 @@ $iconsDir   = $i . '/icons'; ?>
     </div>
   </div>
 </footer>
+
+<?php get_sidebar(); ?>
 
 <script src="<?= $themeDir; ?>/all.min.js?v=<?= (date('YmdHis')); ?>"></script>
 

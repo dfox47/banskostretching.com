@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 116px;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 4px 6px -4px rgba(0, 0, 0, 0.05);
+
+  @media ($media_mobile) {
+    height: 104px;
+    border-radius: 0 0 32px 32px;
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-width: $wrap;
+    margin: 0 auto;
+    padding: 0 $wrap_padding;
+    align-items: center;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .btn-cart {
+      @media ($media_mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    .b-btn {
+      span {
+        @media ($media_mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .nav {
+    margin: 0 auto;
+  }
+}

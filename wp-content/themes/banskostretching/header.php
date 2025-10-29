@@ -29,45 +29,49 @@ $iconsDir   = $i . '/icons'; ?>
   <meta name="description" content="Discover the benefits of stretching in Bansko city! Enhance your flexibility, improve your health, and enjoy guided sessions in the stunning mountain surroundings. Join our community for expert tips, routines, and wellness advice.">
 </head>
 
+
 <body <?php body_class(); ?>>
   <div class="wrap">
     <header class="header">
-      <nav class="nav">
-        <a class="logo" href="/"></a>
+      <div class="header__wrap">
+        <div class="header__burger">
+          <button class="b-btn js-sidebar-open">
+            <i class="b-icon b-icon--burger"></i>
+  
+            <span>Menu</span>
+          </button>
+        </div>
+      
+        <nav class="nav">
+          <a class="logo" href="/"></a>
+        </nav>
 
-        <?php wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'menu_class'     => 'nav__menu',
-          'container'      => false,
-          'fallback_cb'    => false
-        )); ?>
-      </nav>
+        <div class="header__actions">
+          <?php // cart link
+          $lang       = get_bloginfo('language');
+          $langShort  = 'en';
 
-      <div class="header_right">
-        <?php // cart link
-        $lang       = get_bloginfo('language');
-        $langShort  = 'en';
+          if ($lang == 'ru-RU') {
+            $langShort = 'ru';
+          } else if ($lang == 'uk') {
+            $langShort = 'ua';
+          }
 
-        if ($lang == 'ru-RU') {
-          $langShort = 'ru';
-        } else if ($lang == 'uk') {
-          $langShort = 'ua';
-        }
+          // amount in cart
+          $cartCount = WC()->cart->get_cart_contents_count(); ?>
 
-        // amount in cart
-        $cartCount = WC()->cart->get_cart_contents_count(); ?>
+          <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>/cart">
+            <span class="cart_link--icon js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span>
+            <?php if ($cartCount > 0) { ?>
+              <span class="cart_link--count">
+                <?= $cartCount; ?>
+              </span>
+            <?php } ?>
+          </a>
 
-        <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>/cart">
-          <span class="cart_link--icon js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span>
-          <?php if ($cartCount > 0) { ?>
-            <span class="cart_link--count">
-              <?= $cartCount; ?>
-            </span>
-          <?php } ?>
-        </a>
-
-        <?php // language change
-        include_once('template-parts/lang_change.php'); ?>
+          <?php // language change
+          include_once('template-parts/lang_change.php'); ?>
+        </div>
       </div>
     </header>
   </div>

@@ -13,11 +13,6 @@ h1 {
   margin: 1rem 0;
   text-align: center;
   text-transform: uppercase;
-
-  @media #{$mobile} {
-    margin-top: 30px;
-    text-align: center;
-  }
 }
 
 ol {
@@ -28,7 +23,7 @@ ol {
     display: block;
 
     &::before {
-      content: counters(item, '.') '. ';
+      content: counters(item, ".") ". ";
       counter-increment: item;
     }
   }
@@ -87,18 +82,6 @@ svg {
   width: 100%;
 }
 
-.header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: $spacer 0;
-}
-
-.header_right {
-  align-items: center;
-  display: flex;
-}
-
 .ig_wrap {
   position: relative;
 
@@ -109,7 +92,7 @@ svg {
   &::after {
     background-color: #fff;
     bottom: 0;
-    content: '';
+    content: "";
     height: 56px;
     left: 0;
     position: absolute;
@@ -134,12 +117,5 @@ svg {
 .wc-block-components-button {
   @extend .btn;
   @extend .btn--primary;
-}
-
-.wrap {
-  margin: 0 auto;
-  max-width: 75rem;
-  padding: 0 1rem;
-  width: 100%;
 }
 // help classes [END]
