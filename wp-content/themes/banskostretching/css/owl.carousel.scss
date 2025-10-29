@@ -1,4 +1,4 @@
-.owl-carousel {
+ц.owl-carousel {
   display: none;
   position: relative;
   width: 100%;
@@ -11,7 +11,7 @@
 
   &::after {
     clear: both;
-    content: '.';
+    content: ".";
     display: block;
     height: 0;
     line-height: 0;
@@ -121,7 +121,7 @@ button.owl-dot {
   opacity: 0;
   transition: opacity 400ms ease;
 }
-.owl-item .owl-lazy[src^=''],
+.owl-item .owl-lazy[src^=""],
 .owl-item .owl-lazy:not([src]) {
   max-height: 0;
 }
@@ -190,7 +190,7 @@ button.owl-dot {
   &::after,
   &::before {
     background-color: $c_primary;
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     left: 10px;
@@ -251,12 +251,6 @@ button.owl-dot {
     display: block;
     height: 12px;
     width: 12px;
-  }
-
-  @media #{$mobile} {
-    height: 48px;
-    margin: 0;
-    width: 48px;
   }
 }
 
