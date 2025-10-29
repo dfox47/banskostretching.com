@@ -109,6 +109,19 @@
             background-color: #f6f6f6;
           }
         }
+
+        &:last-child {
+          a,
+          a:visited {
+            border-top: 1px solid $c_rich_black_20;
+            color: $c_burgundy;
+            border-radius: 0;
+
+            &:hover {
+              background: none;
+            }
+          }
+        }
       }
     }
   }
