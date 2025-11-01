@@ -1,4 +1,5 @@
 .btn {
+  background-color: #fff;
   border: 0 none;
   border-radius: 0;
   cursor: pointer;
@@ -14,6 +15,45 @@
 
   &--cart {
     padding: 0.5em 1em;
+  }
+
+  &--close {
+    border-radius: 50%;
+    border: 1px solid $c_border;
+    color: $c_text;
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    height: 32px;
+    padding: 0;
+    position: relative;
+    transition: $transition;
+    width: 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.7;
+    }
+
+    &::after,
+    &::before {
+      background-color: #000;
+      content: '';
+      height: 2px;
+      left: 8px;
+      position: absolute;
+      top: 14px;
+      width: 14px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
   &--primary {

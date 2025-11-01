@@ -1,19 +1,19 @@
 .b-btn {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background: transparent;
+  border-radius: 32px;
+  border: 1px solid $c_border;
+  color: $c_text;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
   gap: 16px;
   height: 64px;
-  padding: 0 24px;
-  font-size: 20px;
-  background: transparent;
-  border: 1px solid $c_border;
+  justify-content: center;
   outline: none;
-  color: $c_text;
+  padding: 0 $spacer;
   text-decoration: none;
-  border-radius: 32px;
   transition: $transition;
-  cursor: pointer;
 
   &:hover,
   &:focus,
@@ -32,12 +32,12 @@
 }
 
 .b-icon {
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: contain;
+  height: 16px;
+  width: 16px;
 
   &--burger {
     background-image: url(#{$icons}/burger.svg);
