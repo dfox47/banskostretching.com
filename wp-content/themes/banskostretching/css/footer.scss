@@ -1,9 +1,10 @@
 .footer {
-  padding: 3rem 0;
   border-top: 1px solid $c_border;
+  margin: $spacer 0 0;
+  padding: 3rem 0;
 
   &__lang {
-    margin: 0 auto 24px;
+    margin: 0 auto $spacer;
     text-align: center;
     width: 60px;
   }

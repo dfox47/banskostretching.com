@@ -1,10 +1,7 @@
 .product {
-  min-width: 100%;
-  border-radius: 32px;
-  border: 1px solid $c_rich_black_20;
   background-color: #fbfbfb;
-  height: 262px;
-  overflow: hidden;
+  border-radius: 32px;
+  border: 1px solid $c_border;
 
   a,
   a:visited {

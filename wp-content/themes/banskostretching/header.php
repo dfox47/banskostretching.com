@@ -37,11 +37,11 @@ $iconsDir   = $i . '/icons'; ?>
         <div class="header__burger">
           <button class="b-btn b-btn--small js-sidebar-open">
             <i class="b-icon b-icon--burger"></i>
-  
+
             <span>Menu</span>
           </button>
         </div>
-      
+
         <nav class="nav">
           <a class="logo" href="/"></a>
         </nav>

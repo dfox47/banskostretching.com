@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: $c_rich_black_20;
+    background: $c_border;
     cursor: pointer;
   }
 
@@ -82,30 +82,30 @@
   }
 
   &__close {
-    width: 32px;
-    height: 32px;
-    display: flex;
     align-items: center;
-    justify-content: center;
     background: transparent;
-    border: 1px solid $c_rich_black_20;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    line-height: 1;
+    border: 1px solid $c_border;
     color: $c_text;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    height: 32px;
+    justify-content: center;
+    line-height: 1;
     transition: $transition;
+    width: 32px;
 
     &:hover,
     &:focus,
     &:active {
-      opacity: 0.7;
       background: transparent;
+      opacity: 0.7;
     }
 
     span {
       display: block;
-      margin-top: -4px;
+      margin-top: 1px;
     }
   }
 }

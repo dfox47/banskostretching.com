@@ -7,7 +7,7 @@
   padding: 0 24px;
   font-size: 20px;
   background: transparent;
-  border: 1px solid $c_rich_black_20;
+  border: 1px solid $c_border;
   outline: none;
   color: $c_text;
   text-decoration: none;
@@ -38,8 +38,8 @@
   background-position: center;
   background-color: transparent;
   background-size: contain;
-}
 
-.b-icon--burger {
-  background-image: url(#{$icons}/burger.svg);
+  &--burger {
+    background-image: url(#{$icons}/burger.svg);
+  }
 }

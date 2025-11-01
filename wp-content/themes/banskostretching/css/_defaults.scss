@@ -169,8 +169,7 @@ ul {
 }
 
 // font-sizes [START]
-$fontSizes: 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-  26, 27, 28, 29, 30;
+$fontSizes: 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
 
 @each $fontSize in $fontSizes {
   .fs#{$fontSize} {
@@ -222,23 +221,10 @@ $fontSizes: 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
 .uppercase {
   text-transform: uppercase;
 }
-// help classes [END]
 
-.single-product,
-.site-main {
-  padding-top: 116px;
-
-  @media ($media_mobile) {
-    padding-top: 104px;
-  }
-}
-
-.container {
-  max-width: $wrap;
+.wrap {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 $wrap_padding;
+  padding: 0 $spacer;
 }
-
-.content-area {
-  @extend .container;
-}
+// help classes [END]
