@@ -6,19 +6,9 @@
   padding: $spacer 0;
   width: 100%;
 
-  &__wrap {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 $spacer;
-    width: 100%;
-  }
-
   &__actions {
     display: flex;
     align-items: center;
-    gap: 12px;
 
     .btn-cart {
       @media ($media_mobile) {
@@ -37,8 +27,12 @@
     }
   }
 
-  .nav {
-    margin: 0 auto;
+  &__wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacer;
+    width: 100%;
   }
 }
 

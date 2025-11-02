@@ -3,14 +3,14 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: $spacer;
 
     .product-title {
-      text-align: left;
-      width: 100%;
-      text-transform: capitalize;
       font-size: 40px;
       margin-top: 32px;
+      text-align: left;
+      text-transform: capitalize;
+      width: 100%;
     }
 
     .product-description {
@@ -27,52 +27,52 @@
     .product-purchase {
       align-items: center;
       display: flex;
-      gap: 24px;
+      gap: $spacer;
+      justify-content: space-between;
       margin-top: auto;
       width: 100%;
-      justify-content: space-between;
 
       @media ($media_mobile) {
         flex-wrap: wrap;
-        margin-top: 24px;
+        margin-top: $spacer;
       }
     }
 
     .product_price {
+      align-items: center;
       display: flex;
       font-size: 24px;
-      gap: 16px;
-      align-items: center;
+      gap: calc($spacer / 2);
 
       .amount {
         color: #fff;
         font-size: 20px;
-        background-color: #e75d14;
+        background-color: $c_primary;
         height: 44px;
         display: flex;
         border-radius: 16px;
         align-items: center;
-        padding: 0 24px;
+        padding: 0 $spacer;
         width: fit-content;
       }
     }
 
     .product-image {
-      width: 508px;
+      border-radius: 32px;
       height: 556px;
       overflow: hidden;
-      border-radius: 32px;
+      width: 508px;
 
       @media screen and (max-width: 1279px) {
-        width: 100%;
         height: 400px;
         order: -1;
+        width: 100%;
       }
 
       img {
+        height: 100%;
         object-fit: cover;
         width: 100%;
-        height: 100%;
       }
     }
 
@@ -82,7 +82,7 @@
       overflow: hidden;
       display: flex;
       width: calc(100% - 508px - 24px);
-      padding: 72px 48px;
+      padding: 72px calc($spacer * 2);
       flex-direction: column;
       height: 556px;
 
@@ -91,8 +91,8 @@
       }
 
       @media ($media_mobile) {
-        padding: 48px 24px;
         height: auto;
+        padding: calc($spacer * 2) $spacer;
       }
     }
 
@@ -102,10 +102,10 @@
 
     .course-info {
       display: flex;
-      gap: 48px;
+      gap: calc($spacer * 2);
 
       @media ($media_mobile) {
-        gap: 24px;
+        gap: $spacer;
         flex-wrap: wrap;
       }
 
@@ -127,9 +127,9 @@
     }
 
     .course-details {
-      margin-top: 24px;
-      border: 1px solid rgba(4, 15, 22, 0.2);
       border-radius: 32px;
+      border: 1px solid rgba(4, 15, 22, 0.2);
+      margin-top: $spacer;
       padding: 64px 56px;
 
       @media ($media_mobile) {
@@ -178,10 +178,10 @@
         position: relative;
 
         iframe {
-          top: 0;
-          left: 0;
-          width: 100%;
           height: 500px;
+          left: 0;
+          top: 0;
+          width: 100%;
         }
       }
 
@@ -189,13 +189,13 @@
         display: flex;
         border-radius: 24px;
         padding: 48px;
-        margin-top: 24px;
+        margin-top: $spacer;
         align-items: center;
         background-color: #ededed;
         justify-content: space-between;
 
         @media ($media_mobile) {
-          padding: 24px;
+          padding: $spacer;
           flex-direction: column;
           gap: 12px;
         }
@@ -215,7 +215,7 @@
 
       ul {
         list-style: none;
-        margin-top: 24px;
+        margin-top: $spacer;
         display: flex;
         flex-direction: column;
         gap: 12px;
