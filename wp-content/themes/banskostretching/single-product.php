@@ -9,56 +9,75 @@
     } ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <?php the_title('<h1>', '</h1>'); ?>
-
       <div class="entry-content">
-        <?php if (has_post_thumbnail()) : ?>
-          <div class="product-image">
-            <?php the_post_thumbnail('large'); ?>
-          </div>
-        <?php endif; ?>
+        <div class="course-info">
+          <?php // Отображаем ACF поля курса
+          if (function_exists('get_field')) :
+            $course_duration = get_field('course_duration');
 
-        <?php global $product;
-        if ($product) : ?>
-          <p class="product_price"><?= __t('price'); ?>: <?= $product->get_price_html(); ?></p>
-        <?php endif; ?>
+            if ($course_duration) : ?>
+              <div class="course-duration">
+                <h3><?= __t('course_duration'); ?></h3>
+
+                <p><?= esc_html($course_duration); ?></p>
+              </div>
+            <?php endif; ?>
+
+            <?php // Course level
+            $course_level = get_field('course_level');
+
+            if ($course_level) :
+              $level_labels = array(
+                'advanced' => __t('course_level_advanced'),
+                'all_levels' => __t('course_level_all_levels'),
+                'beginner' => __t('course_level_beginner'),
+                'intermediate' => __t('course_level_intermediate')
+              );
+
+              $level_text = isset($level_labels[$course_level]) ? $level_labels[$course_level] : $course_level; ?>
+
+              <div class="course-level">
+                <h3><?= __t('course_level'); ?></h3>
+
+                <p><?= esc_html($level_text); ?></p>
+              </div>
+            <?php endif;
+          endif; // end ACF check
+          ?>
+        </div>
+
+        <?php the_title('<h3 class="product-title">', '</h3>'); ?>
 
         <div class="product-description">
           <?php the_content(); ?>
         </div>
 
-        <?php // Отображаем ACF поля курса
-        if (function_exists('get_field')) :
-          $course_duration = get_field('course_duration');
+     
+        <?php if ($product && $product->is_purchasable()) : ?>
+          <div class="product-purchase">
+            <form class="cart" method="post">
+              <button class="b-btn b-btn--primary" type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
+                <?= __t('add_to_cart'); ?>
+              </button>
+            </form>
 
-          if ($course_duration) : ?>
-            <div class="course-duration">
-              <h3><?= __t('course_duration'); ?></h3>
+            <?php global $product;
+            if ($product) : ?>
+              <p class="product_price"><?= __t('price'); ?>: <?= $product->get_price_html(); ?></p>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+      </div>
 
-              <p><?= esc_html($course_duration); ?></p>
-            </div>
-          <?php endif; ?>
+      <?php if (has_post_thumbnail()) : ?>
+          <div class="product-image">
+            <?php the_post_thumbnail('large'); ?>
+          </div>
+      <?php endif; ?>
 
-          <?php // Course level
-          $course_level = get_field('course_level');
-
-          if ($course_level) :
-            $level_labels = array(
-              'advanced' => __t('course_level_advanced'),
-              'all_levels' => __t('course_level_all_levels'),
-              'beginner' => __t('course_level_beginner'),
-              'intermediate' => __t('course_level_intermediate')
-            );
-
-            $level_text = isset($level_labels[$course_level]) ? $level_labels[$course_level] : $course_level; ?>
-
-            <div class="course-level">
-              <h3><?= __t('course_level'); ?></h3>
-
-              <p><?= esc_html($level_text); ?></p>
-            </div>
-          <?php endif; ?>
-
+      <?php // Отдельный блок для what_you_learn и lessons
+      if (function_exists('get_field')) : ?>
+        <div class="course-details">
           <?php // Что изучите в курсе
           $what_you_learn = get_field('what_you_learn');
 
@@ -78,19 +97,8 @@
 
           <?php // Отображаем уроки курса с защищенными видео
           echo display_course_lessons(get_the_ID()); ?>
-        <?php endif; // end ACF check
-        ?>
-
-        <?php if ($product && $product->is_purchasable()) : ?>
-          <div class="product-purchase">
-            <form class="cart" method="post">
-              <button class="btn btn--primary" type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
-                <?= __t('add_to_cart'); ?>
-              </button>
-            </form>
-          </div>
-        <?php endif; ?>
-      </div>
+        </div>
+      <?php endif; ?>
     </article>
   <?php endwhile; ?>
 </main>

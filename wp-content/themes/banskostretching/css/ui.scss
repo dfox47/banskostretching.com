@@ -6,7 +6,7 @@
   color: $c_text;
   cursor: pointer;
   display: flex;
-  font-size: 20px;
+  font-size: 16px;
   gap: 16px;
   height: 64px;
   justify-content: center;
@@ -28,6 +28,20 @@
     font-size: 16px;
     border-radius: 24px;
     gap: 8px;
+  }
+
+  &--primary {
+    background-color: #040f16;
+    color: #fff;
+    font-weight: 700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #040f16;
+      color: #fff;
+      opacity: 0.8;
+    }
   }
 }
 
