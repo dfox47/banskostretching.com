@@ -19,33 +19,33 @@
   }
 
   &__overlay {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: $c_border;
-    cursor: pointer;
   }
 
   &__content {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    background: #fff;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    max-width: 400px;
     overflow-y: auto;
+    position: relative;
+    transform: translateX(-100%);
+    transition: $transition;
+    width: 100%;
   }
 
   &__header {
-    padding: $spacer;
+    border-bottom: 1px solid $c_border;
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid rgba(#000, 0.05);
+    padding: $spacer;
   }
 
   &__nav {

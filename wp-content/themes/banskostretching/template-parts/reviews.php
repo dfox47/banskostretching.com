@@ -65,7 +65,7 @@ $reviewTitle = [
 
 $current_reviews = $reviews[$langShort] ?? $reviews['en']; ?>
 
-<h3><?= $reviewTitle[$langShort]; ?></h3>
+<h2><?= $reviewTitle[$langShort]; ?></h2>
 
 <div class="reviews js-carousel-simple">
   <?php foreach ($current_reviews as $review): ?>

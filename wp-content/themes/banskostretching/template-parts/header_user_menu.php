@@ -15,7 +15,7 @@
   </div>
 <?php else : ?>
   <!-- Sign In button for non-logged users -->
-  <a href="<?= wp_login_url(get_permalink()); ?>" class="b-btn b-btn--small">
+  <a href="<?= wp_login_url(get_permalink()); ?>" class="btn btn--secondary b-btn--small">
     <span>Sign In</span>
   </a>
 <?php endif; ?>
