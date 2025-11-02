@@ -4,10 +4,6 @@
   }
 }
 
-.page-title {
-  text-align: left;
-}
-
 .woocommerce-result-count {
   display: none;
 }
@@ -19,8 +15,8 @@
 .woocommerce-breadcrumb {
   a,
   a:visited {
-    color: #040f16;
-    text-decoration: none;
+    color: $c_link;
     font-size: 16px;
+    text-decoration: none;
   }
 }

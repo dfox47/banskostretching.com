@@ -110,6 +110,16 @@ svg {
   }
 }
 
+.price {
+  align-items: center;
+  background-color: $c_link;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  padding: calc($spacer / 2) $spacer;
+}
+
 .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
 .wc-block-components-button {
   @extend .btn;

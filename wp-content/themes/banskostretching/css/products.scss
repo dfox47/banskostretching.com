@@ -9,23 +9,43 @@
   .product {
     position: relative;
 
+    .added_to_cart {
+      display: none;
+    }
+
+    .button {
+      @extend .btn;
+      @extend .btn--primary;
+
+      bottom: $spacer;
+      position: absolute;
+      right: $spacer;
+      z-index: 2;
+
+      @media ($media_mobile) {
+        width: calc(100% - 48px);
+      }
+    }
+
     .woocommerce-loop-product__link {
+      align-items: flex-start;
       background-color: #fbfbfb;
       border-radius: 32px;
       border: 1px solid $c_border;
       display: flex;
       flex-direction: column;
-      height: 224px;
+      justify-content: space-between;
+      min-height: 224px;
       overflow: hidden;
-      padding: 32px 48px 40px calc(326px + 48px);
+      padding: $spacer $spacer $spacer calc(35% + $spacer);
       position: relative;
       text-decoration: none;
-      z-index: 2;
+      z-index: 1;
 
       @media ($media_mobile) {
         border-radius: 24px;
         height: auto;
-        padding: calc(256px + 24px) 24px 112px;
+        padding: $spacer;
       }
 
       &:hover {
@@ -40,52 +60,21 @@
         padding: 0;
         position: absolute;
         top: 0;
-        width: 326px;
+        width: 35%;
 
         @media ($media_mobile) {
-          height: 256px;
-          width: 100%;
+          height: auto;
+          margin: (-$spacer) (-$spacer) $spacer;
+          max-width: none;
+          position: relative;
+          width: calc(100% + $spacer * 2);
         }
       }
 
       .woocommerce-loop-product__title {
-        color: c_title;
+        color: $c_title;
         font-size: 24px;
         text-transform: capitalize;
-      }
-
-      .price {
-        align-items: center;
-        background-color: $c_primary;
-        border-radius: 16px;
-        color: #fff;
-        display: flex;
-        font-size: 20px;
-        height: 44px;
-        margin-top: auto;
-        padding: 0 $spacer;
-        width: fit-content;
-      }
-    }
-
-    .added_to_cart {
-      display: none;
-    }
-
-    .button {
-      @extend .b-btn;
-      @extend .b-btn--primary;
-
-      bottom: 40px;
-      position: absolute;
-      right: 50px;
-      z-index: 4;
-
-      @media ($media_mobile) {
-        bottom: $spacer;
-        right: 50%;
-        transform: translateX(50%);
-        width: calc(100% - 48px);
       }
     }
   }
