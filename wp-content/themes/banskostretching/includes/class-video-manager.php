@@ -147,15 +147,15 @@ class BanskoStretching_Video_Manager {
                 $add_to_cart_url = wc_get_cart_url() . '?add-to-cart=' . $product_id;
             }
             
-            $output = '<div style="background: #ffe0e0; border: 2px solid #ffc0c0; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0;">
+            $output = '<div class="video-access-restricted">
                         <h4>🔒 Доступ ограничен</h4>
                         <p>Для просмотра этого урока необходимо приобрести курс.</p>';
             
             if ($add_to_cart_url) {
-                $output .= '<form method="post" style="display: inline-block; margin: 10px 5px;" class="video-add-to-cart-form">
+                $output .= '<form method="post" class="video-add-to-cart-form">
                             <input type="hidden" name="add-to-cart" value="' . esc_attr($product_id) . '" />
-                            <button type="submit" class="video-add-to-cart-btn" data-product-id="' . esc_attr($product_id) . '" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
-                                🛒 Добавить в корзину
+                            <button type="submit" class="b-btn b-btn--primary video-add-to-cart-btn" data-product-id="' . esc_attr($product_id) . '">
+                                Добавить в корзину
                             </button>
                         </form>';
             }
@@ -209,21 +209,18 @@ class BanskoStretching_Video_Manager {
             $security_attributes = 'data-token="' . esc_attr($access_token) . '" data-user="' . esc_attr($user_id) . '" oncontextmenu="return false;" data-no-copy="true"';
             
             // Защитный оверлей
-            $overlay = '<div class="video-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; pointer-events: none;"></div>';
+            $overlay = '<div class="video-overlay"></div>';
             
             // Водяной знак
             $current_user = wp_get_current_user();
-            $watermark = '<div class="video-watermark" style="position: absolute; top: 10px; right: 10px; z-index: 15; 
-                          background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; font-size: 12px; 
-                          border-radius: 3px; pointer-events: none;">
-                         Лицензия: ' . esc_html($current_user->user_login) . '
+            $watermark = '<div class="video-watermark">
+                          Лицензия: ' . esc_html($current_user->user_login) . '
                      </div>';
         }
-        
-        return '<div class="vimeo-container' . ($use_security ? ' protected-video' : '') . '" ' . $security_attributes . ' style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin: 20px 0;">
+
+        return '<div class="vimeo-container' . ($use_security ? ' protected-video' : '') . '" ' . $security_attributes . '">
                     ' . $overlay . '
                     <iframe src="' . esc_url($vimeo_url) . '" 
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture" 
                             allowfullscreen 
@@ -252,7 +249,7 @@ class BanskoStretching_Video_Manager {
         foreach ($course_lessons as $index => $lesson) {
             if (isset($lesson['lesson_title']) && isset($lesson['vimeo_id'])) {
                 $lesson_number = $index + 1;
-                $output .= '<div class="lesson-item" style="margin-bottom: 30px;">';
+                $output .= '<div class="lesson-item">';
                 $output .= '<h4>Урок ' . $lesson_number . ': ' . esc_html($lesson['lesson_title']) . '</h4>';
                 
                 if (!empty($lesson['lesson_duration'])) {
