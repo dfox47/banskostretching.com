@@ -174,7 +174,6 @@ class BanskoStretching_Video_Manager
       return $output;
     }
 
-
     // Если доступ есть, показываем видео
     if (empty($vimeo_id)) {
       return '<p>Видео временно недоступно.</p>';
@@ -184,15 +183,15 @@ class BanskoStretching_Video_Manager
 
     // Параметры для встраивания Vimeo
     $vimeo_params = array(
-      'badge' => 0,
-      'autopause' => 0,
-      'player_id' => 0,
       'app_id' => 58479,
-      'title' => 0,
+      'autopause' => 0,
+      'badge' => 0,
       'byline' => 0,
+      'player_id' => 0,
       'portrait' => 0,
-      'transparent' => 0,
-      'responsive' => 1
+      'responsive' => 1,
+      'title' => 0,
+      'transparent' => 0
     );
 
     // Дополнительные параметры безопасности
@@ -355,23 +354,23 @@ class BanskoStretching_Video_Manager
   public function get_secure_vimeo_embed_url($vimeo_id, $additional_params = array())
   {
     $default_params = array(
-      'badge' => 0,
-      'autopause' => 0,
-      'player_id' => 0,
       'app_id' => 58479,
-      'dnt' => 1,
-      'title' => 0,
+      'autopause' => 0,
+      'badge' => 0,
       'byline' => 0,
-      'portrait' => 0,
-      'pip' => 0,
-      'speed' => 0, // Отключаем изменение скорости
-      'transparent' => 0,
-      'responsive' => 1,
-      'referrer' => urlencode(get_site_url()),
       'controls' => 1,
-      'keyboard' => 0, // Отключаем горячие клавиши
+      'dnt' => 1,
       'fullscreen' => 1,
-      'playsinline' => 1
+      'keyboard' => 0, // Отключаем горячие клавиши
+      'pip' => 0,
+      'player_id' => 0,
+      'playsinline' => 1,
+      'portrait' => 0,
+      'referrer' => urlencode(get_site_url()),
+      'responsive' => 1,
+      'speed' => 0, // Отключаем изменение скорости
+      'title' => 0,
+      'transparent' => 0
     );
 
     $params = array_merge($default_params, $additional_params);

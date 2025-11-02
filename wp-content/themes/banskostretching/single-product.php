@@ -41,7 +41,7 @@
 
                 <p><?= esc_html($level_text); ?></p>
               </div>
-            <?php endif;
+          <?php endif;
           endif; // end ACF check
           ?>
         </div>
@@ -52,11 +52,10 @@
           <?php the_content(); ?>
         </div>
 
-     
         <?php if ($product && $product->is_purchasable()) : ?>
           <div class="product-purchase">
             <form class="cart" method="post">
-              <button class="b-btn b-btn--primary" type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
+              <button class="btn btn--primary" type="submit" name="add-to-cart" value="<?= esc_attr($product->get_id()); ?>">
                 <?= __t('add_to_cart'); ?>
               </button>
             </form>
@@ -70,9 +69,9 @@
       </div>
 
       <?php if (has_post_thumbnail()) : ?>
-          <div class="product-image">
-            <?php the_post_thumbnail('large'); ?>
-          </div>
+        <div class="product-image">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
       <?php endif; ?>
 
       <?php // Отдельный блок для what_you_learn и lessons
