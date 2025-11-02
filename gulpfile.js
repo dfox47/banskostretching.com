@@ -24,12 +24,14 @@ let remoteCss             = remoteTheme + 'css/'
 let remoteJs              = remoteTheme + 'js/'
 let remoteTemplateParts   = remoteTheme + 'template-parts/'
 let remoteIncludes        = remoteTheme + 'includes/'
+let remoteTranslations    = remoteTheme + 'translations/'
 
 let localTheme            = 'wp-content/themes/banskostretching/'
 let localCss              = localTheme + 'css/'
 let localJs               = localTheme + 'js/'
 let localTemplateParts    = localTheme + 'template-parts/'
 let localIncludes         = localTheme + 'includes/'
+let localTranslations     = localTheme + 'translations/'
 
 function getFtpConnection() {
   return ftp.create({
@@ -76,6 +78,11 @@ gulp.task('copy_js', function () {
   return gulp.src(localJs + '**/*.js').pipe(conn.dest(remoteJs))
 })
 
+gulp.task('copy_translations', function () {
+  return gulp.src(localTranslations + '**/*').pipe(conn.dest(remoteTranslations))
+})
+
+
 gulp.task('js', function () {
   return (
     gulp
@@ -103,6 +110,7 @@ gulp.task('watch', function () {
   gulp.watch(localJs + '**/*.js',             gulp.series('js', 'copy_js'))
   gulp.watch(localTemplateParts + '**/*',     gulp.series('copy_template_parts'))
   gulp.watch(localTheme + '*.php',            gulp.series('copy_html'))
+  gulp.watch(localTranslations,               gulp.series('copy_translations'))
 })
 
 gulp.task('default', gulp.series('watch'))

@@ -6,12 +6,36 @@
   display: inline-block;
   font-size: 16px;
   padding: calc($spacer / 2) $spacer;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: $transition;
   color: $c_text;
   text-transform: none;
   text-decoration: none;
+
+  &--burger {
+    padding-left: 36px;
+
+    &::after,
+    &::before {
+      background-color: #000;
+      content: '';
+      height: 2px;
+      left: 16px;
+      position: absolute;
+      top: 50%;
+      width: 14px;
+    }
+
+    &::after {
+      margin-top: -5px;
+    }
+
+    &::before {
+      margin-top: 2px;
+    }
+  }
 
   &--cart {
     padding: 0.5em 1em;
@@ -33,6 +57,7 @@
     &:hover,
     &:focus,
     &:active {
+      background-color: $c_border;
       opacity: 0.7;
     }
 
@@ -70,5 +95,9 @@
     border-radius: 30px;
     border: 1px solid $c_border;
     font-weight: 300;
+
+    &:hover {
+      background-color: $c_border;
+    }
   }
 }

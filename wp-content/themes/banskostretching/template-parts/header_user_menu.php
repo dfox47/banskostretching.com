@@ -1,8 +1,6 @@
 <?php if (is_user_logged_in()) : ?>
-  <!-- Logged in user menu -->
   <div class="header-user-menu">
-    <div class="header-user-menu__avatar js-header-user-menu-avatar">
-    </div>
+    <div class="header-user-menu__avatar js-header-user-menu-avatar"></div>
 
     <div class="header-user-menu__dropdown js-header-user-menu-dropdown">
       <?php wp_nav_menu(array(
@@ -14,8 +12,5 @@
     </div>
   </div>
 <?php else : ?>
-  <!-- Sign In button for non-logged users -->
-  <a href="<?= wp_login_url(get_permalink()); ?>" class="btn btn--secondary b-btn--small">
-    <span>Sign In</span>
-  </a>
+  <a href="/my-account/" class="btn btn--secondary"><?= __t('sign_in'); ?></a>
 <?php endif; ?>
