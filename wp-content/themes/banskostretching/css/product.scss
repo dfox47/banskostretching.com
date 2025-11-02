@@ -96,10 +96,6 @@
       }
     }
 
-    .course-details {
-      width: 100%;
-    }
-
     .course-info {
       display: flex;
       gap: calc($spacer * 2);
@@ -128,46 +124,30 @@
 
     .course-details {
       border-radius: 32px;
-      border: 1px solid rgba(4, 15, 22, 0.2);
-      margin-top: $spacer;
-      padding: 64px 56px;
-
-      @media ($media_mobile) {
-        padding: 48px 24px;
-      }
+      border: 1px solid $c_border;
+      padding: $spacer * 2;
+      width: 100%;
     }
 
     .course-lessons {
-      margin-top: 48px;
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: $spacer * 2;
+      margin-top: $spacer * 2;
 
       h3 {
+        font-size: 24px;
         text-align: left;
-        font-size: 32px;
-        text-transform: lowercase;
-
-        &:first-letter {
-          text-transform: uppercase;
-        }
       }
     }
 
     .lesson-item {
-      border-bottom: 1px solid #040f16;
-      padding-bottom: 48px;
-      margin: 0;
+      border-bottom: 1px solid $c_border;
+      padding-bottom: $spacer * 2;
 
       &:last-child {
         border-bottom: none;
         padding-bottom: 0;
-      }
-
-      h4 {
-        font-size: 20px;
-        margin: 0;
-        text-align: left;
       }
 
       p {
@@ -186,39 +166,28 @@
       }
 
       .video-access-restricted {
-        display: flex;
-        border-radius: 24px;
-        padding: 48px;
-        margin-top: $spacer;
         align-items: center;
         background-color: #ededed;
+        border-radius: 24px;
+        display: flex;
+        gap: $spacer;
         justify-content: space-between;
+        margin-top: $spacer;
+        padding: $spacer;
 
         @media ($media_mobile) {
-          padding: $spacer;
           flex-direction: column;
-          gap: 12px;
         }
       }
     }
 
     .what-you-learn {
-      h3 {
-        text-align: left;
-        font-size: 32px;
-        text-transform: lowercase;
-
-        &:first-letter {
-          text-transform: uppercase;
-        }
-      }
-
       ul {
         list-style: none;
         margin-top: $spacer;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: $spacer / 2;
 
         li {
           font-size: 16px;

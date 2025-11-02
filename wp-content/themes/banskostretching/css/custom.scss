@@ -23,7 +23,7 @@ ol {
     display: block;
 
     &::before {
-      content: counters(item, ".") ". ";
+      content: counters(item, '.') '. ';
       counter-increment: item;
     }
   }
@@ -66,12 +66,9 @@ svg {
 }
 
 .copyright {
+  font-size: 0.7rem;
   margin: 2rem 0;
   text-align: center;
-
-  &__date {
-    font-size: 1rem;
-  }
 }
 
 .greetings {
@@ -92,7 +89,7 @@ svg {
   &::after {
     background-color: #fff;
     bottom: 0;
-    content: "";
+    content: '';
     height: 56px;
     left: 0;
     position: absolute;
