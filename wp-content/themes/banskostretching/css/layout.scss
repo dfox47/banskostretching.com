@@ -3,20 +3,3 @@
     @extend .wrap;
   }
 }
-
-.woocommerce-result-count {
-  display: none;
-}
-
-.woocommerce-ordering {
-  display: none;
-}
-
-.woocommerce-breadcrumb {
-  a,
-  a:visited {
-    color: $c_link;
-    font-size: 16px;
-    text-decoration: none;
-  }
-}
