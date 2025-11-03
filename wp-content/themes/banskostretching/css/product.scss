@@ -43,18 +43,6 @@
       display: flex;
       font-size: 24px;
       gap: calc($spacer / 2);
-
-      .amount {
-        color: #fff;
-        font-size: 20px;
-        background-color: $c_primary;
-        height: 44px;
-        display: flex;
-        border-radius: 16px;
-        align-items: center;
-        padding: 0 $spacer;
-        width: fit-content;
-      }
     }
 
     .product-image {
@@ -194,5 +182,11 @@
         }
       }
     }
+  }
+}
+
+.product_price {
+  .amount {
+    @extend .price;
   }
 }
