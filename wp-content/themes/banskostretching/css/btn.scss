@@ -83,11 +83,12 @@
 
   &--primary {
     background-color: $c_primary;
+    border-radius: $border_radius;
     color: #fff;
     font-weight: 700;
 
     &:hover {
-      opacity: 0.8;
+      background-color: $c_secondary;
     }
   }
 

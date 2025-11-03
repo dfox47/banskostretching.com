@@ -1,9 +1,7 @@
-.woocommerce-result-count {
-  display: none;
-}
-
-.woocommerce-ordering {
-  display: none;
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.wc-block-components-button {
+  @extend .btn;
+  @extend .btn--primary;
 }
 
 .woocommerce-breadcrumb {
@@ -17,4 +15,12 @@
       text-decoration: none;
     }
   }
+}
+
+.woocommerce-ordering {
+  display: none;
+}
+
+.woocommerce-result-count {
+  display: none;
 }

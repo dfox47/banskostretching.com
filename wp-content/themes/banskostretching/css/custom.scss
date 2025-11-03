@@ -41,8 +41,6 @@ svg {
 
 // help classes [START]
 .cart_link {
-  position: relative;
-
   &--icon {
     position: relative;
     z-index: 1;
@@ -113,16 +111,10 @@ svg {
 .price {
   align-items: center;
   background-color: $c_link;
-  border-radius: 16px;
+  border-radius: $border_radius;
   color: #fff;
   display: flex;
   font-size: 20px;
   padding: calc($spacer / 2) $spacer;
-}
-
-.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
-.wc-block-components-button {
-  @extend .btn;
-  @extend .btn--primary;
 }
 // help classes [END]
