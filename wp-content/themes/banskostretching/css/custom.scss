@@ -110,11 +110,11 @@ svg {
 
 .price {
   align-items: center;
-  background-color: $c_link;
+  background-color: $c_secondary;
   border-radius: $border_radius;
   color: #fff;
   display: flex;
-  font-size: 20px;
+  font-size: 16px;
   padding: calc($spacer / 2) $spacer;
 }
 // help classes [END]

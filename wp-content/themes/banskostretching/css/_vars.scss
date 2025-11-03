@@ -3,6 +3,7 @@ $icons: $i + '/icons';
 
 // colors
 $c_border: rgba(#000, 0.1);
+$c_content_bg: #ededed;
 $c_highlight: #55c3f0; // 85,195,240
 $c_link: #0e1c36;
 $c_primary: #ff8da1;
@@ -17,6 +18,7 @@ $spacer: 24px;
 $transition: all 0.3s ease-in-out;
 
 // @medias
+$media_desktop: 'max-width: 1279px';
 $media_mobile: 'max-width: 767px';
 $media_tablet: 'max-width: 1023px';
 
