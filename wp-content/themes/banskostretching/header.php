@@ -29,19 +29,14 @@ $iconsDir   = $i . '/icons'; ?>
   <meta name="description" content="Discover the benefits of stretching in Bansko city! Enhance your flexibility, improve your health, and enjoy guided sessions in the stunning mountain surroundings. Join our community for expert tips, routines, and wellness advice.">
 </head>
 
-
 <body <?php body_class(); ?>>
   <div class="wrap">
     <header class="header">
       <div class="header__wrap">
-        <div class="header__burger">
-          <button class="b-btn b-btn--small js-sidebar-open">
-            <i class="b-icon b-icon--burger"></i>
-  
-            <span>Menu</span>
-          </button>
-        </div>
-      
+        <button class="btn btn--secondary btn--burger js-sidebar-open">
+          <span><?= __t('menu'); ?></span>
+        </button>
+
         <nav class="nav">
           <a class="logo" href="/"></a>
         </nav>

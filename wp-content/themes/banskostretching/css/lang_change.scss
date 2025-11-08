@@ -1,4 +1,5 @@
 .lang_change {
+  background-color: #fff;
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
@@ -12,6 +13,7 @@
   }
 
   &__item {
+    background-color: #fff;
     border-bottom: 1px solid $c_border;
     display: block;
     width: 100%;

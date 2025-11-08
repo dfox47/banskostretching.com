@@ -1,34 +1,14 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  height: 116px;
-  margin: 0;
   background-color: #fff;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
-    0 4px 6px -4px rgba(0, 0, 0, 0.05);
-
-  @media ($media_mobile) {
-    height: 104px;
-    border-radius: 0 0 32px 32px;
-  }
-
-  &__wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    max-width: $wrap;
-    margin: 0 auto;
-    padding: 0 $wrap_padding;
-    align-items: center;
-  }
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  margin: 0 0 $spacer;
+  padding: $spacer 0;
+  width: 100%;
 
   &__actions {
-    display: flex;
     align-items: center;
-    gap: 12px;
+    display: flex;
 
     .btn-cart {
       @media ($media_mobile) {
@@ -37,18 +17,12 @@
     }
   }
 
-  &__burger {
-    .b-btn {
-      span {
-        @media ($media_mobile) {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .nav {
-    margin: 0 auto;
+  &__wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacer;
+    width: 100%;
   }
 }
 
@@ -59,7 +33,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: $c_rich_black_20;
+    background-color: $c_border;
     cursor: pointer;
   }
 
@@ -70,7 +44,7 @@
     background-color: #fff;
     width: 277px;
     padding: 32px;
-    border: 1px solid $c_rich_black_20;
+    border: 1px solid $c_border;
     border-radius: 32px;
     display: none;
 
@@ -80,7 +54,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      content: "";
+      content: '';
     }
 
     .nav__menu {
@@ -93,31 +67,31 @@
 
         a,
         a:visited {
-          color: $c_link;
-          text-decoration: none;
-          position: relative;
-          height: 36px;
-          padding: 0 16px;
-          transition: $transition;
-          width: 100%;
-          display: flex;
           align-items: center;
           border-radius: 8px;
+          color: $c_link;
+          display: flex;
+          height: 36px;
+          padding: 0 16px;
           position: relative;
+          position: relative;
+          text-decoration: none;
+          transition: $transition;
+          width: 100%;
           z-index: 2;
 
           &:hover {
+            background-color: $c_border;
             opacity: 0.8;
-            background-color: #f6f6f6;
           }
         }
 
         &:last-child {
           a,
           a:visited {
-            border-top: 1px solid $c_rich_black_20;
-            color: $c_burgundy;
             border-radius: 0;
+            border-top: 1px solid $c_border;
+            color: $c_primary;
 
             &:hover {
               background: none;

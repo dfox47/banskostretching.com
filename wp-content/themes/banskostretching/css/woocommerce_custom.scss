@@ -1,0 +1,26 @@
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.wc-block-components-button {
+  @extend .btn;
+  @extend .btn--primary;
+}
+
+.woocommerce-breadcrumb {
+  a,
+  a:visited {
+    color: $c_link;
+    font-size: 16px;
+
+    &:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+}
+
+.woocommerce-ordering {
+  display: none;
+}
+
+.woocommerce-result-count {
+  display: none;
+}

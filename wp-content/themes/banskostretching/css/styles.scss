@@ -3,20 +3,21 @@
 // Powered by Denis FOX | dfox@foxartbox.com
 
 // // should be first
-@import "vars";
-@import "_defaults";
-@import "ui";
+@import 'vars';
+@import '_defaults';
+@import 'ui';
 
-@import "btn";
-@import "footer";
-@import "hero";
-@import "header";
-@import "sidebar";
-@import "lang_change";
-@import "owl.carousel";
-@import "reviews";
-@import "products";
-@import "product";
+@import 'btn';
+@import 'footer';
+@import 'hero';
+@import 'header';
+@import 'sidebar';
+@import 'lang_change';
+@import 'owl.carousel';
+@import 'reviews';
+@import 'products';
+@import 'product';
+@import 'woocommerce_custom';
 
 // // must be the last
-@import "custom";
+@import 'custom';

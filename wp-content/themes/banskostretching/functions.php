@@ -261,3 +261,44 @@ function __t($key)
   return $translations[$key] ?? $key;
 }
 // translations [END]
+
+/**
+ * Отключение стилей WooCommerce
+ */
+function banskostretching_disable_woocommerce_styles()
+{
+  // Отключаем основные стили WooCommerce
+  wp_dequeue_style('woocommerce-general');
+  wp_dequeue_style('woocommerce-layout');
+  wp_dequeue_style('woocommerce-smallscreen');
+  
+  // Опционально: отключить стили для блоков WooCommerce
+  // wp_dequeue_style('wc-blocks-style');
+}
+add_action('wp_enqueue_scripts', 'banskostretching_disable_woocommerce_styles', 100);
+
+/**
+ * Изменение классов body для страницы магазина WooCommerce
+ */
+function banskostretching_custom_shop_body_class($classes)
+{
+  // Проверяем, что это страница WooCommerce
+  if (is_shop() || is_product_category() || is_product_tag()) {
+    // Удаляем стандартные классы WooCommerce
+    $classes = array_diff($classes, ['woocommerce', 'woocommerce-page']);
+    
+    // Добавляем свои классы
+    $classes[] = 'products-page';
+  }
+
+  if (is_product()) {
+    // Удаляем стандартные классы WooCommerce
+    $classes = array_diff($classes, ['woocommerce', 'woocommerce-page']);
+    
+    // Добавляем свои классы
+    $classes[] = 'product-page';
+  }
+  
+  return $classes;
+}
+add_filter('body_class', 'banskostretching_custom_shop_body_class');

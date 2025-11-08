@@ -1,9 +1,12 @@
 .footer {
+  background: linear-gradient(45deg, $c_secondary 0%, rgba($c_secondary, 0.9) 100%);
+  border-radius: ($border_radius * 2) ($border_radius * 2) 0 0;
+  color: #fff;
+  margin: $spacer 0 0;
   padding: 3rem 0;
-  border-top: 1px solid $c_border;
 
   &__lang {
-    margin: 0 auto 24px;
+    margin: 0 auto $spacer;
     text-align: center;
     width: 60px;
   }

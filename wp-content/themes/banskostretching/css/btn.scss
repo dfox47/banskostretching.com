@@ -1,10 +1,12 @@
 .btn {
+  background-color: #fff;
   border: 0 none;
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
   padding: calc($spacer / 2) $spacer;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: $transition;
@@ -12,21 +14,91 @@
   text-transform: none;
   text-decoration: none;
 
+  &--burger {
+    padding-left: 40px;
+
+    &::after,
+    &::before {
+      background-color: #000;
+      content: '';
+      height: 2px;
+      left: 16px;
+      position: absolute;
+      top: 50%;
+      width: 14px;
+    }
+
+    &::after {
+      margin-top: -5px;
+    }
+
+    &::before {
+      margin-top: 2px;
+    }
+  }
+
   &--cart {
     padding: 0.5em 1em;
   }
 
+  &--close {
+    border-radius: 50%;
+    border: 1px solid $c_border;
+    color: $c_text;
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    height: 32px;
+    padding: 0;
+    position: relative;
+    transition: $transition;
+    width: 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $c_border;
+      opacity: 0.7;
+    }
+
+    &::after,
+    &::before {
+      background-color: #000;
+      content: '';
+      height: 2px;
+      left: 8px;
+      position: absolute;
+      top: 14px;
+      width: 14px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
   &--primary {
     background-color: $c_primary;
+    border-radius: $border_radius;
     color: #fff;
     font-weight: 700;
 
     &:hover {
-      opacity: 0.8;
+      background-color: $c_secondary;
     }
   }
 
   &--secondary {
+    border-radius: 30px;
+    border: 1px solid $c_border;
     font-weight: 300;
+
+    &:hover {
+      background-color: $c_border;
+    }
   }
 }

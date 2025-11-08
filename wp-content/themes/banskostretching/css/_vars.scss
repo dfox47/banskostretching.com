@@ -1,33 +1,31 @@
-$i: "/wp-content/themes/banskostretching/i";
-$icons: $i + "/icons";
+$i: '/wp-content/themes/banskostretching/i';
+$icons: $i + '/icons';
 
 // colors
-$c_border: rgba(#000, 0.3);
+$c_border: rgba(#000, 0.1);
+$c_content_bg: #ededed;
 $c_highlight: #55c3f0; // 85,195,240
 $c_link: #0e1c36;
-$c_link_bg: #00005f; // 0,0,95
-$c_menu: #71777e;
 $c_primary: #ff8da1;
 $c_secondary: #383882; // 56,56,130
 $c_text: #101316;
 $c_title: #101316;
-$c_burgundy: #780116;
 
-$c_rich_black: #040f16;
-$c_rich_black_20: rgba(4, 15, 22, 0.2);
-
-$transition: all 0.3s ease-in-out;
+$border_radius: 16px;
 
 $spacer: 24px;
 
+$transition: all 0.3s ease-in-out;
+
 // @medias
-$media_mobile: "max-width: 767px";
-$media_tablet: "max-width: 1023px";
+$media_desktop: 'max-width: 1279px';
+$media_mobile: 'max-width: 767px';
+$media_tablet: 'max-width: 1023px';
 
 // fonts
-$font_main: "Ubuntu Condensed", Arial, Helvetica, sans-serif;
-$font_lilita_one: "Lilita One", Arial, Helvetica, sans-serif;
-$font_ubuntu_cond: "Ubuntu Condensed", Arial, Helvetica, sans-serif;
+$font_main: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
+$font_lilita_one: 'Lilita One', Arial, Helvetica, sans-serif;
+$font_ubuntu_cond: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
 
 // fonts array [START]
 //$fontNames: aldi_sued_bold, aldi_sued_reg;
@@ -41,6 +39,3 @@ $font_ubuntu_cond: "Ubuntu Condensed", Arial, Helvetica, sans-serif;
 //	}
 //}
 // fonts array [END]
-
-$wrap: 1604px;
-$wrap_padding: 24px;

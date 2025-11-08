@@ -1,19 +1,180 @@
-.product {
-  min-width: 100%;
-  border-radius: 32px;
-  border: 1px solid $c_rich_black_20;
-  background-color: #fbfbfb;
-  height: 262px;
-  overflow: hidden;
-
-  a,
-  a:visited {
+.product-page {
+  .product {
     display: flex;
+    gap: $spacer;
+    flex-wrap: wrap;
 
-    img {
-      max-width: 375px;
-      height: 100%;
-      object-fit: cover;
+    .course-details {
+      border-radius: $border_radius * 2;
+      border: 1px solid $c_border;
+      padding: $spacer * 2;
+      width: 100%;
     }
+
+    .course-info {
+      display: flex;
+      gap: calc($spacer * 2);
+
+      @media ($media_mobile) {
+        gap: $spacer;
+        flex-wrap: wrap;
+      }
+
+      .course-duration,
+      .course-level {
+        font-size: 16px;
+        text-transform: capitalize;
+
+        h3 {
+          text-transform: capitalize;
+        }
+
+        p {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .course-lessons {
+      display: flex;
+      flex-direction: column;
+      gap: $spacer * 2;
+      margin-top: $spacer * 2;
+
+      h3 {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+
+    .entry-content {
+      background-color: $c_content_bg;
+      border-radius: $border_radius * 2;
+      display: flex;
+      flex-direction: column;
+      padding: calc($spacer * 2);
+      width: 60%;
+
+      @media ($media_desktop) {
+        width: 100%;
+      }
+    }
+
+    .lesson-item {
+      border-bottom: 1px solid $c_border;
+      padding-bottom: $spacer * 2;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      p {
+        display: none;
+      }
+
+      .vimeo-container {
+        position: relative;
+
+        iframe {
+          height: 500px;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
+
+      .video-access-restricted {
+        align-items: center;
+        background-color: $c_content_bg;
+        border-radius: $border_radius;
+        display: flex;
+        gap: $spacer;
+        justify-content: space-between;
+        margin-top: $spacer;
+        padding: $spacer;
+
+        @media ($media_mobile) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .product-description {
+      font-size: 20px;
+      margin: $spacer 0;
+      width: 100%;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .product-image {
+      border-radius: $border_radius * 2;
+      overflow: hidden;
+      width: 38%;
+
+      @media ($media_desktop) {
+        max-height: 400px;
+        order: -1;
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .product_price {
+      align-items: center;
+      display: flex;
+      font-size: 24px;
+      gap: calc($spacer / 2);
+    }
+
+    .product-purchase {
+      align-items: center;
+      display: flex;
+      gap: $spacer;
+      justify-content: space-between;
+      margin-top: auto;
+      width: 100%;
+
+      @media ($media_mobile) {
+        flex-wrap: wrap;
+        margin-top: $spacer;
+      }
+    }
+
+    .product-title {
+      font-size: 40px;
+      margin-top: $spacer;
+      text-align: left;
+      text-transform: capitalize;
+      width: 100%;
+    }
+
+    .what-you-learn {
+      ul {
+        list-style: none;
+        margin-top: $spacer;
+        display: flex;
+        flex-direction: column;
+        gap: $spacer / 2;
+
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.product_price {
+  .amount {
+    @extend .price;
   }
 }
