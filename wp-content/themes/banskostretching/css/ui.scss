@@ -45,6 +45,24 @@
   }
 }
 
+.b-input {
+  background: #f2f2f2;
+  height: 64px;
+  color: #040f16;
+  border-radius: 16px;
+  padding: 0 32px;
+  font-size: 16px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: none;
+    background: #f2f2f2;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
 .b-icon {
   background-color: transparent;
   background-position: center;
@@ -55,5 +73,23 @@
 
   &--burger {
     background-image: url(#{$icons}/burger.svg);
+  }
+}
+
+.b-link {
+  color: $c_link;
+  text-decoration: none;
+  position: relative;
+  height: 36px;
+  padding: 0 16px;
+  transition: $transition;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: #f6f6f6;
   }
 }
