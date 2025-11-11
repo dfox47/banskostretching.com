@@ -5,6 +5,7 @@
 // // should be first
 @import 'vars';
 @import '_defaults';
+@import 'woocommerce';
 @import 'ui';
 
 @import 'btn';
@@ -19,6 +20,7 @@
 @import 'product';
 @import 'woocommerce_custom';
 @import 'login';
+@import 'my-account';
 
 // // must be the last
 @import 'custom';
