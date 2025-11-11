@@ -45,7 +45,7 @@
       @media ($media_mobile) {
         border-radius: 24px;
         height: auto;
-        padding: $spacer;
+        padding: $spacer $spacer 86px;
       }
 
       &:hover {
