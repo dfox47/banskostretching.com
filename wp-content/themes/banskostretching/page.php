@@ -1,6 +1,26 @@
 <?php get_header(); ?>
 
-<main id="primary" class="wrap site-main page.php">
+<?php
+// Создаём массив классов
+$main_classes = ['wrap', 'site-main', 'page-template'];
+
+// Добавляем slug страницы
+if (is_page()) {
+  global $post;
+  $main_classes[] = 'page-' . $post->post_name;
+  $main_classes[] = 'page-id-' . get_the_ID();
+}
+
+// Если главная страница
+if (is_front_page()) {
+  $main_classes[] = 'front-page';
+}
+
+// Преобразуем массив в строку классов
+$main_class = implode(' ', $main_classes);
+?>
+
+<main id="primary" class="<?php echo esc_attr($main_class); ?>">
   <?php while (have_posts()) :
     the_post();
 

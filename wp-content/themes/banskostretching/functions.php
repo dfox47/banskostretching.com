@@ -275,6 +275,7 @@ function banskostretching_disable_woocommerce_styles()
   // Опционально: отключить стили для блоков WooCommerce
   // wp_dequeue_style('wc-blocks-style');
 }
+
 add_action('wp_enqueue_scripts', 'banskostretching_disable_woocommerce_styles', 100);
 
 /**
@@ -302,3 +303,30 @@ function banskostretching_custom_shop_body_class($classes)
   return $classes;
 }
 add_filter('body_class', 'banskostretching_custom_shop_body_class');
+
+
+/**
+ * Удаление поля billing_address_2 из всех форм WooCommerce
+ */
+function banskostretching_remove_billing_address_2($fields) {
+  // Удаляем поле адреса 2 (квартира/офис)
+  unset($fields['billing_address_2']);
+  
+  return $fields;
+}
+add_filter('woocommerce_billing_fields', 'banskostretching_remove_billing_address_2');
+
+/**
+ * Удаление поля billing_address_2 из чекаута
+ */
+function banskostretching_remove_checkout_address_2($fields) {
+  // Удаляем из billing
+  unset($fields['billing']['billing_address_2']);
+  
+  // Также можно удалить из shipping, если нужно
+  // unset($fields['shipping']['shipping_address_2']);
+  
+  return $fields;
+}
+add_filter('woocommerce_checkout_fields', 'banskostretching_remove_checkout_address_2');
+
