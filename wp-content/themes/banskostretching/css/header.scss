@@ -30,7 +30,7 @@
   position: relative;
 
   &__avatar {
-    background-color: $c_border;
+    background: url(#{$icons}/avatar.svg) $c_border;
     border-radius: 50%;
     cursor: pointer;
     height: 40px;
@@ -42,11 +42,11 @@
     border-radius: var(--border_radius);
     border: 1px solid $c_border;
     display: none;
-    padding: 32px;
+    padding: var(--spacer);
     position: absolute;
     right: 0;
-    top: calc(100% + 24px);
-    width: 277px;
+    top: 100%;
+    width: 250px;
 
     &::before {
       content: '';
