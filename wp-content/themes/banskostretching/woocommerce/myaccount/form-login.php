@@ -2,12 +2,8 @@
 
 do_action('woocommerce_before_customer_login_form'); ?>
 
-<?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
-  <div class="u-columns col2-set" id="customer_login">
-    <div class="u-column1 col-1">
-
-    <?php endif; ?>
-
+<div class="account_wrap">
+  <div class="account_wrap__login">
     <h2><?php esc_html_e('Login', 'woocommerce'); ?></h2>
 
     <form class="woocommerce-form woocommerce-form-login login" method="post" novalidate>
@@ -42,14 +38,13 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
       <?php do_action('woocommerce_login_form_end'); ?>
     </form>
+  </div>
 
-    <?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
-    </div>
-
-    <div class="u-column2 col-2">
+  <?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
+    <div class="account_wrap__register">
       <h2><?php esc_html_e('Register', 'woocommerce'); ?></h2>
 
-      <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action('woocommerce_register_form_tag'); ?>>
+      <form method="post" class="login woocommerce-form woocommerce-form-register register" <?php do_action('woocommerce_register_form_tag'); ?>>
 
         <?php do_action('woocommerce_register_form_start'); ?>
 
@@ -68,7 +63,6 @@ do_action('woocommerce_before_customer_login_form'); ?>
         </p>
 
         <?php if ('no' === get_option('woocommerce_registration_generate_password')) : ?>
-
           <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="reg_password"><?php esc_html_e('Password', 'woocommerce'); ?>&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text"><?php esc_html_e('Required', 'woocommerce'); ?></span></label>
             <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" required aria-required="true" />
@@ -88,7 +82,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
         <?php do_action('woocommerce_register_form_end'); ?>
       </form>
     </div>
-  </div>
-<?php endif; ?>
+  <?php endif; ?>
+</div>
 
 <?php do_action('woocommerce_after_customer_login_form'); ?>

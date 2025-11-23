@@ -250,8 +250,10 @@
 .woocommerce-error {
   background-color: $c_primary;
   border-radius: var(--border_radius);
+  border: 0 none;
   color: #fff;
   margin-bottom: var(--spacer);
+  outline: none;
   padding: var(--spacer);
   text-align: center;
 }
