@@ -1,33 +1,31 @@
 .login {
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 64px 48px;
-  max-width: 540px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   border-radius: 32px;
+  border: 1px solid rgba(#000, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-
-  @media ($media_mobile) {
-    padding: 32px 24px;
-  }
+  gap: var(--spacer);
+  margin: 0 auto;
+  max-width: 400px;
+  padding: calc(var(--spacer) * 2);
+  width: 100%;
 
   .woocommerce-form-row {
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin: 0;
     width: 100%;
 
     input {
       @extend .b-input;
+
       width: 100%;
     }
 
     .password-input {
-      display: flex;
       align-items: center;
+      display: flex;
       position: relative;
 
       input {
@@ -36,12 +34,13 @@
 
       .show-password-input {
         @extend .b-icon;
+
+        background-image: url(#{$icons}/eye-open.svg);
+        cursor: pointer;
+        height: 24px;
         position: absolute;
         right: 32px;
-        background-image: url(#{$icons}/eye-open.svg);
         width: 24px;
-        height: 24px;
-        cursor: pointer;
 
         &.display-password {
           background-image: url(#{$icons}/eye-closed.svg);
@@ -57,8 +56,8 @@
     gap: 16px;
 
     .button {
-      @extend .b-btn;
-      @extend .b-btn--primary;
+      @extend .btn;
+      @extend .btn--primary;
     }
   }
 
@@ -67,6 +66,7 @@
 
     a {
       @extend .b-link;
+
       justify-content: center;
     }
   }
