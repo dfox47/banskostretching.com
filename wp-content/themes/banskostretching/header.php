@@ -33,7 +33,7 @@ $iconsDir   = $i . '/icons'; ?>
   <div class="wrap">
     <header class="header">
       <div class="header__wrap">
-        <button class="btn btn--secondary btn--burger js-sidebar-open">
+        <button class="btn btn--secondary btn--burger js-sidebar-toggle">
           <span><?= __t('menu'); ?></span>
         </button>
 

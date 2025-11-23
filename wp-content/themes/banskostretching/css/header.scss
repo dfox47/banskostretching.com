@@ -4,7 +4,9 @@
   box-shadow: 0 10px 15px -3px rgba(#000, 0.05), 0 4px 6px -4px rgba(#000, 0.05);
   margin: 0 0 var(--spacer);
   padding: var(--spacer) 0;
+  position: relative;
   width: 100%;
+  z-index: 3;
 
   &__actions {
     align-items: center;
@@ -26,15 +28,29 @@
   }
 }
 
+.header-user-menu-active {
+  .header-user-menu {
+    &__dropdown {
+      display: block;
+    }
+  }
+}
+
 .header-user-menu {
   position: relative;
 
   &__avatar {
     background: url(#{$icons}/avatar.svg) $c_border;
+    border: 2px solid #fff;
     border-radius: 50%;
     cursor: pointer;
     height: 40px;
+    transition: $transition;
     width: 40px;
+
+    &:hover {
+      border-color: $c_primary;
+    }
   }
 
   &__dropdown {

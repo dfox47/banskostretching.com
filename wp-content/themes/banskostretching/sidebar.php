@@ -4,11 +4,11 @@ $i          = $themeDir . '/i';
 $iconsDir   = $i . '/icons'; ?>
 
 <aside class="sidebar js-sidebar">
-  <div class="sidebar__overlay js-sidebar-close"></div>
+  <div class="sidebar__overlay js-sidebar-toggle"></div>
 
   <div class="sidebar__content">
     <div class="sidebar__header">
-      <button class="sidebar__close btn btn--close js-sidebar-close"></button>
+      <button class="sidebar__close btn btn--close js-sidebar-toggle"></button>
     </div>
 
     <nav class="sidebar__nav">

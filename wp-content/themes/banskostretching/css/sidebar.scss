@@ -9,7 +9,7 @@
   width: 100%;
   z-index: 1000;
 
-  &.is-open {
+  &.active {
     opacity: 1;
     visibility: visible;
 
@@ -72,11 +72,7 @@
 
           border-radius: calc(var(--border_radius) / 2);
           color: $c_link;
-          display: block;
           padding: calc(var(--spacer) / 2) var(--spacer);
-          position: relative;
-          text-decoration: none;
-          transition: $transition;
           width: 100%;
 
           &:hover {

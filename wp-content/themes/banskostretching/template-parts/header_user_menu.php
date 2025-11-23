@@ -1,8 +1,8 @@
 <?php if (is_user_logged_in()) : ?>
   <div class="header-user-menu">
-    <div class="header-user-menu__avatar js-header-user-menu-avatar"></div>
+    <button class="header-user-menu__avatar js-menu-toggle"></button>
 
-    <div class="header-user-menu__dropdown js-header-user-menu-dropdown">
+    <div class="header-user-menu__dropdown">
       <?php wp_nav_menu(array(
         'theme_location' => 'header-user',
         'menu_class'     => 'nav__menu',
