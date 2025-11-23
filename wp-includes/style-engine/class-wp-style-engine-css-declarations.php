@@ -132,14 +132,14 @@ class WP_Style_Engine_CSS_Declarations {
 	 *
 	 * @param string $property The CSS property.
 	 * @param string $value    The value to be filtered.
-	 * @param string $spacer   Optional. The spacer between the colon and the value.
+	 * @param string var(--spacer)   Optional. The spacer between the colon and the value.
 	 *                         Default empty string.
 	 * @return string The filtered declaration or an empty string.
 	 */
-	protected static function filter_declaration( $property, $value, $spacer = '' ) {
+	protected static function filter_declaration( $property, $value, var(--spacer) = '' ) {
 		$filtered_value = wp_strip_all_tags( $value, true );
 		if ( '' !== $filtered_value ) {
-			return safecss_filter_attr( "{$property}:{$spacer}{$filtered_value}" );
+			return safecss_filter_attr( "{$property}:{var(--spacer)}{$filtered_value}" );
 		}
 		return '';
 	}
@@ -161,10 +161,10 @@ class WP_Style_Engine_CSS_Declarations {
 		$indent              = $should_prettify ? str_repeat( "\t", $indent_count ) : '';
 		$suffix              = $should_prettify ? ' ' : '';
 		$suffix              = $should_prettify && $indent_count > 0 ? "\n" : $suffix;
-		$spacer              = $should_prettify ? ' ' : '';
+		var(--spacer)              = $should_prettify ? ' ' : '';
 
 		foreach ( $declarations_array as $property => $value ) {
-			$filtered_declaration = static::filter_declaration( $property, $value, $spacer );
+			$filtered_declaration = static::filter_declaration( $property, $value, var(--spacer) );
 			if ( $filtered_declaration ) {
 				$declarations_output .= "{$indent}{$filtered_declaration};$suffix";
 			}

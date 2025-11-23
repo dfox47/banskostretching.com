@@ -45,7 +45,7 @@
     border-bottom: 1px solid $c_border;
     display: flex;
     justify-content: flex-end;
-    padding: $spacer;
+    padding: var(--spacer);
   }
 
   &__nav {

@@ -15,8 +15,6 @@ $box-shadown: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
 $border_radius: 16px;
 
-$spacer: 24px;
-
 $transition: all 0.3s ease-in-out;
 
 // @medias
@@ -28,6 +26,18 @@ $media_tablet: 'max-width: 1023px';
 $font_main: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
 $font_lilita_one: 'Lilita One', Arial, Helvetica, sans-serif;
 $font_ubuntu_cond: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
+
+:root {
+  --border_radius: 16px;
+  --spacer: 24px;
+}
+
+@media ($media_mobile) {
+  :root {
+    --border_radius: 16px;
+    --spacer: 12px;
+  }
+}
 
 // fonts array [START]
 //$fontNames: aldi_sued_bold, aldi_sued_reg;

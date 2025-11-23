@@ -167,7 +167,7 @@ class WP_Style_Engine_CSS_Rule {
 		$declarations_indent        = $should_prettify ? $indent_count + 1 : 0;
 		$nested_declarations_indent = $should_prettify ? $indent_count + 2 : 0;
 		$suffix                     = $should_prettify ? "\n" : '';
-		$spacer                     = $should_prettify ? ' ' : '';
+		var(--spacer)                     = $should_prettify ? ' ' : '';
 		// Trims any multiple selectors strings.
 		$selector         = $should_prettify ? implode( ',', array_map( 'trim', explode( ',', $this->get_selector() ) ) ) : $this->get_selector();
 		$selector         = $should_prettify ? str_replace( array( ',' ), ",\n", $selector ) : $selector;
@@ -180,10 +180,10 @@ class WP_Style_Engine_CSS_Rule {
 		}
 
 		if ( $has_rules_group ) {
-			$selector = "{$rule_indent}{$rules_group}{$spacer}{{$suffix}{$nested_rule_indent}{$selector}{$spacer}{{$suffix}{$css_declarations}{$suffix}{$nested_rule_indent}}{$suffix}{$rule_indent}}";
+			$selector = "{$rule_indent}{$rules_group}{var(--spacer)}{{$suffix}{$nested_rule_indent}{$selector}{var(--spacer)}{{$suffix}{$css_declarations}{$suffix}{$nested_rule_indent}}{$suffix}{$rule_indent}}";
 			return $selector;
 		}
 
-		return "{$rule_indent}{$selector}{$spacer}{{$suffix}{$css_declarations}{$suffix}{$rule_indent}}";
+		return "{$rule_indent}{$selector}{var(--spacer)}{{$suffix}{$css_declarations}{$suffix}{$rule_indent}}";
 	}
 }

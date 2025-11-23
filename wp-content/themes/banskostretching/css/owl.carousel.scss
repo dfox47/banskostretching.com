@@ -11,7 +11,7 @@
 
   &::after {
     clear: both;
-    content: ".";
+    content: '.';
     display: block;
     height: 0;
     line-height: 0;
@@ -121,7 +121,7 @@ button.owl-dot {
   opacity: 0;
   transition: opacity 400ms ease;
 }
-.owl-item .owl-lazy[src^=""],
+.owl-item .owl-lazy[src^=''],
 .owl-item .owl-lazy:not([src]) {
   max-height: 0;
 }
@@ -190,7 +190,7 @@ button.owl-dot {
   &::after,
   &::before {
     background-color: $c_primary;
-    content: "";
+    content: '';
     display: block;
     height: 3px;
     left: 10px;
@@ -257,7 +257,7 @@ button.owl-dot {
 .owl-dots {
   display: flex;
   justify-content: center;
-  margin: $spacer 0 0;
+  margin: var(--spacer) 0 0;
 
   &.disabled {
     display: none;

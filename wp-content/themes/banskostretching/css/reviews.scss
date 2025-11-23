@@ -1,8 +1,8 @@
 .reviews {
   font-size: 20px;
-  margin: $spacer auto calc($spacer * 3);
+  margin: var(--spacer) auto calc(var(--spacer) * 3);
   max-width: 500px;
-  padding: 0 calc($spacer * 2);
+  padding: 0 calc(var(--spacer) * 2);
   position: relative;
   width: 100%;
 
@@ -12,7 +12,7 @@
 
   &__name {
     font-size: 0.8em;
-    margin: $spacer 0 0;
+    margin: var(--spacer) 0 0;
     opacity: 0.7;
     text-align: right;
   }

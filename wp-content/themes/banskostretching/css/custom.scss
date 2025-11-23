@@ -115,6 +115,6 @@ svg {
   color: #fff;
   display: flex;
   font-size: 16px;
-  padding: calc($spacer / 2) $spacer;
+  padding: calc(var(--spacer) / 2) var(--spacer);
 }
 // help classes [END]

@@ -5,7 +5,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  padding: calc($spacer / 2) $spacer;
+  padding: calc(var(--spacer) / 2) var(--spacer);
   position: relative;
   transition: $transition;
   color: $c_text;

@@ -2,7 +2,7 @@
   .products {
     display: flex;
     flex-direction: column;
-    gap: $spacer;
+    gap: var(--spacer);
     margin-top: 40px;
   }
 
@@ -17,9 +17,9 @@
       @extend .btn;
       @extend .btn--primary;
 
-      bottom: $spacer;
+      bottom: var(--spacer);
       position: absolute;
-      right: $spacer;
+      right: var(--spacer);
       z-index: 2;
 
       @media ($media_mobile) {
@@ -37,7 +37,7 @@
       justify-content: space-between;
       min-height: 224px;
       overflow: hidden;
-      padding: $spacer $spacer $spacer calc(35% + $spacer);
+      padding: var(--spacer) var(--spacer) var(--spacer) calc(35% + var(--spacer));
       position: relative;
       text-decoration: none;
       z-index: 1;
@@ -45,7 +45,7 @@
       @media ($media_mobile) {
         border-radius: 24px;
         height: auto;
-        padding: $spacer $spacer 86px;
+        padding: var(--spacer) var(--spacer) 86px;
       }
 
       &:hover {
@@ -64,10 +64,10 @@
 
         @media ($media_mobile) {
           height: auto;
-          margin: (-$spacer) (-$spacer) $spacer;
+          margin: (-var(--spacer)) (-var(--spacer)) var(--spacer);
           max-width: none;
           position: relative;
-          width: calc(100% + $spacer * 2);
+          width: calc(100% + calc(var(--spacer) * 2));
         }
       }
 

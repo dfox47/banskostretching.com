@@ -11,7 +11,7 @@
   height: 64px;
   justify-content: center;
   outline: none;
-  padding: 0 $spacer;
+  padding: 0 var(--spacer);
   text-decoration: none;
   transition: $transition;
 

@@ -2,11 +2,11 @@
   background: linear-gradient(45deg, $c_secondary 0%, rgba($c_secondary, 0.9) 100%);
   border-radius: ($border_radius * 2) ($border_radius * 2) 0 0;
   color: #fff;
-  margin: $spacer 0 0;
+  margin: var(--spacer) 0 0;
   padding: 3rem 0;
 
   &__lang {
-    margin: 0 auto $spacer;
+    margin: 0 auto var(--spacer);
     text-align: center;
     width: 60px;
   }
@@ -37,7 +37,7 @@
   display: flex;
   font-size: 12px;
   justify-content: center;
-  margin: $spacer 0;
+  margin: var(--spacer) 0;
 
   a {
     color: $c_text;
