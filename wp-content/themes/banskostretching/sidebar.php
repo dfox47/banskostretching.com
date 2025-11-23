@@ -14,7 +14,7 @@ $iconsDir   = $i . '/icons'; ?>
     <nav class="sidebar__nav">
       <?php wp_nav_menu(array(
         'theme_location' => 'primary',
-        'menu_class'     => 'nav__menu',
+        'menu_class'     => 'nav_menu',
         'container'      => false,
         'fallback_cb'    => false
       )); ?>

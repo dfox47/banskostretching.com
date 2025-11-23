@@ -79,6 +79,22 @@
     }
   }
 
+  &--link {
+    border-radius: calc(var(--border_radius) / 2);
+    color: $c_link;
+    display: block;
+    padding: calc(var(--spacer) / 2);
+    text-decoration: none;
+
+    &:hover {
+      background-color: $c_bg_link;
+    }
+
+    &.active {
+      color: $c_primary;
+    }
+  }
+
   &--primary {
     background-color: $c_primary;
     border-radius: var(--border_radius);

@@ -19,19 +19,21 @@ const password      = config.password
 const port          = config.port
 const user          = config.user
 
-let remoteTheme           = '/public_html/wp-content/themes/banskostretching/'
-let remoteCss             = remoteTheme + 'css/'
-let remoteJs              = remoteTheme + 'js/'
-let remoteTemplateParts   = remoteTheme + 'template-parts/'
-let remoteIncludes        = remoteTheme + 'includes/'
-let remoteTranslations    = remoteTheme + 'translations/'
+const remoteTheme           = '/public_html/wp-content/themes/banskostretching/'
+const remoteCss             = remoteTheme + 'css/'
+const remoteJs              = remoteTheme + 'js/'
+const remoteTemplateParts   = remoteTheme + 'template-parts/'
+const remoteIncludes        = remoteTheme + 'includes/'
+const remoteTranslations    = remoteTheme + 'translations/'
+const remoteWoocommerce     = remoteTheme + 'woocommerce/'
 
-let localTheme            = 'wp-content/themes/banskostretching/'
-let localCss              = localTheme + 'css/'
-let localJs               = localTheme + 'js/'
-let localTemplateParts    = localTheme + 'template-parts/'
-let localIncludes         = localTheme + 'includes/'
-let localTranslations     = localTheme + 'translations/'
+const localTheme            = 'wp-content/themes/banskostretching/'
+const localCss              = localTheme + 'css/'
+const localJs               = localTheme + 'js/'
+const localTemplateParts    = localTheme + 'template-parts/'
+const localIncludes         = localTheme + 'includes/'
+const localTranslations     = localTheme + 'translations/'
+const localWoocommerce      = localTheme + 'woocommerce/'
 
 function getFtpConnection() {
   return ftp.create({
@@ -82,7 +84,6 @@ gulp.task('copy_translations', function () {
   return gulp.src(localTranslations + '**/*').pipe(conn.dest(remoteTranslations))
 })
 
-
 gulp.task('js', function () {
   return (
     gulp
@@ -104,6 +105,10 @@ gulp.task('copy_template_parts', function () {
   return gulp.src(localTemplateParts + '**/*').pipe(conn.dest(remoteTemplateParts))
 })
 
+gulp.task('copy_woocommerce', function () {
+  return gulp.src(localWoocommerce + '**/*').pipe(conn.dest(remoteWoocommerce))
+})
+
 gulp.task('watch', function () {
   gulp.watch(localCss + '**/*',               gulp.series('css', 'copy_css'))
   gulp.watch(localIncludes + '**/*',          gulp.series('copy_includes'))
@@ -111,6 +116,7 @@ gulp.task('watch', function () {
   gulp.watch(localTemplateParts + '**/*',     gulp.series('copy_template_parts'))
   gulp.watch(localTheme + '*.php',            gulp.series('copy_html'))
   gulp.watch(localTranslations,               gulp.series('copy_translations'))
+  gulp.watch(localWoocommerce,                gulp.series('copy_woocommerce'))
 })
 
 gulp.task('default', gulp.series('watch'))

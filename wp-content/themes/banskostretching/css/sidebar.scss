@@ -1,17 +1,17 @@
 .sidebar {
+  height: 100%;
+  left: 0;
+  opacity: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
   transition: $transition;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
 
   &.is-open {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
 
     .sidebar__content {
       transform: translateX(0);
@@ -49,28 +49,35 @@
   }
 
   &__nav {
-    padding: 24px;
+    padding: var(--spacer);
 
-    .nav__menu {
+    .nav_menu {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+
+      .current-menu-item {
+        a,
+        a:visited {
+          color: $c_primary;
+        }
+      }
 
       li {
         width: 100%;
 
         a,
         a:visited {
+          @extend .btn;
+          @extend .btn--link;
+
+          border-radius: calc(var(--border_radius) / 2);
           color: $c_link;
-          text-decoration: none;
+          display: block;
+          padding: calc(var(--spacer) / 2) var(--spacer);
           position: relative;
-          height: 36px;
-          padding: 0 16px;
+          text-decoration: none;
           transition: $transition;
           width: 100%;
-          display: flex;
-          align-items: center;
-          border-radius: 8px;
 
           &:hover {
             opacity: 0.8;
