@@ -246,3 +246,12 @@
 .woocommerce-result-count {
   display: none;
 }
+
+.woocommerce-error {
+  background-color: $c_primary;
+  border-radius: var(--border_radius);
+  color: #fff;
+  margin-bottom: var(--spacer);
+  padding: var(--spacer);
+  text-align: center;
+}
