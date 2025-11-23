@@ -81,7 +81,7 @@
 
   &--primary {
     background-color: $c_primary;
-    border-radius: $border_radius;
+    border-radius: var(--border_radius);
     color: #fff;
     font-weight: 700;
 

@@ -364,11 +364,11 @@ function styles_for_block_core_search( $attributes ) {
 
 	if ( $has_border_radius ) {
 		$default_padding = '4px';
-		$border_radius   = $attributes['style']['border']['radius'];
+		var(--border_radius)   = $attributes['style']['border']['radius'];
 
-		if ( is_array( $border_radius ) ) {
+		if ( is_array( var(--border_radius) ) ) {
 			// Apply styles for individual corner border radii.
-			foreach ( $border_radius as $key => $value ) {
+			foreach ( var(--border_radius) as $key => $value ) {
 				if ( null !== $value ) {
 					// Convert camelCase key to kebab-case.
 					$name = strtolower( preg_replace( '/(?<!^)[A-Z]/', '-$0', $key ) );
@@ -396,17 +396,17 @@ function styles_for_block_core_search( $attributes ) {
 			}
 		} else {
 			// Numeric check is for backwards compatibility purposes.
-			$border_radius   = is_numeric( $border_radius ) ? $border_radius . 'px' : $border_radius;
-			$border_style    = sprintf( 'border-radius: %s;', esc_attr( $border_radius ) );
+			var(--border_radius)   = is_numeric( var(--border_radius) ) ? var(--border_radius) . 'px' : var(--border_radius);
+			$border_style    = sprintf( 'border-radius: %s;', esc_attr( var(--border_radius) ) );
 			$input_styles[]  = $border_style;
 			$button_styles[] = $border_style;
 
-			if ( $is_button_inside && intval( $border_radius ) !== 0 ) {
+			if ( $is_button_inside && intval( var(--border_radius) ) !== 0 ) {
 				// Adjust wrapper border radii to maintain visual consistency
 				// with inner elements when button is positioned inside.
 				$wrapper_styles[] = sprintf(
 					'border-radius: calc(%s + %s);',
-					esc_attr( $border_radius ),
+					esc_attr( var(--border_radius) ),
 					$default_padding
 				);
 			}

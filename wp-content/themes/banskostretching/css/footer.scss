@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(45deg, $c_secondary 0%, rgba($c_secondary, 0.9) 100%);
-  border-radius: ($border_radius * 2) ($border_radius * 2) 0 0;
+  border-radius: calc(var(--border_radius) * 2) calc(var(--border_radius) * 2) 0 0;
   color: #fff;
   margin: var(--spacer) 0 0;
   padding: 3rem 0;

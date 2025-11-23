@@ -111,7 +111,7 @@ svg {
 .price {
   align-items: center;
   background-color: $c_secondary;
-  border-radius: $border_radius;
+  border-radius: var(--border_radius);
   color: #fff;
   display: flex;
   font-size: 16px;

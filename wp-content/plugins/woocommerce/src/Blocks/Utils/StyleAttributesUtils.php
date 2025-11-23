@@ -245,16 +245,16 @@ class StyleAttributesUtils {
 			$style = 'border-radius:' . $custom_border_radius . ';';
 		} else {
 			// Unlinked sides.
-			$border_radius = array();
+			var(--border_radius) = array();
 
-			$border_radius['border-top-left-radius']     = $custom_border_radius['topLeft'] ?? '';
-			$border_radius['border-top-right-radius']    = $custom_border_radius['topRight'] ?? '';
-			$border_radius['border-bottom-right-radius'] = $custom_border_radius['bottomRight'] ?? '';
-			$border_radius['border-bottom-left-radius']  = $custom_border_radius['bottomLeft'] ?? '';
+			var(--border_radius)['border-top-left-radius']     = $custom_border_radius['topLeft'] ?? '';
+			var(--border_radius)['border-top-right-radius']    = $custom_border_radius['topRight'] ?? '';
+			var(--border_radius)['border-bottom-right-radius'] = $custom_border_radius['bottomRight'] ?? '';
+			var(--border_radius)['border-bottom-left-radius']  = $custom_border_radius['bottomLeft'] ?? '';
 
-			foreach ( $border_radius as $border_radius_side => $border_radius_value ) {
-				if ( '' !== $border_radius_value ) {
-					$style .= $border_radius_side . ':' . $border_radius_value . ';';
+			foreach ( var(--border_radius) as var(--border_radius)_side => var(--border_radius)_value ) {
+				if ( '' !== var(--border_radius)_value ) {
+					$style .= var(--border_radius)_side . ':' . var(--border_radius)_value . ';';
 				}
 			}
 		}

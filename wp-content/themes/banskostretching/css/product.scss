@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 
     .course-details {
-      border-radius: $border_radius * 2;
+      border-radius: calc(var(--border_radius) * 2);
       border: 1px solid $c_border;
       padding: calc(var(--spacer) * 2);
       width: 100%;
@@ -49,7 +49,7 @@
 
     .entry-content {
       background-color: $c_content_bg;
-      border-radius: $border_radius * 2;
+      border-radius: calc(var(--border_radius) * 2);
       display: flex;
       flex-direction: column;
       padding: calc(var(--spacer) * 2);
@@ -87,7 +87,7 @@
       .video-access-restricted {
         align-items: center;
         background-color: $c_content_bg;
-        border-radius: $border_radius;
+        border-radius: var(--border_radius);
         display: flex;
         gap: var(--spacer);
         justify-content: space-between;
@@ -111,7 +111,7 @@
     }
 
     .product-image {
-      border-radius: $border_radius * 2;
+      border-radius: calc(var(--border_radius) * 2);
       overflow: hidden;
       width: 38%;
 

@@ -62,13 +62,13 @@ function wp_apply_border_support( $block_type, $block_attributes ) {
 		isset( $block_attributes['style']['border']['radius'] ) &&
 		! wp_should_skip_block_supports_serialization( $block_type, '__experimentalBorder', 'radius' )
 	) {
-		$border_radius = $block_attributes['style']['border']['radius'];
+		var(--border_radius) = $block_attributes['style']['border']['radius'];
 
-		if ( is_numeric( $border_radius ) ) {
-			$border_radius .= 'px';
+		if ( is_numeric( var(--border_radius) ) ) {
+			var(--border_radius) .= 'px';
 		}
 
-		$border_block_styles['radius'] = $border_radius;
+		$border_block_styles['radius'] = var(--border_radius);
 	}
 
 	// Border style.
