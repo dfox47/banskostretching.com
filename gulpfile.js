@@ -21,17 +21,19 @@ const user          = config.user
 
 const remoteTheme           = '/public_html/wp-content/themes/banskostretching/'
 const remoteCss             = remoteTheme + 'css/'
+const remoteFunctionsParts  = remoteTheme + 'functions-parts/'
+const remoteIncludes        = remoteTheme + 'includes/'
 const remoteJs              = remoteTheme + 'js/'
 const remoteTemplateParts   = remoteTheme + 'template-parts/'
-const remoteIncludes        = remoteTheme + 'includes/'
 const remoteTranslations    = remoteTheme + 'translations/'
 const remoteWoocommerce     = remoteTheme + 'woocommerce/'
 
 const localTheme            = 'wp-content/themes/banskostretching/'
 const localCss              = localTheme + 'css/'
+const localFunctionsParts   = localTheme + 'functions-parts/'
+const localIncludes         = localTheme + 'includes/'
 const localJs               = localTheme + 'js/'
 const localTemplateParts    = localTheme + 'template-parts/'
-const localIncludes         = localTheme + 'includes/'
 const localTranslations     = localTheme + 'translations/'
 const localWoocommerce      = localTheme + 'woocommerce/'
 
@@ -105,12 +107,17 @@ gulp.task('copy_template_parts', function () {
   return gulp.src(localTemplateParts + '**/*').pipe(conn.dest(remoteTemplateParts))
 })
 
+gulp.task('copy_functions_parts', function () {
+  return gulp.src(localFunctionsParts + '**/*').pipe(conn.dest(remoteFunctionsParts))
+})
+
 gulp.task('copy_woocommerce', function () {
   return gulp.src(localWoocommerce + '**/*').pipe(conn.dest(remoteWoocommerce))
 })
 
 gulp.task('watch', function () {
   gulp.watch(localCss + '**/*',               gulp.series('css', 'copy_css'))
+  gulp.watch(localFunctionsParts + '**/*',    gulp.series('copy_functions_parts'))
   gulp.watch(localIncludes + '**/*',          gulp.series('copy_includes'))
   gulp.watch(localJs + '**/*.js',             gulp.series('js', 'copy_js'))
   gulp.watch(localTemplateParts + '**/*',     gulp.series('copy_template_parts'))
