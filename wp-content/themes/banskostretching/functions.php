@@ -155,6 +155,7 @@ function banskostretching_scripts()
 }
 add_action('wp_enqueue_scripts', 'banskostretching_scripts');
 
+// TODO | front | ref
 /**
  * Implement the Custom Header feature.
  */
