@@ -193,21 +193,6 @@ svg {
   }
 }
 
-.link {
-  align-items: center;
-  border-radius: var(--border_radius);
-  color: $c_link;
-  display: flex;
-  padding: var(--spacer) calc(var(--spacer) / 2);
-  position: relative;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #f6f6f6;
-    opacity: 0.8;
-  }
-}
-
 .logo {
   background: url(#{$icons}/favicon/favicon.svg) 0 0 scroll transparent;
   background-size: contain;

@@ -11,6 +11,7 @@
   &__actions {
     align-items: center;
     display: flex;
+    gap: var(--spacer);
 
     .btn-cart {
       @media ($media_mobile) {

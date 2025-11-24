@@ -170,7 +170,8 @@
   gap: 16px;
 
   .woocommerce-button {
-    @extend .link;
+    @extend .btn;
+    @extend .btn--link;
   }
 
   thead {

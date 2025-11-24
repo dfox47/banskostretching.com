@@ -6,7 +6,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  padding: var(--spacer);
+  padding: calc(var(--spacer) / 2) var(--spacer);
   position: relative;
   text-align: center;
   text-decoration: none;
