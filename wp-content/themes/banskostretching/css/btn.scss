@@ -2,12 +2,13 @@
   background-color: #fff;
   border-radius: 0;
   border: 0 none;
-  color: $c_text;
+  color: $c_link;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  padding: calc(var(--spacer) / 2) var(--spacer);
+  padding: var(--spacer);
   position: relative;
+  text-align: center;
   text-decoration: none;
   text-transform: none;
   transition: $transition;
@@ -80,14 +81,13 @@
   }
 
   &--link {
-    border-radius: calc(var(--border_radius) / 2);
-    color: $c_link;
+    background-color: $c_bg_link;
+    border-radius: var(--border_radius);
     display: block;
-    padding: calc(var(--spacer) / 2);
     text-decoration: none;
 
     &:hover {
-      background-color: $c_bg_link;
+      background-color: $c_highlight;
     }
 
     &.active {

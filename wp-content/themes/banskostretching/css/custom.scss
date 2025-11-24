@@ -91,7 +91,7 @@ svg {
   position: relative;
 
   &__input {
-    left: -100px;
+    left: -9999px;
     position: absolute;
 
     &:checked {
@@ -173,6 +173,38 @@ svg {
     position: absolute;
     width: 100%;
     z-index: 9;
+  }
+}
+
+.input {
+  background-color: #f2f2f2;
+  border-radius: var(--border_radius);
+  color: $c_text;
+  font-size: 16px;
+  max-width: 300px;
+  padding: var(--spacer);
+  width: 100%;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: #f2f2f2;
+    border: none;
+  }
+}
+
+.link {
+  align-items: center;
+  border-radius: var(--border_radius);
+  color: $c_link;
+  display: flex;
+  padding: var(--spacer) calc(var(--spacer) / 2);
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f6f6f6;
+    opacity: 0.8;
   }
 }
 
@@ -265,9 +297,10 @@ svg {
     }
 
     button[type='submit'] {
-      @extend .b-btn;
-      @extend .b-btn--primary;
-      margin: 24px auto 0;
+      @extend .btn;
+      @extend .btn--primary;
+
+      margin: var(--spacer) auto 0;
     }
   }
 }

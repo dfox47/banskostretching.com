@@ -41,11 +41,11 @@
   }
 
   .select2-search__field {
-    @extend .b-input;
+    @extend .input;
 
+    background-color: #fff;
     border: none !important;
     height: 48px;
-    background-color: #fff;
 
     &:focus,
     &:active,
@@ -170,7 +170,7 @@
   gap: 16px;
 
   .woocommerce-button {
-    @extend .b-link;
+    @extend .link;
   }
 
   thead {

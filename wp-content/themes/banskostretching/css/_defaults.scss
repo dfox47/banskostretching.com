@@ -14,9 +14,9 @@
 }
 
 a {
-  transition: all 0.3s ease-in-out;
   color: $c_link;
   text-decoration: none;
+  transition: $transition;
 
   &.link_to_block {
     left: 0;
@@ -129,12 +129,11 @@ img {
 }
 
 input {
+  @extend .input;
+
   border: 0 none;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 100;
-  padding: 0.5em 1em;
-  @extend .b-input;
+  box-shadow: none;
+  outline: none;
 }
 
 p {

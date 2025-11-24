@@ -17,12 +17,6 @@
     margin: 0;
     width: 100%;
 
-    input {
-      @extend .b-input;
-
-      width: 100%;
-    }
-
     .password-input {
       align-items: center;
       display: flex;
@@ -33,9 +27,8 @@
       }
 
       .show-password-input {
-        @extend .b-icon;
-
-        background-image: url(#{$icons}/eye-open.svg);
+        background: url(#{$icons}/eye-open.svg) center no-repeat transparent;
+        background-size: contain;
         cursor: pointer;
         height: 24px;
         position: absolute;
@@ -65,7 +58,9 @@
     margin: 0;
 
     a {
-      @extend .b-link;
+      @extend .btn;
+      @extend .btn--link;
+      // @extend .link;
 
       justify-content: center;
     }
