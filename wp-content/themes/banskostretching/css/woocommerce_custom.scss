@@ -83,6 +83,36 @@
   @extend .btn--primary;
 }
 
+.wc-block-components-radio-control {
+  &__option {
+    input {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.wc-block-components-order-summary {
+  .wc-block-components-order-summary-item {
+    &__individual-prices {
+      display: none !important;
+    }
+  }
+}
+
+.wc-block-components-notice-banner {
+  &.is-error {
+    background-color: $c_primary;
+  }
+}
+
+.wc-block-cart-item {
+  &__prices {
+    display: none;
+  }
+}
+
 .woocommerce-MyAccount-content,
 .woocommerce-billing-fields,
 .woocommerce-checkout {
