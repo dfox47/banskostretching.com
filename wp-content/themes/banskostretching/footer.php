@@ -13,7 +13,6 @@ $iconsDir   = $i . '/icons'; ?>
   include_once('template-parts/instagram_widget.php');
 } ?>
 
-
 <footer class="footer">
   <div class="wrap">
     <div class="footer__lang">
@@ -35,6 +34,15 @@ $iconsDir   = $i . '/icons'; ?>
 
       <div class="copyright__date">© 2022 - <?= (date('Y')); ?></div>
     </div>
+
+    <nav class="footer_menu">
+      <?php wp_nav_menu(array(
+        'theme_location' => 'footer_menu',
+        'menu_class'     => 'footer_menu__list',
+        'container'      => false,
+        'fallback_cb'    => false
+      )); ?>
+    </nav>
   </div>
 </footer>
 

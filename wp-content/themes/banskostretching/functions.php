@@ -10,7 +10,7 @@
 
 if (! defined('_S_VERSION')) {
   // Replace the version number of the theme on each release.
-  define('_S_VERSION', '1.0.0');
+  define('_S_VERSION', '2.0.0');
 }
 
 // Подключаем модули
@@ -56,6 +56,7 @@ function banskostretching_setup()
     array(
       'primary' => esc_html__('Primary', 'banskostretching'),
       'header-user' => esc_html__('Header User Menu', 'banskostretching'),
+      'footer_menu' => __('Footer Menu', 'banskostretching'),
     )
   );
 
@@ -129,26 +130,7 @@ function banskostretching_content_width()
 }
 add_action('after_setup_theme', 'banskostretching_content_width', 0);
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function banskostretching_widgets_init()
-{
-  register_sidebar(
-    array(
-      'name'          => esc_html__('Sidebar', 'banskostretching'),
-      'id'            => 'sidebar-1',
-      'description'   => esc_html__('Add widgets here.', 'banskostretching'),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-    )
-  );
-}
-add_action('widgets_init', 'banskostretching_widgets_init');
+
 
 /**
  * Enqueue scripts and styles.
@@ -218,49 +200,7 @@ add_action('admin_init', 'check_woocommerce_status');
 // Функции для работы с видео перенесены в класс BanskoStretching_Video_Manager
 // Глобальные функции для обратной совместимости подключаются автоматически
 
-function register_menu_footer()
-{
-  register_nav_menu('footer', __('Footer Menu', 'banskostretching'));
-}
-add_action('after_setup_theme', 'register_menu_footer');
 
-// translations [START]
-function load_json_translations($lang = 'ru')
-{
-  static $translations = [];
-
-  // Cache translations in memory
-  if (!isset($translations[$lang])) {
-    $file = get_template_directory() . "/translations/{$lang}.json";
-
-    if (file_exists($file)) {
-      $json = file_get_contents($file);
-      $translations[$lang] = json_decode($json, true);
-    } else {
-      $translations[$lang] = [];
-    }
-  }
-
-  return $translations[$lang];
-}
-
-function __t($key)
-{
-  $current_lang = get_locale();
-
-  // Map WordPress locales to your file names
-  $map = [
-    'en_US' => 'en',
-    'ru_RU' => 'ru',
-    'uk' => 'ua'
-  ];
-
-  $lang = isset($map[$current_lang]) ? $map[$current_lang] : 'ru';
-  $translations = load_json_translations($lang);
-
-  return $translations[$key] ?? $key;
-}
-// translations [END]
 
 /**
  * Отключение стилей WooCommerce
@@ -271,7 +211,7 @@ function banskostretching_disable_woocommerce_styles()
   wp_dequeue_style('woocommerce-general');
   wp_dequeue_style('woocommerce-layout');
   wp_dequeue_style('woocommerce-smallscreen');
-  
+
   // Опционально: отключить стили для блоков WooCommerce
   // wp_dequeue_style('wc-blocks-style');
 }
@@ -287,7 +227,7 @@ function banskostretching_custom_shop_body_class($classes)
   if (is_shop() || is_product_category() || is_product_tag()) {
     // Удаляем стандартные классы WooCommerce
     $classes = array_diff($classes, ['woocommerce', 'woocommerce-page']);
-    
+
     // Добавляем свои классы
     $classes[] = 'products-page';
   }
@@ -295,11 +235,11 @@ function banskostretching_custom_shop_body_class($classes)
   if (is_product()) {
     // Удаляем стандартные классы WooCommerce
     $classes = array_diff($classes, ['woocommerce', 'woocommerce-page']);
-    
+
     // Добавляем свои классы
     $classes[] = 'product-page';
   }
-  
+
   return $classes;
 }
 add_filter('body_class', 'banskostretching_custom_shop_body_class');
@@ -308,10 +248,11 @@ add_filter('body_class', 'banskostretching_custom_shop_body_class');
 /**
  * Удаление поля billing_address_2 из всех форм WooCommerce
  */
-function banskostretching_remove_billing_address_2($fields) {
+function banskostretching_remove_billing_address_2($fields)
+{
   // Удаляем поле адреса 2 (квартира/офис)
   unset($fields['billing_address_2']);
-  
+
   return $fields;
 }
 add_filter('woocommerce_billing_fields', 'banskostretching_remove_billing_address_2');
@@ -319,14 +260,17 @@ add_filter('woocommerce_billing_fields', 'banskostretching_remove_billing_addres
 /**
  * Удаление поля billing_address_2 из чекаута
  */
-function banskostretching_remove_checkout_address_2($fields) {
+function banskostretching_remove_checkout_address_2($fields)
+{
   // Удаляем из billing
   unset($fields['billing']['billing_address_2']);
-  
+
   // Также можно удалить из shipping, если нужно
   // unset($fields['shipping']['shipping_address_2']);
-  
+
   return $fields;
 }
 add_filter('woocommerce_checkout_fields', 'banskostretching_remove_checkout_address_2');
 
+include_once('functions-parts/sidebar.php');
+include_once('functions-parts/languages.php');
