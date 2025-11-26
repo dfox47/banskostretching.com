@@ -83,3 +83,39 @@
     @extend .wrap;
   }
 }
+
+.products {
+  display: grid;
+
+  &.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media ($media_tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media ($media_tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media ($media_mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media ($media_tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media ($media_mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
