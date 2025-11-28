@@ -1,4 +1,15 @@
-<?php if (is_user_logged_in()) : ?>
+<?php
+// lang link
+$lang       = get_bloginfo('language');
+$langShort  = '';
+
+if ($lang == 'en-US') {
+  $langShort = 'en/';
+} else if ($lang == 'uk') {
+  $langShort = 'ua/';
+}
+
+if (is_user_logged_in()) : ?>
   <div class="header-user-menu">
     <button class="header-user-menu__avatar js-menu-toggle"></button>
 
@@ -12,5 +23,5 @@
     </div>
   </div>
 <?php else : ?>
-  <a href="/my-account/" class="btn btn--secondary"><?= __t('sign_in'); ?></a>
+  <a href="/<?= $langShort; ?>my-account/" class="btn btn--secondary"><?= __t('sign_in'); ?></a>
 <?php endif; ?>
