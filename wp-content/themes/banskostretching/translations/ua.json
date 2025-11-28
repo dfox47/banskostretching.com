@@ -1,4 +1,6 @@
 {
+  "access_restricted": "Доступ обмежений",
+  "access_restricted_desc": "Для перегляду цього відео необхідно придбати курс.",
   "add_to_cart": "Додати до кошику",
   "cart_title": "Кошик",
   "checkout": "Оформлення замовлення",
@@ -8,11 +10,16 @@
   "course_level_all_levels": "Усі рівні",
   "course_level_beginner": "Початківець",
   "course_level_intermediate": "Середній",
+  "course_video": "Відео курсу",
+  "duration": "Тривалість",
+  "license": "Ліцензія",
   "logout": "Вийти",
   "menu": "Меню",
   "my_orders": "Мої замовлення",
   "personal_account": "Особистий кабінет",
   "price": "Ціна",
   "sign_in": "Увійти",
+  "video": "Відео",
+  "video_temporarily_unavailable.": "The video is temporarily unavailable.",
   "welcome": "Ласкаво просимо!"
 }

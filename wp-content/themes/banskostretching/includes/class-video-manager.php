@@ -157,14 +157,14 @@ class BanskoStretching_Video_Manager
       }
 
       $output = '<div class="video-access-restricted">
-                        <h4>🔒 Доступ ограничен</h4>
-                        <p>Для просмотра этого урока необходимо приобрести курс.</p>';
+                  <h4>🔒 ' . __t('access_restricted') . '</h4>
+                  <p>' . __t('access_restricted_desc') . '</p>';
 
       if ($add_to_cart_url) {
         $output .= '<form method="post" class="video-add-to-cart-form">
                             <input type="hidden" name="add-to-cart" value="' . esc_attr($product_id) . '" />
                             <button type="submit" class="btn btn--primary video-add-to-cart-btn" data-product-id="' . esc_attr($product_id) . '">
-                                Добавить в корзину
+                                ' . __t('add_to_cart') . '
                             </button>
                         </form>';
       }
@@ -176,7 +176,7 @@ class BanskoStretching_Video_Manager
 
     // Если доступ есть, показываем видео
     if (empty($vimeo_id)) {
-      return '<p>Видео временно недоступно.</p>';
+      return '<p>' . __t('video_temporarily_unavailable') . '</p>';
     }
 
     $iframe_title = !empty($lesson_title) ? esc_attr($lesson_title) : 'Урок курса';
@@ -222,8 +222,8 @@ class BanskoStretching_Video_Manager
       // Водяной знак
       $current_user = wp_get_current_user();
       $watermark = '<div class="video-watermark">
-                          Лицензия: ' . esc_html($current_user->user_login) . '
-                     </div>';
+                      ' . __t('license') . ': ' . esc_html($current_user->user_login) . '
+                    </div>';
     }
 
     return '<div class="vimeo-container' . ($use_security ? ' protected-video' : '') . '" ' . $security_attributes . '">
@@ -238,9 +238,7 @@ class BanskoStretching_Video_Manager
                 </div>';
   }
 
-  /**
-   * Отображает все уроки курса
-   */
+  // Отображает все уроки курса
   public function display_course_lessons($product_id, $use_security = false)
   {
     if (!function_exists('get_field')) {
@@ -253,16 +251,16 @@ class BanskoStretching_Video_Manager
       return '<p>Уроки для этого курса пока не добавлены.</p>';
     }
 
-    $output = '<div class="course-lessons"><h3>Уроки курса</h3>';
+    $output = '<div class="course-lessons"><h3>' . __t('course_video') . '</h3>';
 
     foreach ($course_lessons as $index => $lesson) {
       if (isset($lesson['lesson_title']) && isset($lesson['vimeo_id'])) {
         $lesson_number = $index + 1;
         $output .= '<div class="lesson-item">';
-        $output .= '<h4>Урок ' . $lesson_number . ': ' . esc_html($lesson['lesson_title']) . '</h4>';
+        $output .= '<h4>' . __t('video') . ' ' . $lesson_number . ': ' . esc_html($lesson['lesson_title']) . '</h4>';
 
         if (!empty($lesson['lesson_duration'])) {
-          $output .= '<p><em>Длительность: ' . esc_html($lesson['lesson_duration']) . '</em></p>';
+          $output .= '<p><em>' . __t('duration') . ': ' . esc_html($lesson['lesson_duration']) . '</em></p>';
         }
 
         $output .= $this->display_vimeo_video($lesson['vimeo_id'], $product_id, $lesson['lesson_title'], $use_security);
@@ -274,9 +272,7 @@ class BanskoStretching_Video_Manager
     return $output;
   }
 
-  /**
-   * Шорткод для вставки Vimeo видео
-   */
+  // shortcode for Vimeo video
   public function vimeo_video_shortcode($atts)
   {
     $atts = shortcode_atts(array(

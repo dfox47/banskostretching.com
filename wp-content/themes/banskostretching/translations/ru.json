@@ -1,4 +1,6 @@
 {
+  "access_restricted": "Доступ ограничен",
+  "access_restricted_desc": "Для просмотра этого видео необходимо приобрести курс.",
   "add_to_cart": "Добавить в корзину",
   "cart_title": "Корзина",
   "checkout": "Оформление заказа",
@@ -8,11 +10,16 @@
   "course_level_all_levels": "Все уровни",
   "course_level_beginner": "Начинающий",
   "course_level_intermediate": "Средний",
+  "course_video": "Видео курса",
+  "duration": "Duration",
+  "license": "Лицензия",
   "logout": "Выйти",
   "menu": "Меню",
   "my_orders": "Мои заказы",
   "personal_account": "Личный кабинет",
   "price": "Цена",
   "sign_in": "Войти",
+  "video": "Видео",
+  "video_temporarily_unavailable.": "Видео временно недоступно.",
   "welcome": "Добро пожаловать!"
 }

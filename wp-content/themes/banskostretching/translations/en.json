@@ -1,4 +1,6 @@
 {
+  "access_restricted": "Access is restricted",
+  "access_restricted_desc": "To view this video you need to purchase the course.",
   "add_to_cart": "Add to cart",
   "cart_title": "Cart",
   "checkout": "Checkout",
@@ -8,11 +10,16 @@
   "course_level_all_levels": "All levels",
   "course_level_beginner": "Beginner",
   "course_level_intermediate": "Intermediate",
+  "course_video": "Course video",
+  "duration": "Duration",
+  "license": "License",
   "logout": "Sign Out",
   "menu": "Menu",
   "my_orders": "My Orders",
   "personal_account": "My Account",
   "price": "Price",
   "sign_in": "Sign In",
+  "video": "Video",
+  "video_temporarily_unavailable.": "Відео тимчасово недоступне.",
   "welcome": "Welcome to our store!"
 }

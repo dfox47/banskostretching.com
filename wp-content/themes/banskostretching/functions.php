@@ -273,6 +273,15 @@ function banskostretching_remove_checkout_address_2($fields)
 }
 add_filter('woocommerce_checkout_fields', 'banskostretching_remove_checkout_address_2');
 
+// Add custom class to loop add-to-cart buttons | category page
+add_filter('woocommerce_loop_add_to_cart_args', function ($args, $product) {
+  if (!isset($args['class'])) $args['class'] = '';
+
+  $args['class'] .= ' btn btn--primary';
+
+  return $args;
+}, 10, 2);
+
 include_once('functions-parts/breadcrumbs.php');
 include_once('functions-parts/languages.php');
 include_once('functions-parts/sidebar.php');

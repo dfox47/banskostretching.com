@@ -173,8 +173,75 @@
   }
 }
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// TODO | ref code above
+
 .product_price {
   .amount {
     @extend .price;
+  }
+}
+
+.products_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacer);
+
+  @media ($media_tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    align-items: flex-start;
+    border-radius: var(--border_radius);
+    border: 1px solid $c_border;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 224px;
+    overflow: hidden;
+    padding: var(--spacer) var(--spacer) var(--spacer) calc(35% + var(--spacer));
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+
+    @media ($media_mobile) {
+      border-radius: 24px;
+      height: auto;
+      padding: var(--spacer) var(--spacer) 86px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      height: 100%;
+      left: 0;
+      margin: 0;
+      object-fit: cover;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      width: 35%;
+
+      @media ($media_mobile) {
+        height: auto;
+        margin: (-var(--spacer)) (-var(--spacer)) var(--spacer);
+        max-width: none;
+        position: relative;
+        width: calc(100% + calc(var(--spacer) * 2));
+      }
+    }
+
+    .woocommerce-loop-product__title {
+      color: $c_link;
+      font-size: 24px;
+      text-transform: capitalize;
+    }
   }
 }
