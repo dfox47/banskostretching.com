@@ -2,16 +2,15 @@ $i: '/wp-content/themes/banskostretching/i';
 $icons: $i + '/icons';
 
 // colors
-$c_bg_link: #f2f2f2;
+$c_bg_link: #ededed;
 $c_border: rgba(#000, 0.1);
-$c_highlight: #55c3f0; // 85,195,240
+$c_highlight: #55c3f0;
 $c_link: #0e1c36;
 $c_primary: #ff8da1;
-$c_secondary: #383882; // 56,56,130
+$c_secondary: #383882;
 $c_text: #101316;
-$c_title: #101316;
 
-$box-shadown: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+$box-shadown: 4px 4px 8px 0px rgba($c_border, 0.2);
 
 $transition: all 0.3s ease-in-out;
 

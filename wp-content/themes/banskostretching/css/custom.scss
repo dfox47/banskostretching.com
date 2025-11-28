@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  color: $c_title;
+  color: $c_link;
   font-family: $font_lilita_one;
   font-size: 2.9rem;
   font-weight: 700;
@@ -65,7 +65,7 @@ svg {
   color: $c_primary;
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   gap: calc(var(--spacer) / 2);
   margin: var(--spacer) 0;
 
@@ -82,8 +82,8 @@ svg {
       background: url(#{$icons}/home.svg) no-repeat center center;
       background-size: contain;
       font-size: 0;
-      height: 18px;
-      width: 18px;
+      height: 16px;
+      width: 16px;
     }
   }
 }
