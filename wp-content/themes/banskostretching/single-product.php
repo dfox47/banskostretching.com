@@ -82,7 +82,7 @@
 
           if ($what_you_learn && is_array($what_you_learn)) : ?>
             <div class="what-you-learn">
-              <h3>Что вы изучите в курсе</h3>
+              <h3><?= __t('what_you_will_learn'); ?></h3>
 
               <ul>
                 <?php foreach ($what_you_learn as $item) : ?>
@@ -92,9 +92,9 @@
                 <?php endforeach; ?>
               </ul>
             </div>
-          <?php endif; ?>
+          <?php endif;
 
-          <?php // Отображаем уроки курса с защищенными видео
+          // Отображаем уроки курса с защищенными видео
           echo display_course_lessons(get_the_ID()); ?>
         </div>
       <?php endif; ?>

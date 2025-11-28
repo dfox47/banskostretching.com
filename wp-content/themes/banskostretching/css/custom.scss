@@ -333,6 +333,7 @@ svg {
   padding: calc(var(--spacer) / 2) var(--spacer);
 }
 
+// TODO | remove 2d breadcrumbs from the html
 .site-main {
   .breadcrumbs {
     display: none;
