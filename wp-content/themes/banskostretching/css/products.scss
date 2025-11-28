@@ -1,11 +1,4 @@
 .products-page {
-  .products {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacer);
-    margin-top: 40px;
-  }
-
   .product {
     position: relative;
 
@@ -86,6 +79,7 @@
 
 .products {
   display: grid;
+  gap: var(--spacer);
 
   &.columns-2 {
     grid-template-columns: repeat(2, 1fr);

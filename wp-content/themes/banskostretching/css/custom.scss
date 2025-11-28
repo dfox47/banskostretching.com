@@ -177,6 +177,11 @@ svg {
   text-align: center;
 }
 
+.edit {
+  @extend .btn;
+  @extend .btn--secondary;
+}
+
 .greetings {
   font-size: 1.5rem;
   margin: 0 auto;
@@ -326,6 +331,12 @@ svg {
   display: flex;
   font-size: 16px;
   padding: calc(var(--spacer) / 2) var(--spacer);
+}
+
+.site-main {
+  .breadcrumbs {
+    display: none;
+  }
 }
 
 .vimeo-container {
