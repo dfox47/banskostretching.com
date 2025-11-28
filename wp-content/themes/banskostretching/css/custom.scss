@@ -69,7 +69,8 @@ svg {
   gap: calc(var(--spacer) / 2);
   margin: var(--spacer) 0;
 
-  a {
+  a,
+  a:visited {
     color: $c_link;
     display: block;
 
