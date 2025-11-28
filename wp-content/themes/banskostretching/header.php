@@ -1,7 +1,17 @@
 <?php // vars
 $themeDir   = '/wp-content/themes/banskostretching';
 $i          = $themeDir . '/i';
-$iconsDir   = $i . '/icons'; ?>
+$iconsDir   = $i . '/icons';
+
+// lang link
+$lang       = get_bloginfo('language');
+$langShort  = 'en';
+
+if ($lang == 'ru-RU') {
+  $langShort = 'ru';
+} else if ($lang == 'uk') {
+  $langShort = 'ua';
+} ?>
 
 <!DOCTYPE html>
 
@@ -38,21 +48,11 @@ $iconsDir   = $i . '/icons'; ?>
         </button>
 
         <nav class="nav">
-          <a class="logo" href="/"></a>
+          <a class="logo" href="/<?= $langShort; ?>"></a>
         </nav>
 
         <div class="header__actions">
-          <?php // cart link
-          $lang       = get_bloginfo('language');
-          $langShort  = 'en';
-
-          if ($lang == 'ru-RU') {
-            $langShort = 'ru';
-          } else if ($lang == 'uk') {
-            $langShort = 'ua';
-          }
-
-          // amount in cart
+          <?php // amount in cart
           $cartCount = WC()->cart->get_cart_contents_count(); ?>
 
           <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>/cart">
