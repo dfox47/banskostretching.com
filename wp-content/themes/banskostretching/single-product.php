@@ -10,6 +10,8 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <div class="entry-content">
+        <?php the_title('<h1 class="product_title">', '</h1>'); ?>
+
         <div class="course-info">
           <?php // Отображаем ACF поля курса
           if (function_exists('get_field')) :
@@ -45,8 +47,6 @@
           endif; // end ACF check
           ?>
         </div>
-
-        <?php the_title('<h3 class="product-title">', '</h3>'); ?>
 
         <div class="product-description">
           <?php the_content(); ?>

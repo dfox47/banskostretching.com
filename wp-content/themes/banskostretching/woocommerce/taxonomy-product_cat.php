@@ -37,15 +37,15 @@ $term = get_queried_object(); ?>
         global $product; ?>
 
         <div class="products_list__item">
-          <a href="<?php the_permalink(); ?>">
+          <a class="products_list__link" href="<?php the_permalink(); ?>">
             <?php if (has_post_thumbnail()) : ?>
-              <div class="product-thumb"><?php the_post_thumbnail('medium'); ?></div>
+              <div class="products_list__thumb"><?php the_post_thumbnail('medium'); ?></div>
             <?php endif; ?>
 
             <h2 class="product-title"><?php the_title(); ?></h2>
 
             <?php if ($product->get_price()) : ?>
-              <div class="product_price"><?= $product->get_price_html(); ?></div>
+              <div class="price"><?= $product->get_price_html(); ?></div>
             <?php endif; ?>
           </a>
 
