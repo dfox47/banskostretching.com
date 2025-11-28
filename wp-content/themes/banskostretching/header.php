@@ -70,6 +70,13 @@ $iconsDir   = $i . '/icons'; ?>
     </header>
   </div>
 
+  <?php // Breadcrumbs
+  if (!is_front_page() && function_exists('woocommerce_breadcrumb')) { ?>
+    <div class="wrap">
+      <?php woocommerce_breadcrumb(); ?>
+    </div>
+  <?php } ?>
+
   <?php if (is_front_page()) { ?>
     <div class="hero js-img-bg" data-src="<?= $i; ?>/hero.jpg"></div>
   <?php } ?>

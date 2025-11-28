@@ -60,6 +60,33 @@ svg {
   gap: var(--spacer);
 }
 
+.breadcrumbs {
+  align-items: center;
+  color: $c_primary;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  gap: calc(var(--spacer) / 2);
+  margin: var(--spacer) 0;
+
+  a {
+    color: $c_link;
+    display: block;
+
+    &:hover {
+      color: $c_primary;
+    }
+
+    &:first-child {
+      background: url(#{$icons}/home.svg) no-repeat center center;
+      background-size: contain;
+      font-size: 0;
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
 .cart_link {
   &--icon {
     position: relative;

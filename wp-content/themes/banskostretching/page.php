@@ -20,7 +20,7 @@ if (is_front_page()) {
 $main_class = implode(' ', $main_classes);
 ?>
 
-<main id="primary" class="<?php echo esc_attr($main_class); ?>">
+<main id="primary" class="<?= esc_attr($main_class); ?>">
   <?php while (have_posts()) :
     the_post();
 

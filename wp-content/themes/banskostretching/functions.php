@@ -273,5 +273,6 @@ function banskostretching_remove_checkout_address_2($fields)
 }
 add_filter('woocommerce_checkout_fields', 'banskostretching_remove_checkout_address_2');
 
-include_once('functions-parts/sidebar.php');
+include_once('functions-parts/breadcrumbs.php');
 include_once('functions-parts/languages.php');
+include_once('functions-parts/sidebar.php');
