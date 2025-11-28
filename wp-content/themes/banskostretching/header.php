@@ -5,12 +5,12 @@ $iconsDir   = $i . '/icons';
 
 // lang link
 $lang       = get_bloginfo('language');
-$langShort  = 'en';
+$langShort  = '';
 
-if ($lang == 'ru-RU') {
-  $langShort = 'ru';
+if ($lang == 'en-US') {
+  $langShort = 'en/';
 } else if ($lang == 'uk') {
-  $langShort = 'ua';
+  $langShort = 'ua/';
 } ?>
 
 <!DOCTYPE html>
@@ -35,8 +35,6 @@ if ($lang == 'ru-RU') {
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?= $themeDir; ?>/styles.min.css?v<?= (date("YmdHis")); ?>">
-
-  <meta name="description" content="Discover the benefits of stretching in Bansko city! Enhance your flexibility, improve your health, and enjoy guided sessions in the stunning mountain surroundings. Join our community for expert tips, routines, and wellness advice.">
 </head>
 
 <body <?php body_class(); ?>>
@@ -55,7 +53,7 @@ if ($lang == 'ru-RU') {
           <?php // amount in cart
           $cartCount = WC()->cart->get_cart_contents_count(); ?>
 
-          <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>/cart">
+          <a class="btn btn--cart cart_link" href="/<?= $langShort; ?>cart">
             <span class="cart_link--icon js-img-scroll" data-src="<?= $iconsDir; ?>/cart.svg"></span>
             <?php if ($cartCount > 0) { ?>
               <span class="cart_link--count">
