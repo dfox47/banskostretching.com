@@ -327,4 +327,16 @@ svg {
   font-size: 16px;
   padding: calc(var(--spacer) / 2) var(--spacer);
 }
+
+.vimeo-container {
+  border-radius: var(--border_radius);
+  overflow: hidden;
+  position: relative;
+
+  iframe {
+    margin: 0;
+    height: 500px;
+    width: 100%;
+  }
+}
 // help classes [END]
