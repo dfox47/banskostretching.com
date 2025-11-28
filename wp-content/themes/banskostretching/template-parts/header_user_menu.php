@@ -13,7 +13,7 @@ if (is_user_logged_in()) : ?>
   <div class="header-user-menu">
     <button class="header-user-menu__avatar js-menu-toggle"></button>
 
-    <div class="header-user-menu__dropdown">
+    <div class="header-user-menu__dropdown js-menu-toggle">
       <?php wp_nav_menu(array(
         'theme_location' => 'header-user',
         'menu_class'     => 'nav__menu',

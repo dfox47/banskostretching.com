@@ -4,9 +4,7 @@ const menuDropdown = () => {
   if (!menuToggle) return
 
   menuToggle.forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault()
-
+    btn.addEventListener('click', function () {
       document.documentElement.classList.toggle('overflow-hidden')
       document.documentElement.classList.toggle('header-user-menu-active')
     })
