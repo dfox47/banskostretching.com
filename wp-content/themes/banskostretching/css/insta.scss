@@ -4,6 +4,7 @@
   justify-content: center;
   gap: var(--spacer);
   grid-template-columns: repeat(4, 1fr);
+  margin-bottom: var(--spacer);
 
   @media ($media_tablet) {
     grid-template-columns: repeat(2, 1fr);

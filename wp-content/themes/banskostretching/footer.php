@@ -10,8 +10,12 @@ $iconsDir   = $i . '/icons'; ?>
   include_once('template-parts/reviews.php');
 
   // instagram
-  include_once('template-parts/instagram_widget.php');
-} ?>
+  include_once('template-parts/instagram_widget.php'); ?>
+
+  <div class="text-center">
+    <a class="btn btn--primary" href="/trenirovki/"><?= __t('sign_up_for_training'); ?></a>
+  </div>
+<?php } ?>
 
 <footer class="footer">
   <div class="wrap">

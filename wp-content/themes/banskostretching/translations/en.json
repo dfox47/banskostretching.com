@@ -19,8 +19,9 @@
   "personal_account": "My Account",
   "price": "Price",
   "sign_in": "Sign In",
+  "sign_up_for_training": "Sign up for training",
   "video": "Video",
-  "video_temporarily_unavailable.": "Відео тимчасово недоступне.",
+  "video_temporarily_unavailable.": "The video is temporarily unavailable.",
   "welcome": "Welcome to our store!",
   "what_you_will_learn": "What you will learn in the course"
 }
