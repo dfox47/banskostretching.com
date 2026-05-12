@@ -1,0 +1,61 @@
+.amelia-app-booking .el-button,
+.amelia-app-booking button,
+.amelia-v2-booking .am-button {
+  background: $c_primary !important;
+  border-radius: var(--border_radius) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700;
+  padding: calc(var(--spacer) / 2) var(--spacer);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $c_secondary !important;
+  }
+
+  &--secondary {
+    background-color: $c_secondary !important;
+  }
+}
+
+.amelia-v2-booking {
+  #amelia-container {
+    .am-ec {
+      &__actions-price {
+        color: $c_secondary !important;
+      }
+
+      &__info-availability {
+        &.full {
+          color: $c_primary !important;
+        }
+      }
+    }
+
+    .am-eli {
+      .am-eli__main {
+        .el-tabs {
+          &__active-bar {
+            background-color: $c_secondary !important;
+          }
+
+          &__item.is-active {
+            color: $c_secondary !important;
+          }
+        }
+      }
+    }
+
+    .am-pagination {
+      .el-pager {
+        .number {
+          &.is-active {
+            background-color: $c_secondary !important;
+            border: 1px solid $c_secondary !important;
+          }
+        }
+      }
+    }
+  }
+}
