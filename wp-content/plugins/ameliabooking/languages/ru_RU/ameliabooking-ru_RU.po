@@ -465,7 +465,7 @@ msgstr "Открыто"
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:143
 #: src/Infrastructure/WP/Translations/LiteFrontendStrings.php:118
 msgid "Open"
-msgstr "Открыть"
+msgstr "Открыто"
 
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:144
 msgid "Packages"
@@ -3170,7 +3170,7 @@ msgstr "Открыть бронирование прямо сейчас"
 
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:804
 msgid "Open Event"
-msgstr "Открыть"
+msgstr "Открыть мероприятие"
 
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:805
 msgid "Event has been opened."
@@ -4135,12 +4135,12 @@ msgstr "мест осталось"
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:1610
 #: src/Infrastructure/WP/Translations/LiteFrontendStrings.php:220
 msgid "Learn more"
-msgstr "Еще"
+msgstr "Записаться"
 
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:1073
 #: src/Infrastructure/WP/Translations/LiteFrontendStrings.php:221
 msgid "Read more"
-msgstr "Еще"
+msgstr "Записаться"
 
 #: src/Infrastructure/WP/Translations/LiteBackendStrings.php:1078
 msgid "About"
@@ -7903,7 +7903,7 @@ msgstr "Информация"
 
 #: src/Infrastructure/WP/Translations/LiteFrontendStrings.php:242
 msgid "View More"
-msgstr "Еще"
+msgstr "Записаться"
 
 #: src/Infrastructure/WP/Translations/LiteFrontendStrings.php:243
 msgid "View All"
@@ -13488,7 +13488,7 @@ msgstr "Выберите услугу"
 #~ msgstr "Версия "
 
 #~ msgid "View Cart"
-#~ msgstr "Еще"
+#~ msgstr "Записаться"
 
 #~ msgid "View Employees"
 #~ msgstr "Новый сотрудник"
@@ -13506,7 +13506,7 @@ msgstr "Выберите услугу"
 #~ msgstr "Показать меньше пакетов"
 
 #~ msgid "View more"
-#~ msgstr "Еще"
+#~ msgstr "Записаться"
 
 #~ msgid "View more packages"
 #~ msgstr "Посмотреть другие пакеты"
