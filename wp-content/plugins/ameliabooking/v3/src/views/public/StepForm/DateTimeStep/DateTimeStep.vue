@@ -200,7 +200,7 @@ let langDetection = computed(() => amSettings.general.usedLanguages.includes(loc
 let amLabels = computed(() => {
   let computedLabels = reactive({...globalLabels})
 
-  if (amSettings.customizedData && amSettings.customizedData.sbsNew && amSettings.customizedData.sbsNew.dateTimeStep.translations) {
+  if (amSettings.customizedData?.sbsNew?.dateTimeStep?.translations) {
     let customizedLabels = amSettings.customizedData.sbsNew.dateTimeStep.translations
     Object.keys(customizedLabels).forEach(labelKey => {
       if (customizedLabels[labelKey][localLanguage.value] && langDetection.value) {

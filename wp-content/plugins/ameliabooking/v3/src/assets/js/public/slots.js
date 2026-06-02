@@ -93,8 +93,24 @@ function useAppointmentSlots (params, fetchedSlots, callback, customCallback, wa
               const serviceId = params.serviceId
               const duration = params.serviceDuration
               // Consider only rows for this service; require at least one match
-              const serviceRows = providersData.filter(p => p.s === serviceId)
-              if (duration && (serviceRows.length && serviceRows[0].d !== duration / 60)) return
+              let serviceRows = providersData.filter(p => p.s === serviceId)
+              if (
+                'locationId' in params &&
+                params.locationId !== null &&
+                params.locationId !== ''
+              ) {
+                serviceRows = serviceRows.filter(
+                  (p) => p.l != null && p.l !== '' && String(p.l) === String(params.locationId)
+                )
+              }
+              if (!serviceRows.length) return
+              if (duration) {
+                const expectedDuration = duration / 60
+                serviceRows = serviceRows.filter(
+                  (p) => Number(p.d) === Number(expectedDuration)
+                )
+                if (!serviceRows.length) return
+              }
               // Filter for selected providers only
               const selectedProviderRows = params.providerIds && params.providerIds.length
                 ? serviceRows.filter(p => params.providerIds.includes(p.e))
@@ -115,9 +131,8 @@ function useAppointmentSlots (params, fetchedSlots, callback, customCallback, wa
 
               // Add to waiting list only if all providers are fully booked and at least one has waiting capacity
               if (waitingListProviders.length > 0) {
-                // IMPORTANT FIX: Check if this time slot exists in regular slots
-                // If it does, don't add to waiting list because user can book the regular slot
-                let regularSlotExists = slots[date] && slots[date][time];
+                // If this time exists in regular slots, don't add waiting list (user can book the regular slot)
+                let regularSlotExists = slots[date] && slots[date][time]
 
                 if (!regularSlotExists) {
                   if (!(date in waitingListSlots)) waitingListSlots[date] = {}

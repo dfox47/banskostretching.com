@@ -145,7 +145,7 @@ let langDetection = computed(() => settings.general.usedLanguages.includes(local
 let amLabels = computed(() => {
   let computedLabels = reactive({...globalLabels})
 
-  if (settings.customizedData && settings.customizedData.sbsNew && settings.customizedData.sbsNew.paymentStep.translations) {
+  if (settings.customizedData?.sbsNew?.paymentStep?.translations) {
     let customizedLabels = settings.customizedData.sbsNew.paymentStep.translations
     Object.keys(customizedLabels).forEach(labelKey => {
       if (customizedLabels[labelKey][localLanguage.value] && langDetection.value) {

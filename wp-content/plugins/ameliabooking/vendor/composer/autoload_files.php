@@ -20,4 +20,5 @@ return array(
     '93aa591bc4ca510c520999e34229ee79_am' => $vendorDir . '/sabre/xml/lib/Serializer/functions.php',
     'a8d3953fd9959404dd22d3dfcd0a79f0' => $vendorDir . '/google/apiclient/src/aliases.php',
     '13906c19e3d8fcd1341b24ed4d51cf72' => $vendorDir . '/razorpay/razorpay/Deprecated.php',
+    '2d223b650b5c56928c1affa16ee5cfe2' => $vendorDir . '/wordpress/abilities-api/includes/bootstrap.php',
 );

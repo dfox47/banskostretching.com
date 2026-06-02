@@ -134,7 +134,6 @@
         >
           <AmSelect
             v-model="detailsForm.status"
-            :disabled="!props.isNew"
             :placeholder="amLabels.select"
             :prefix-icon="
               attendeeStatuses.find((i) => i.value === detailsForm.status).icon
@@ -150,10 +149,10 @@
               :value="status.value"
               :label="status.label"
             >
-            <span
-              :class="`am-icon-${status.icon}`"
-              :style="{ color: status.color }"
-            />
+              <span
+                :class="`am-icon-${status.icon}`"
+                :style="{ color: status.color }"
+              />
               {{ status.label }}
             </AmOption>
           </AmSelect>
@@ -329,14 +328,12 @@ let eventSettings = computed(() => {
 })
 
 let attendeeStatuses = ref(useAttendeeStatuses().filter(
-    i => i.value !== 'canceled' && (
-      !amSettings.featuresIntegrations.waitingList.enabled ||
+    i => !amSettings.featuresIntegrations.waitingList.enabled ||
       (
         eventSettings.value
           ? 'waitingList' in eventSettings.value && !eventSettings.value.waitingList.enabled
           : true
       ) ? i.value !== 'waiting' : true
-    ) && i.value !== 'no-show'
   )
 )
 

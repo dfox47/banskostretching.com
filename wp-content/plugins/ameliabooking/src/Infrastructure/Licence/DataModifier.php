@@ -31,7 +31,7 @@ class DataModifier extends Lite\DataModifier
     private static function getLicenseClass()
     {
         // In production, always use the parent class (Lite)
-        if (AMELIA_PRODUCTION) {
+        if (!AMELIA_DEV) {
             return 'AmeliaBooking\Infrastructure\Licence\Lite\DataModifier';
         }
 
@@ -54,7 +54,7 @@ class DataModifier extends Lite\DataModifier
     public static function __callStatic($method, $arguments)
     {
         // In production, use normal inheritance (class extends were changed by build scripts)
-        if (AMELIA_PRODUCTION) {
+        if (!AMELIA_DEV) {
             return call_user_func_array(['parent', $method], $arguments);
         }
 

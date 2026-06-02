@@ -173,11 +173,7 @@ provide('packagesVisibility', packagesVisibility)
 let amLabels = computed(() => {
   let computedLabels = reactive({ ...globalLabels })
 
-  if (
-    amSettings.customizedData &&
-    amSettings.customizedData.sbsNew &&
-    amSettings.customizedData.sbsNew.bringingAnyone.translations
-  ) {
+  if (amSettings.customizedData?.sbsNew?.bringingAnyone?.translations) {
     let customizedLabels =
       amSettings.customizedData.sbsNew.bringingAnyone.translations
     Object.keys(customizedLabels).forEach((labelKey) => {

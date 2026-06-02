@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-15 07:57:01+0000\n"
+"PO-Revision-Date: 2026-05-23 08:08:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,90 @@ msgstr ""
 "X-Generator: GlotPress/4.0.3\n"
 "Language: uk_UA\n"
 "Project-Id-Version: Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release)\n"
+
+#: src/abilities/user-interface/abilities-integration.php:252
+msgid "A human-readable label for the score."
+msgstr "Зрозуміла для людини мітка оцінки."
+
+#: src/abilities/user-interface/abilities-integration.php:248
+msgid "The score slug."
+msgstr "Частина посилання оцінки."
+
+#: src/abilities/user-interface/abilities-integration.php:243
+msgid "The post title."
+msgstr "Заголовок запису."
+
+#: src/abilities/user-interface/abilities-integration.php:194
+msgid "The number of recently modified posts to retrieve scores for. Defaults to 10."
+msgstr "Кількість нещодавно змінених публікацій, за якими потрібно отримати оцінки. За замовчуванням - 10."
+
+#: src/abilities/user-interface/abilities-integration.php:167
+msgid "Get the inclusive language scores for the most recently modified posts."
+msgstr "Перегляньте показники щодо інклюзивної мови для останніх оновлених записів."
+
+#: src/abilities/user-interface/abilities-integration.php:166
+msgid "Get Inclusive Language Scores"
+msgstr "Отримати оцінки щодо інклюзивності мови"
+
+#: src/abilities/user-interface/abilities-integration.php:148
+msgid "Get the readability scores for the most recently modified posts."
+msgstr "Отримати показники читабельності для останніх оновлених записів."
+
+#: src/abilities/user-interface/abilities-integration.php:147
+msgid "Get Readability Scores"
+msgstr "Отримати показники читабельності"
+
+#: src/abilities/user-interface/ability-categories-integration.php:44
+msgid "SEO analysis capabilities provided by Yoast SEO."
+msgstr "Функції SEO-аналізу, що надаються плагіном Yoast SEO."
+
+#: src/abilities/user-interface/abilities-integration.php:129
+msgid "Get the SEO scores for the most recently modified posts."
+msgstr "Отримайте показники SEO для записів, які були оновлені нещодавно."
+
+#: src/abilities/user-interface/abilities-integration.php:121
+msgid "The focus keyphrase for the post, or null if not set."
+msgstr "Ключова фраза для запису або нуль, якщо вона не вказана."
+
+#: src/abilities/user-interface/abilities-integration.php:128
+msgid "Get SEO Scores"
+msgstr "Отримати оцінки SEO"
+
+#. translators: %1$s expands to <p>, %2$s expands to </p>, %3$s expands to <p>,
+#. %4$s expands to </p>, %5$s expands to <strong>, %6$s expands to </strong>,
+#. %7$s expands to <strong> and %8$s expands to </strong>.
+#: src/task-list/application/tasks/improve-default-meta-descriptions.php:111
+msgid "%1$sDefault meta descriptions don't always highlight what makes your page unique. Write your own to improve clarity and drive more clicks.%2$s%3$sShort on time? In %5$sYoast SEO Premium%6$s, use %7$sAI Generate%8$s to create tailored meta descriptions in seconds.%4$s"
+msgstr "%1$sСтандартні метаописи не завжди підкреслюють те, що робить вашу сторінку унікальною. Напишіть власні, щоб зробити її зрозумілішою та залучити більше кліків.%2$s%3$sНе вистачає часу? У %5$sYoast SEO Premium%6$s скористайтеся функцією %7$sAI Generate%8$s, щоб за лічені секунди створити індивідуальні метаописи.%4$s"
+
+#: src/task-list/domain/exceptions/complete-sample-page-task-exception.php:17
+msgid "Failed to delete the Sample Page."
+msgstr "Не вдалося видалити Приклад Сторінки."
+
+#: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:37
+msgid "Improve SEO"
+msgstr "Поліпшити SEO"
+
+#: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:37
+msgid "Improve readability"
+msgstr "Поліпшити читабельність"
+
+#: src/plugins-tab/application/plugins-list-handler.php:71
+msgctxt "plugin status"
+msgid "Yoast"
+msgid_plural "Yoast"
+msgstr[0] "Yoast"
+msgstr[1] "Yoast"
+msgstr[2] "Yoast"
+
+#. translators: %1$s expands to the post type label this task is about
+#: src/task-list/application/tasks/improve-default-meta-descriptions.php:108
+msgid "Improve default meta descriptions of your recent content: %1$s"
+msgstr "Покращіть стандартні метаописи ваших останніх публікацій: %1$s"
+
+#: src/task-list/application/tasks/delete-sample-page.php:124
+msgid "Remove the \"Sample Page\""
+msgstr "Видалити \"Приклад сторінки\""
 
 #. translators: %1$s expands to an opening p tag, %2$s and %4$s expand to a
 #. closing p tag, %3$s expands to an opening p tag and opening strong tag, %5$s
@@ -24,11 +108,6 @@ msgstr "%1$sУзгоджуючи свій контент із пошуковим
 msgid "Generic titles and descriptions make your results unclear in search. Templates ensure every %s has a clear, click-worthy snippet automatically. Go to Search appearance, choose your post type, and set default title and meta description patterns."
 msgstr "Загальні заголовки та описи роблять результати пошуку нечіткими. Шаблони гарантують, що кожен %s автоматично отримає чіткий фрагмент, який спонукає до натискання. Перейдіть у розділ «Вигляд у пошуку», виберіть тип публікації та встановіть шаблони заголовків і метаописів за замовчуванням."
 
-#. translators: %1$s expands to the post type label this task is about
-#: src/task-list/application/tasks/improve-content-seo.php:110
-msgid "Improve the SEO of your recent content: %1$s"
-msgstr "Покращіть SEO останнього контенту: %1$s"
-
 #. translators: %1$s expands to an opening p tag, %2$s and %4$s expand to a
 #. closing p tag, %3$s expands to an opening p tag and opening strong tag, %5$s
 #. expands to a closing strong tag, %6$s expands to an opening strong tag, %7$s
@@ -36,6 +115,11 @@ msgstr "Покращіть SEO останнього контенту: %1$s"
 #: src/task-list/application/tasks/improve-content-readability.php:112
 msgid "%1$sChecking your recent content's readability ensures it stays clear and easy to follow, improving your user experience. Follow the feedback to refine your sentence structure and word choice and maintain a high standard of engagement and comprehension.%2$s%3$sPro tip%5$s: Use %6$sAI Optimize%7$s to automatically simplify complex sentences and improve the flow of your writing.%4$s"
 msgstr "%1$sПеревірка читабельності вашого останнього контенту гарантує, що він є зрозумілими та легкими для сприйняття, що покращує користувацький досвід. Дотримуйтесь рекомендацій, щоб удосконалити структуру речень та вибір слів, а також підтримувати високий рівень зацікавленості та зрозумілості.%2$s%3$sПорада від профі%5$s: скористайтеся функцією %6$sAI Optimize%7$s, щоб автоматично спростити складні речення та поліпшити стиль письма.%4$s"
+
+#. translators: %1$s expands to the post type label this task is about
+#: src/task-list/application/tasks/improve-content-seo.php:110
+msgid "Improve the SEO of your recent content: %1$s"
+msgstr "Покращіть SEO останнього контенту: %1$s"
 
 #. translators: %1$s and %3$s expands to an opening p tag, %2$s and %5$s expand
 #. to a closing p tag and %4$s expands to Yoast
@@ -119,23 +203,27 @@ msgstr "Не вдалося видалити запис \"Привіт, світ
 msgid "Without llms.txt, AI platforms may not know how to treat your content. Enabling it helps communicate your preferences in a clearer way to AI tools."
 msgstr "Без файлу llms.txt платформи ШІ можуть не знати, як обробляти ваш контент. Його публікація допомагає чіткіше донести ваші уподобання до інструментів ШІ."
 
-#: src/presenters/admin/sidebar-presenter.php:77 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:77
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Optimize your site faster, smarter, and with more confidence."
 msgstr "Оптимізуйте свій сайш швидше, розумніше та з більшою впевненістю."
 
-#: src/presenters/admin/sidebar-presenter.php:77 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:77
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Help ready-to-buy shoppers and search engines find your product."
 msgstr "Допоможіть готовим купувати покупцям та пошуковим системам знайти ваш товар."
 
-#: src/presenters/admin/sidebar-presenter.php:72 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:72
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Spend less time on SEO tasks!"
 msgstr "Витрачайте менше часу на SEO-завдання!"
 
-#: src/presenters/admin/sidebar-presenter.php:72 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:72
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Grow your store's visibility!"
 msgstr "Підвищіть видимість вашого магазину!"
 
@@ -147,85 +235,87 @@ msgstr "Створити новий контент"
 msgid "Create new post"
 msgstr "Створити нову публікацію"
 
-#: src/presenters/admin/sidebar-presenter.php:115 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:115
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Less friction. Faster publishing."
 msgstr "Менше протиріч. Швидше публікування"
 
-#: src/presenters/admin/sidebar-presenter.php:115 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:115
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Less friction. Smarter optimization."
 msgstr "Менше протиріч. Розумніша оптимізація."
 
 #: src/presenters/admin/sidebar-presenter.php:92 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Optimize pages for multiple keywords with guidance"
 msgstr "Оптимізуйте сторінки для декількох ключових слів за допомогою підказок"
 
 #: src/presenters/admin/sidebar-presenter.php:91 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Manage redirects with ease and without extra plugins"
 msgstr "З легкістю керуйте перенаправленнями без додаткових плагінів"
 
 #: src/presenters/admin/sidebar-presenter.php:90 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Apply AI suggestions to improve content in 1 click"
 msgstr "Застосовуйте пропозиції ШІ для покращення контенту одним натисканням"
 
 #: src/presenters/admin/sidebar-presenter.php:89 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Create optimized SEO titles & meta descriptions in seconds"
 msgstr "Створюйте оптимізовані заголовки SEO та метаописи за лічені секунди"
 
 #: src/presenters/admin/sidebar-presenter.php:86 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Receive clear SEO and readability guidance to optimize your products"
 msgstr "Отримайте чіткі рекомендації щодо SEO та читабельності, щоб оптимізувати свої товари"
 
 #: src/presenters/admin/sidebar-presenter.php:85 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Create optimized SEO titles & meta descriptions with AI"
 msgstr "Створюйте оптимізовані заголовки SEO та метаописи за допомогою ШІ"
 
 #: src/presenters/admin/sidebar-presenter.php:84 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Make sure search engines show the right version of your product page"
 msgstr "Переконайтеся, що пошукові системи відображають правильну версію вашої сторінки товарів"
 
 #: src/presenters/admin/sidebar-presenter.php:83 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Add product details to help your listings stand out"
 msgstr "Додайте детальну інформацію про товар, щоб ваші пропозиції виділялися серед інших"
 
@@ -318,8 +408,9 @@ msgstr "метаописи"
 msgid "Google Docs add-on (1 seat)"
 msgstr "Доповнення Google Docs (1 місце)"
 
-#: src/presenters/admin/sidebar-presenter.php:104 js/dist/general-page.js:7
-#: js/dist/new-settings.js:7 js/dist/support.js:6
+#: src/presenters/admin/sidebar-presenter.php:104
+#: js/dist/ai-content-planner.js:62 js/dist/block-editor.js:62
+#: js/dist/general-page.js:7 js/dist/new-settings.js:7 js/dist/support.js:7
 msgid "Buy now for 30% off"
 msgstr "Купуйте зараз із знижкою 30%"
 
@@ -356,75 +447,80 @@ msgstr "%1$s30%% ЗНИЖКА - Чорна п'ятниця %2$s"
 msgid "Upgrade"
 msgstr "Оновити"
 
-#: src/presenters/admin/sidebar-presenter.php:122 js/dist/general-page.js:7
-#: js/dist/new-settings.js:7 js/dist/support.js:6
+#: src/presenters/admin/sidebar-presenter.php:122
+#: js/dist/ai-content-planner.js:62 js/dist/block-editor.js:62
+#: js/dist/general-page.js:7 js/dist/new-settings.js:7 js/dist/support.js:7
 msgid "30-day money back guarantee"
 msgstr "30-денна гарантія повернення грошей"
 
 #. translators: %1$s and %2$s expand to a span wrap to avoid linebreaks. %3$s
 #. expands to "Yoast SEO Premium".
-#: src/presenters/admin/sidebar-presenter.php:66 js/dist/general-page.js:6
-#: js/dist/general-page.js:7 js/dist/new-settings.js:6
-#: js/dist/new-settings.js:7 js/dist/support.js:5 js/dist/support.js:6
+#: src/presenters/admin/sidebar-presenter.php:66
+#: js/dist/ai-content-planner.js:61 js/dist/ai-content-planner.js:62
+#: js/dist/block-editor.js:61 js/dist/block-editor.js:62
+#: js/dist/general-page.js:6 js/dist/general-page.js:7
+#: js/dist/new-settings.js:6 js/dist/new-settings.js:7 js/dist/support.js:6
+#: js/dist/support.js:7
 msgid "%1$s%2$s %3$s"
 msgstr "%1$s%2$s %3$s"
 
-#: admin/class-premium-upsell-admin-block.php:163 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: admin/class-premium-upsell-admin-block.php:163
+#: js/dist/ai-content-planner.js:190 js/dist/block-editor.js:190
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Boost visibility for your products, from 10 or 10,000+"
 msgstr "Підвищіть видимість своїх продуктів, від 10 до 10 000+"
 
 #: admin/class-premium-upsell-admin-block.php:159 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Access to friendly help when you need it, day or night"
 msgstr "Доступ до дружньої допомоги, коли вона вам потрібна, вдень чи вночі"
 
 #: admin/class-premium-upsell-admin-block.php:158 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Internal links and redirect management, easy"
 msgstr "Просте керування внутрішніми посиланнями та перенаправленнями"
 
 #: admin/class-premium-upsell-admin-block.php:157 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Easy Local SEO. Show up in Google Maps results"
 msgstr "Просте локальне SEO. Відображайтеся в результатах пошуку на Google Maps"
 
 #: admin/class-premium-upsell-admin-block.php:156 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Built to get found by search, AI, and real users"
 msgstr "Створено для пошукових систем, штучного інтелекту та реальних користувачів"
 
 #: admin/class-premium-upsell-admin-block.php:155 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Make your articles visible, be seen in Google News"
 msgstr "Зробіть свої статті видимими, щоб їх можна було побачити в Google News"
 
 #: admin/class-premium-upsell-admin-block.php:154 js/dist/ai-consent.js:2
-#: js/dist/ai-generator.js:2 js/dist/block-editor.js:18
-#: js/dist/classic-editor.js:1 js/dist/editor-modules.js:116
-#: js/dist/externals-components.js:127 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:28 js/dist/new-settings.js:5
-#: js/dist/redirects.js:1 js/dist/support.js:4
+#: js/dist/ai-content-planner.js:190 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:190 js/dist/classic-editor.js:2
+#: js/dist/editor-modules.js:116 js/dist/externals-components.js:127
+#: js/dist/general-page.js:5 js/dist/integrations-page.js:28
+#: js/dist/new-settings.js:5 js/dist/redirects.js:2 js/dist/support.js:5
 msgid "Generate SEO optimized metadata in seconds with AI"
 msgstr "Генеруйте SEO-оптимізовані метадані за лічені секунди за допомогою ШІ"
 
@@ -511,8 +607,9 @@ msgstr "Не вдалося активувати %s"
 msgid "%s is unable to create database tables"
 msgstr "%s не вдається створити таблиці бази даних"
 
-#: src/presenters/admin/sidebar-presenter.php:107 js/dist/general-page.js:5
-#: js/dist/new-settings.js:5 js/dist/support.js:4
+#: src/presenters/admin/sidebar-presenter.php:107
+#: js/dist/ai-content-planner.js:60 js/dist/block-editor.js:60
+#: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "Buy now"
 msgstr "Придбати зараз"
 
@@ -652,15 +749,15 @@ msgstr "Зараз інтерфейс %1$s недоступний в бета-в
 msgid "Compatibility issue: Yoast SEO is incompatible with the beta WooCommerce product editor."
 msgstr "Проблема сумісності: Yoast SEO несумісний з бета-версією редактора продуктів WooCommerce."
 
-#: admin/class-premium-upsell-admin-block.php:89 js/dist/block-editor.js:498
-#: js/dist/classic-editor.js:481 js/dist/general-page.js:9
+#: admin/class-premium-upsell-admin-block.php:89 js/dist/block-editor.js:572
+#: js/dist/classic-editor.js:482 js/dist/general-page.js:9
 #: js/dist/new-settings.js:9
 msgid "BLACK FRIDAY"
 msgstr "ЧОРНА П'ЯТНИЦЯ"
 
 #: admin/class-premium-upsell-admin-block.php:90
-#: admin/menu/class-base-menu.php:260 js/dist/block-editor.js:498
-#: js/dist/classic-editor.js:481 js/dist/general-page.js:9
+#: admin/menu/class-base-menu.php:260 js/dist/block-editor.js:572
+#: js/dist/classic-editor.js:482 js/dist/general-page.js:9
 #: js/dist/new-settings.js:9
 msgid "30% OFF"
 msgstr "Знижка 30%"
@@ -718,7 +815,7 @@ msgstr "Помилка: Таксономія не була видалена з �
 msgid "Error: Post type was not removed from new_post_types list."
 msgstr "Помилка: Тип запису не був видалений зі списку нових_типів_записів."
 
-#: src/integrations/support-integration.php:130 js/dist/support.js:7
+#: src/integrations/support-integration.php:130 js/dist/support.js:8
 msgid "Support"
 msgstr "Підтримка"
 
@@ -794,9 +891,9 @@ msgid "Finish your %s"
 msgstr "Завершіть %s"
 
 #: inc/class-wpseo-rank.php:156 inc/class-wpseo-rank.php:245
-#: js/dist/block-editor.js:498 js/dist/editor-modules.js:115
-#: js/dist/editor-modules.js:384 js/dist/externals-components.js:122
-#: js/dist/externals-components.js:438
+#: js/dist/block-editor.js:572 js/dist/editor-modules.js:115
+#: js/dist/editor-modules.js:385 js/dist/externals-components.js:122
+#: js/dist/externals-components.js:439
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Potentially non-inclusive"
 msgstr "Потенційно неінклюзивний"
@@ -902,18 +999,22 @@ msgstr "Нам потрібно заново проаналізувати дея
 msgid "We need to re-analyze some of your SEO data because of a change in the visibility of your post types. Please help us do that by running the SEO data optimization."
 msgstr "Нам потрібно повторно проаналізувати деякі ваші дані SEO через зміну видимості типів ваших записів. Допоможіть нам зробити це, запустивши оптимізацію даних SEO."
 
-#: src/presenters/admin/sidebar-presenter.php:21 js/dist/block-editor.js:247
-#: js/dist/classic-editor.js:230 js/dist/editor-modules.js:111
-#: js/dist/externals-components.js:118 js/dist/general-page.js:7
-#: js/dist/new-settings.js:7 js/dist/support.js:6
+#: src/presenters/admin/sidebar-presenter.php:21
+#: js/dist/ai-content-planner.js:62 js/dist/block-editor.js:62
+#: js/dist/block-editor.js:531 js/dist/classic-editor.js:231
+#: js/dist/editor-modules.js:111 js/dist/externals-components.js:118
+#: js/dist/general-page.js:7 js/dist/new-settings.js:7 js/dist/support.js:7
 msgid "BLACK FRIDAY | 30% OFF"
 msgstr "ЧОРНА П'ЯТНИЦЯ | 30% ЗНИЖКА"
 
-#: admin/views/class-yoast-feature-toggles.php:206 js/dist/general-page.js:12
-#: js/dist/general-page.js:24 js/dist/integrations-page.js:3
-#: js/dist/integrations-page.js:6 js/dist/integrations-page.js:18
-#: js/dist/integrations-page.js:28 js/dist/introductions.js:13
-#: js/dist/new-settings.js:56 js/dist/plans.js:3 js/dist/plans.js:7
+#: admin/views/class-yoast-feature-toggles.php:206
+#: js/dist/ai-content-planner.js:228 js/dist/ai-content-planner.js:285
+#: js/dist/block-editor.js:228 js/dist/block-editor.js:285
+#: js/dist/general-page.js:12 js/dist/general-page.js:24
+#: js/dist/integrations-page.js:3 js/dist/integrations-page.js:6
+#: js/dist/integrations-page.js:18 js/dist/integrations-page.js:28
+#: js/dist/introductions.js:13 js/dist/new-settings.js:56 js/dist/plans.js:3
+#: js/dist/plans.js:7
 msgid "Learn more"
 msgstr "Дізнатись більше"
 
@@ -961,7 +1062,7 @@ msgid "Inclusive language analysis"
 msgstr "Аналіз інклюзивної мови"
 
 #: admin/metabox/class-metabox-section-inclusive-language.php:30
-#: js/dist/externals-components.js:440
+#: js/dist/externals-components.js:441
 msgid "Inclusive language"
 msgstr "Інклюзивна мова"
 
@@ -1428,8 +1529,8 @@ msgstr "Посилання пропозицій"
 msgid "Find relevant data about your content right in the Insights section in the Yoast SEO metabox. You’ll see what words you use most often and if they’re a match with your keywords! "
 msgstr "Знайдіть відповідні дані про ваш вміст у розділі Інсайти в метабоксі Yoast SEO. Ви побачите, які слова ви використовуєте найчастіше і чи збігаються вони з ключовими словами! "
 
-#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:247
-#: js/dist/block-editor.js:514 js/dist/classic-editor.js:230
+#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:531
+#: js/dist/block-editor.js:588 js/dist/classic-editor.js:231
 #: js/dist/new-settings.js:31 js/dist/new-settings.js:526
 msgid "Insights"
 msgstr "Статистика"
@@ -1503,7 +1604,7 @@ msgstr "Автоматичні оновлення вимкнені на осно
 
 #: src/presenters/admin/badge-presenter.php:80
 #: src/presenters/admin/badge-presenter.php:87
-#: js/dist/externals-components.js:440 js/dist/externals/componentsNew.js:563
+#: js/dist/externals-components.js:441 js/dist/externals/componentsNew.js:563
 #: js/dist/integrations-page.js:3 js/dist/integrations-page.js:6
 #: js/dist/integrations-page.js:18 js/dist/new-settings.js:592
 msgid "New"
@@ -1710,8 +1811,8 @@ msgstr "Сторінка оформлення замовлення"
 msgid "Search Results Page"
 msgstr "Сторінка результатів пошуку"
 
-#: src/config/schema-types.php:64 js/dist/block-editor.js:493
-#: js/dist/classic-editor.js:476
+#: src/config/schema-types.php:64 js/dist/block-editor.js:567
+#: js/dist/classic-editor.js:477
 msgid "Item Page"
 msgstr "Сторінка товару"
 
@@ -1952,8 +2053,9 @@ msgstr "Браузер, яким ви користуєтесь, на жаль, �
 msgid "If you want to apply advanced <code>meta</code> robots settings for this page, please define them in the following field."
 msgstr "Якщо ви хочете застосувати розширені налаштування роботів <code>meta</code> для цієї сторінки, будь ласка, зазначте їх в цьому полі."
 
-#: src/presenters/admin/sidebar-presenter.php:137 js/dist/general-page.js:2
-#: js/dist/new-settings.js:2 js/dist/support.js:2
+#: src/presenters/admin/sidebar-presenter.php:137
+#: js/dist/ai-content-planner.js:117 js/dist/block-editor.js:117
+#: js/dist/general-page.js:2 js/dist/new-settings.js:2 js/dist/support.js:2
 msgid "Learn SEO"
 msgstr "Вивчайте SEO"
 
@@ -1969,15 +2071,17 @@ msgstr "Ваші %1$s налаштування:"
 
 #. translators: %1$s expands to Yoast SEO academy, which is a clickable link.
 #. translators: %1$s expands to "Yoast SEO" academy, which is a clickable link.
-#: src/presenters/admin/sidebar-presenter.php:145 js/dist/general-page.js:2
-#: js/dist/new-settings.js:2 js/dist/support.js:2
+#: src/presenters/admin/sidebar-presenter.php:145
+#: js/dist/ai-content-planner.js:117 js/dist/block-editor.js:117
+#: js/dist/general-page.js:2 js/dist/new-settings.js:2 js/dist/support.js:2
 msgid "Want to learn SEO from Team Yoast? Check out our %1$s!"
 msgstr "Бажаєте вивчати SEO разом з Командою Yoast? Дивіться нашу %1$s!"
 
 #. translators: %1$s expands to Yoast SEO academy
 #. translators: %1$s expands to "Yoast SEO academy".
-#: src/presenters/admin/sidebar-presenter.php:154 js/dist/general-page.js:3
-#: js/dist/new-settings.js:3 js/dist/support.js:3
+#: src/presenters/admin/sidebar-presenter.php:154
+#: js/dist/ai-content-planner.js:118 js/dist/block-editor.js:118
+#: js/dist/general-page.js:3 js/dist/new-settings.js:3 js/dist/support.js:3
 msgid "Check out %1$s"
 msgstr "Дивіться %1$s"
 
@@ -1986,12 +2090,13 @@ msgstr "Дивіться %1$s"
 msgid "Import settings from another %1$s installation by pasting them here and clicking \"%2$s\"."
 msgstr "Імпортувати налаштування з іншого середовища %1$s, вставивши їх сюди й натиснувши \"%2$s\"."
 
-#: src/presenters/admin/sidebar-presenter.php:147 js/dist/general-page.js:2
-#: js/dist/new-settings.js:2 js/dist/support.js:2
+#: src/presenters/admin/sidebar-presenter.php:147
+#: js/dist/ai-content-planner.js:117 js/dist/block-editor.js:117
+#: js/dist/general-page.js:2 js/dist/new-settings.js:2 js/dist/support.js:2
 msgid "We have both free and premium online courses to learn everything you need to know about SEO."
 msgstr "Ми пропонуємо як безкоштовні, так і преміум онлайн курси для вивчення всього, що необхідно знати про SEO."
 
-#: admin/metabox/class-metabox.php:424 js/dist/block-editor.js:539
+#: admin/metabox/class-metabox.php:440 js/dist/block-editor.js:613
 #: js/dist/new-settings.js:24 js/dist/new-settings.js:34
 #: js/dist/new-settings.js:38 js/dist/new-settings.js:43
 #: js/dist/new-settings.js:95 js/dist/new-settings.js:412
@@ -2147,8 +2252,8 @@ msgstr "Вихідні внутрішні посилання"
 msgid "Received internal links"
 msgstr "Отримані внутрішні посилання"
 
-#: admin/class-meta-columns.php:132 js/dist/block-editor.js:104
-#: js/dist/classic-editor.js:87 js/dist/wincher-dashboard-widget.js:130
+#: admin/class-meta-columns.php:132 js/dist/block-editor.js:388
+#: js/dist/classic-editor.js:88 js/dist/wincher-dashboard-widget.js:130
 msgid "Keyphrase"
 msgstr "Ключова фраза"
 
@@ -2270,7 +2375,7 @@ msgstr "Ця можливість відключена адміністрато�
 #. translators: WooCommerce SEO
 #: admin/class-premium-popup.php:81
 #: admin/watchers/class-slug-change-watcher.php:228
-#: js/dist/externals-components.js:413
+#: js/dist/externals-components.js:414
 msgid "Get %s"
 msgstr "Отримайте %s"
 
@@ -2294,7 +2399,7 @@ msgstr[2] "Є нових сповіщень."
 #. translators: %d expands to the number of day/days.
 #. translators: %d expands to the number of days.
 #: src/integrations/blocks/structured-data-blocks.php:132
-#: js/dist/block-editor.js:83 js/dist/classic-editor.js:66
+#: js/dist/block-editor.js:367 js/dist/classic-editor.js:67
 #: js/dist/how-to-block.js:2 js/dist/how-to-block.js:8
 #: js/dist/wincher-dashboard-widget.js:72
 msgid "%d day"
@@ -2737,7 +2842,7 @@ msgstr "%s інтеграція"
 
 #: admin/views/class-yoast-feature-toggles.php:71
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:64
-#: js/dist/externals-components.js:420 js/dist/new-settings.js:31
+#: js/dist/externals-components.js:421 js/dist/new-settings.js:31
 #: js/dist/new-settings.js:526
 msgid "SEO analysis"
 msgstr "SEO аналіз"
@@ -2828,9 +2933,14 @@ msgstr "Старий майстер конфігурації"
 #: src/integrations/admin/workouts-integration.php:245
 #: src/presenters/admin/help-link-presenter.php:76
 #: src/presenters/admin/sidebar-presenter.php:159 js/dist/academy.js:12
-#: js/dist/ai-consent.js:2 js/dist/ai-generator.js:2 js/dist/ai-generator.js:61
-#: js/dist/ai-generator.js:276 js/dist/block-editor.js:499
-#: js/dist/block-editor.js:500 js/dist/editor-modules.js:116
+#: js/dist/ai-consent.js:2 js/dist/ai-content-planner.js:71
+#: js/dist/ai-content-planner.js:119 js/dist/ai-content-planner.js:228
+#: js/dist/ai-content-planner.js:276 js/dist/ai-generator.js:2
+#: js/dist/ai-generator.js:61 js/dist/ai-generator.js:276
+#: js/dist/block-editor.js:71 js/dist/block-editor.js:119
+#: js/dist/block-editor.js:228 js/dist/block-editor.js:276
+#: js/dist/block-editor.js:573 js/dist/block-editor.js:574
+#: js/dist/classic-editor.js:2 js/dist/editor-modules.js:116
 #: js/dist/editor-modules.js:383 js/dist/externals-components.js:21
 #: js/dist/externals-components.js:126 js/dist/externals-components.js:127
 #: js/dist/externals-components.js:394 js/dist/externals/componentsNew.js:675
@@ -2849,7 +2959,8 @@ msgstr "Старий майстер конфігурації"
 #: js/dist/introductions.js:8 js/dist/introductions.js:13
 #: js/dist/introductions.js:14 js/dist/new-settings.js:4
 #: js/dist/new-settings.js:5 js/dist/new-settings.js:12 js/dist/plans.js:2
-#: js/dist/redirects.js:5 js/dist/support.js:4 js/dist/support.js:7
+#: js/dist/redirects.js:2 js/dist/redirects.js:6 js/dist/support.js:4
+#: js/dist/support.js:5 js/dist/support.js:8
 msgid "(Opens in a new browser tab)"
 msgstr "(Відкриється в новій вкладці браузера)"
 
@@ -2930,8 +3041,9 @@ msgstr "Ключовий вміст"
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: src/presenters/admin/sidebar-presenter.php:127 js/dist/general-page.js:7
-#: js/dist/new-settings.js:7 js/dist/support.js:6
+#: src/presenters/admin/sidebar-presenter.php:127
+#: js/dist/ai-content-planner.js:62 js/dist/block-editor.js:62
+#: js/dist/general-page.js:7 js/dist/new-settings.js:7 js/dist/support.js:7
 msgid "24/7 support"
 msgstr "Підтримка 24/7"
 
@@ -2999,6 +3111,7 @@ msgid "Warning: the variable %1$s cannot be used in this template. See the %2$s 
 msgstr "Попередження: змінна %1$s не може бути використана в цьому шаблоні. Перегляньте %2$s для отримання додаткової інформації."
 
 #: admin/class-bulk-editor-list-table.php:829
+#: src/abilities/application/score-retriever.php:165
 msgid "(no title)"
 msgstr "(без назви)"
 
@@ -3067,12 +3180,12 @@ msgid "En dash"
 msgstr "Коротке тире"
 
 #: admin/metabox/class-metabox.php:183 admin/metabox/class-metabox.php:188
-#: js/dist/block-editor.js:249 js/dist/classic-editor.js:232
+#: js/dist/block-editor.js:533 js/dist/classic-editor.js:233
 msgid "No"
 msgstr "Ні"
 
 #: admin/metabox/class-metabox.php:182 admin/metabox/class-metabox.php:187
-#: js/dist/block-editor.js:249 js/dist/classic-editor.js:232
+#: js/dist/block-editor.js:533 js/dist/classic-editor.js:233
 msgid "Yes"
 msgstr "Так"
 
@@ -3158,15 +3271,15 @@ msgstr "Читабельність"
 #: inc/class-wpseo-rank.php:208 inc/class-wpseo-rank.php:240
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:52
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:52
-#: js/dist/block-editor.js:498 js/dist/editor-modules.js:115
-#: js/dist/editor-modules.js:384 js/dist/externals-components.js:122
+#: js/dist/block-editor.js:572 js/dist/editor-modules.js:115
+#: js/dist/editor-modules.js:385 js/dist/externals-components.js:122
 #: js/dist/externals/analysis.js:409 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Needs improvement"
 msgstr "Можна краще"
 
 #: admin/views/class-yoast-feature-toggles.php:79
-#: js/dist/externals-components.js:412 js/dist/new-settings.js:31
+#: js/dist/externals-components.js:413 js/dist/new-settings.js:31
 #: js/dist/new-settings.js:526
 msgid "Readability analysis"
 msgstr "Аналіз читабельності"
@@ -3195,9 +3308,10 @@ msgstr "Фільтр по SEO оцінці"
 msgid "Meta description not set."
 msgstr "Мета опис не вказано."
 
-#: inc/class-wpseo-rank.php:138 js/dist/block-editor.js:498
-#: js/dist/editor-modules.js:115 js/dist/editor-modules.js:384
-#: js/dist/externals-components.js:122
+#: inc/class-wpseo-rank.php:138
+#: src/abilities/application/score-retriever.php:140
+#: js/dist/block-editor.js:572 js/dist/editor-modules.js:115
+#: js/dist/editor-modules.js:385 js/dist/externals-components.js:122
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Not available"
 msgstr "Недоступно"
@@ -3243,7 +3357,7 @@ msgid "Trying to build the sitemap cache key, but the postfix and prefix combina
 msgstr "Спробую побудувати ключ кешу масиву сайту, але комбінація постфікса та префікса залишає замало місця для цього. Ви, напевно, зажадаєте сторінку, яка є виходом з очікуваного діапазону."
 
 #: src/integrations/admin/redirects-page-integration.php:100
-#: js/dist/redirects.js:2 js/dist/redirects.js:23
+#: js/dist/redirects.js:3 js/dist/redirects.js:24
 msgid "Redirects"
 msgstr "Перенаправлення"
 
@@ -3324,8 +3438,8 @@ msgstr "Команда Yoast"
 #: inc/class-wpseo-rank.php:218 inc/class-wpseo-rank.php:250
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:50
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:50
-#: js/dist/block-editor.js:498 js/dist/editor-modules.js:115
-#: js/dist/editor-modules.js:384 js/dist/externals-components.js:122
+#: js/dist/block-editor.js:572 js/dist/editor-modules.js:115
+#: js/dist/editor-modules.js:385 js/dist/externals-components.js:122
 #: js/dist/externals/analysis.js:409 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Good"
@@ -3403,7 +3517,8 @@ msgstr "Налаштування блогу за умовчанням має м�
 
 #. Plugin Name of the plugin
 #: wp-seo.php admin/capabilities/class-capability-manager-integration.php:74
-#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:577
+#: src/abilities/user-interface/ability-categories-integration.php:43
+#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:651
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3777,6 +3892,8 @@ msgid "Are you in Google News? Increase your traffic from Google News by optimiz
 msgstr "Ви в Новинах Google? Збільште трафік з Новин Google, оптимізуючи його!"
 
 #: admin/views/tool-bulk-editor.php:111 inc/class-wpseo-replace-vars.php:1471
+#: js/dist/ai-content-planner.js:272 js/dist/ai-content-planner.js:273
+#: js/dist/block-editor.js:272 js/dist/block-editor.js:273
 #: js/dist/externals-redux.js:1
 msgid "Title"
 msgstr "Заголовок"
@@ -3812,20 +3929,27 @@ msgid "Privacy sensitive (FB admins and such), theme specific (title rewrite) an
 msgstr "Таємні дані (адміни FB, тощо), особливості теми (перепис назв) і кілька конкретних налаштувань сайту не будуть імпортовані до нових блогів."
 
 #: admin/google_search_console/views/gsc-redirect-nopremium.php:27
-#: js/dist/ai-consent.js:5 js/dist/ai-generator.js:6 js/dist/ai-generator.js:21
+#: js/dist/ai-consent.js:5 js/dist/ai-content-planner.js:4
+#: js/dist/ai-content-planner.js:243 js/dist/ai-content-planner.js:259
+#: js/dist/ai-content-planner.js:271 js/dist/ai-content-planner.js:274
+#: js/dist/ai-content-planner.js:276 js/dist/ai-content-planner.js:284
+#: js/dist/ai-generator.js:6 js/dist/ai-generator.js:21
 #: js/dist/ai-generator.js:37 js/dist/ai-generator.js:55
 #: js/dist/ai-generator.js:61 js/dist/ai-generator.js:272
 #: js/dist/ai-generator.js:274 js/dist/ai-generator.js:276
-#: js/dist/editor-modules.js:116 js/dist/editor-modules.js:120
-#: js/dist/editor-modules.js:135 js/dist/editor-modules.js:151
-#: js/dist/editor-modules.js:169 js/dist/editor-modules.js:379
-#: js/dist/editor-modules.js:381 js/dist/editor-modules.js:383
-#: js/dist/externals-components.js:126 js/dist/externals-components.js:131
-#: js/dist/externals-components.js:146 js/dist/externals-components.js:162
-#: js/dist/externals-components.js:180 js/dist/externals-components.js:390
-#: js/dist/externals-components.js:392 js/dist/externals-components.js:394
-#: js/dist/externals/aiFrontend.js:170 js/dist/externals/aiFrontend.js:175
-#: js/dist/externals/componentsNew.js:626
+#: js/dist/block-editor.js:4 js/dist/block-editor.js:243
+#: js/dist/block-editor.js:259 js/dist/block-editor.js:271
+#: js/dist/block-editor.js:274 js/dist/block-editor.js:276
+#: js/dist/block-editor.js:284 js/dist/editor-modules.js:116
+#: js/dist/editor-modules.js:120 js/dist/editor-modules.js:135
+#: js/dist/editor-modules.js:151 js/dist/editor-modules.js:169
+#: js/dist/editor-modules.js:379 js/dist/editor-modules.js:381
+#: js/dist/editor-modules.js:383 js/dist/externals-components.js:126
+#: js/dist/externals-components.js:131 js/dist/externals-components.js:146
+#: js/dist/externals-components.js:162 js/dist/externals-components.js:180
+#: js/dist/externals-components.js:390 js/dist/externals-components.js:392
+#: js/dist/externals-components.js:394 js/dist/externals/aiFrontend.js:170
+#: js/dist/externals/aiFrontend.js:175 js/dist/externals/componentsNew.js:626
 #: js/dist/externals/dashboardFrontend.js:6 js/dist/general-page.js:12
 #: js/dist/general-page.js:32 js/dist/integrations-page.js:28
 #: js/dist/introductions.js:2 js/dist/introductions.js:4
@@ -3865,8 +3989,8 @@ msgstr "Деактивувати %s"
 #: inc/class-wpseo-rank.php:213
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:51
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:51
-#: js/dist/block-editor.js:498 js/dist/editor-modules.js:115
-#: js/dist/editor-modules.js:384 js/dist/externals-components.js:122
+#: js/dist/block-editor.js:572 js/dist/editor-modules.js:115
+#: js/dist/editor-modules.js:385 js/dist/externals-components.js:122
 #: js/dist/externals/analysis.js:409 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
 msgid "OK"
@@ -3933,7 +4057,7 @@ msgstr "Ви не можете редагувати %s, бо це не ваше.
 msgid "%1$s detected you are using version %2$s of %3$s, please update to the latest version to prevent compatibility issues."
 msgstr "%1$s визначено використання версії %2$s з %3$s. Будь ласка, оновіть до останньої версії, щоб запобігти проблем зі сумісністю."
 
-#: admin/metabox/class-metabox.php:407
+#: admin/metabox/class-metabox.php:423
 #: admin/taxonomy/class-taxonomy-metabox.php:141
 #: inc/class-wpseo-admin-bar-menu.php:763
 #: src/services/health-check/report-builder.php:168
@@ -4032,23 +4156,23 @@ msgstr "Просто ще один сайт на WordPress"
 msgid "You have used HTML in your value which is not allowed."
 msgstr "У цьому полі не можна використовувати HTML-теги."
 
-#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:253
-#: js/dist/classic-editor.js:236
+#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:537
+#: js/dist/classic-editor.js:237
 msgid "No Archive"
 msgstr "Не архівувати"
 
-#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:253
-#: js/dist/classic-editor.js:236
+#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:537
+#: js/dist/classic-editor.js:237
 msgid "No Image Index"
 msgstr "Не індексувати зображення"
 
-#: admin/metabox/class-metabox.php:432
+#: admin/metabox/class-metabox.php:448
 #: admin/taxonomy/class-taxonomy-metabox.php:159 js/dist/new-settings.js:38
 msgid "Social"
 msgstr "Соціальні мережі"
 
-#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:253
-#: js/dist/classic-editor.js:236
+#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:537
+#: js/dist/classic-editor.js:237
 msgid "Meta robots advanced"
 msgstr "Meta robots просунуті"
 
@@ -4073,7 +4197,9 @@ msgstr "Заголовок сторінки WP"
 msgid "Post Status"
 msgstr "Статус запису"
 
-#: admin/metabox/class-metabox.php:173
+#: admin/metabox/class-metabox.php:173 js/dist/ai-content-planner.js:272
+#: js/dist/ai-content-planner.js:273 js/dist/block-editor.js:272
+#: js/dist/block-editor.js:273
 #: js/dist/externals/replacementVariableEditor.js:71
 #: js/dist/externals/searchMetadataPreviews.js:102 js/dist/new-settings.js:21
 #: js/dist/new-settings.js:27 js/dist/new-settings.js:34
@@ -4096,8 +4222,8 @@ msgstr "XML Карта сайту"
 msgid "General"
 msgstr "Загальне"
 
-#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:255
-#: js/dist/classic-editor.js:238
+#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:539
+#: js/dist/classic-editor.js:239
 msgid "Canonical URL"
 msgstr "Канонічний URL"
 
@@ -4105,7 +4231,7 @@ msgstr "Канонічний URL"
 msgid "Search Console"
 msgstr "Search Console"
 
-#: admin/class-admin.php:229 js/dist/externals-components.js:440
+#: admin/class-admin.php:229 js/dist/externals-components.js:441
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -4113,8 +4239,8 @@ msgstr "FAQ"
 msgid "Preview"
 msgstr "Попередній перегляд"
 
-#: admin/class-bulk-editor-list-table.php:866 js/dist/block-editor.js:83
-#: js/dist/classic-editor.js:66 js/dist/externals/dashboardFrontend.js:5
+#: admin/class-bulk-editor-list-table.php:866 js/dist/block-editor.js:367
+#: js/dist/classic-editor.js:67 js/dist/externals/dashboardFrontend.js:5
 #: js/dist/wincher-dashboard-widget.js:125
 msgid "View"
 msgstr "Дивитися"
@@ -4123,13 +4249,13 @@ msgstr "Дивитися"
 msgid "SEO Title"
 msgstr "SEO-заголовок"
 
-#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:253
-#: js/dist/classic-editor.js:236
+#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:537
+#: js/dist/classic-editor.js:237
 msgid "No Snippet"
 msgstr "Без сніппету"
 
-#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:254
-#: js/dist/classic-editor.js:237
+#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:538
+#: js/dist/classic-editor.js:238
 msgid "Breadcrumbs Title"
 msgstr "Заголовок для навігаційних стежок"
 

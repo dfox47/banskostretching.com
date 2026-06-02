@@ -768,6 +768,13 @@ let langDetection = computed(() =>
 
 let cart = useCart(store)
 
+// * Steps flags and boolean values - we use these flags and booleans to achieve certain functionalities on pages
+// * preventRebuildRecurringBookingData flag prevents the recurring booking data from being rebuilt when navigating back to the recurring summary step
+const preventRebuildRecurringBookingData = ref(false)
+provide('stepsFlagsAndBooleans', {
+  preventRebuildRecurringBookingData,
+})
+
 // * Computed labels
 let amLabels = computed(() => {
   let computedLabels = reactive({ ...labels })
@@ -1487,6 +1494,13 @@ function previousStep() {
     }
 
     if (
+      stepIndex.value > 0 &&
+      stepsArray.value[stepIndex.value - 1]?.name === recurringSummary.name
+    ) {
+      preventRebuildRecurringBookingData.value = true
+    }
+
+    if (
       stepsArray.value[stepIndex.value].name ===
       packageAppointmentsListStep.name
     ) {
@@ -1984,6 +1998,8 @@ onMounted(() => {
     max-width: 760px;
     height: 460px;
     width: 100%;
+    background: var(--am-c-main-bgr);
+    border-radius: 8px;
 
     p {
       margin-bottom: 8px;

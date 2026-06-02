@@ -234,7 +234,7 @@ let langDetection = computed(() => amSettings.general.usedLanguages.includes(loc
 let amLabels = computed(() => {
   let computedLabels = reactive({...labels})
 
-  if (amSettings.customizedData && amSettings.customizedData.cbf && amSettings.customizedData.cbf.categoriesList.translations) {
+  if (amSettings.customizedData?.cbf?.categoriesList?.translations) {
     let customizedLabels = amSettings.customizedData.cbf.categoriesList.translations
     Object.keys(customizedLabels).forEach(labelKey => {
       if (customizedLabels[labelKey][localLanguage.value] && langDetection.value) {

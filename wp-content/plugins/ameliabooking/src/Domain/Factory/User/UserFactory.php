@@ -335,7 +335,7 @@ class UserFactory
         foreach ($data as $blockTime) {
             $blockTimes[] = BlockTimeFactory::create([
                 'id'        => $blockTime['id'],
-                'userId'    => $blockTime['userId'],
+                'userId'    => $blockTime['userId'] ?? null,
                 'name'      => $blockTime['name'],
                 'startDate' => $blockTime['startDate'],
                 'endDate'   => $blockTime['endDate'],

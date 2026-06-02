@@ -3,7 +3,7 @@
 Plugin Name: Amelia
 Plugin URI: https://wpamelia.com/
 Description: Amelia is a simple yet powerful automated booking specialist, working 24/7 to make sure your customers can make appointments and events even while you sleep!
-Version: 2.3
+Version: 2.4
 Author: Melograno Ventures
 Author URI: https://melograno.io/
 Text Domain: ameliabooking
@@ -25,9 +25,11 @@ use AmeliaBooking\Infrastructure\WP\Elementor\ElementorBlock;
 use AmeliaBooking\Infrastructure\WP\ErrorService\ErrorService;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaBookingGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaStepBookingGutenbergBlock;
+use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaStepBookingButtonGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaCatalogBookingGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaCatalogGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaEventsGutenbergBlock;
+use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaEventsListBookingButtonGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\GutenbergBlock\AmeliaEventsListBookingGutenbergBlock;
 use AmeliaBooking\Infrastructure\WP\Integrations\WooCommerce\StarterWooCommerceService;
 use AmeliaBooking\Infrastructure\WP\SettingsService\SettingsStorage;
@@ -40,6 +42,7 @@ use AmeliaBooking\Infrastructure\WP\WPMenu\AdminBarMenu;
 use Exception;
 use Slim\App;
 use AmeliaBooking\Infrastructure\Licence;
+use WP\MCP\Core\McpAdapter;
 
 // No direct access
 defined('ABSPATH') or die('No script kiddies please!');
@@ -111,7 +114,7 @@ if (!defined('AMELIA_LOGIN_URL')) {
 
 // Const for Amelia version
 if (!defined('AMELIA_VERSION')) {
-    define('AMELIA_VERSION', '2.3');
+    define('AMELIA_VERSION', '2.4');
 }
 
 // Const for site URL
@@ -145,10 +148,6 @@ if (!defined('AMELIA_DEV')) {
     define('AMELIA_DEV', false);
 }
 
-if (!defined('AMELIA_PRODUCTION')) {
-    define('AMELIA_PRODUCTION', true);
-}
-
 if (!defined('AMELIA_NGROK_URL')) {
     define('AMELIA_NGROK_URL', 'nonmelodiously-barnlike-anika.ngrok-free.dev');
 }
@@ -162,7 +161,6 @@ if (!defined('AMELIA_MAILCHIMP_CLIENT_ID')) {
 }
 
 require_once AMELIA_PATH . '/vendor/autoload.php';
-
 
 /**
  * @noinspection AutoloadingIssuesInspection
@@ -264,10 +262,12 @@ class Plugin
 
         // Register Gutenberg blocks for rendering on frontend (works for all users, logged in or not)
         AmeliaStepBookingGutenbergBlock::init();
+        AmeliaStepBookingButtonGutenbergBlock::init();
         AmeliaCatalogBookingGutenbergBlock::init();
         AmeliaBookingGutenbergBlock::init();
         AmeliaCatalogGutenbergBlock::init();
         AmeliaEventsGutenbergBlock::init();
+        AmeliaEventsListBookingButtonGutenbergBlock::init();
         AmeliaEventsListBookingGutenbergBlock::init();
 
         // Init menu if user is logged in with amelia role
@@ -674,6 +674,86 @@ class Plugin
             AMELIA_VERSION
         );
     }
+
+    /**
+     * Resolve AutoUpdateHook without triggering autoload when files are partially removed (e.g. during uninstall).
+     *
+     * @return class-string|null Fully-qualified class name if loadable, otherwise null.
+     */
+    private static function getAutoUpdateHookClass()
+    {
+        $class = __NAMESPACE__ . '\Infrastructure\WP\InstallActions\AutoUpdateHook';
+        if (class_exists($class, false)) {
+            return $class;
+        }
+        $path = AMELIA_PATH . '/src/Infrastructure/WP/InstallActions/AutoUpdateHook.php';
+        if (!is_file($path)) {
+            return null;
+        }
+        require_once $path;
+        return class_exists($class, false) ? $class : null;
+    }
+
+    /**
+     * Update transient filter — must not reference AutoUpdateHook directly in add_filter (invalid callback if class file is missing during delete).
+     *
+     * @param mixed $transient
+     *
+     * @return mixed
+     */
+    public static function filterPreSetSiteTransientUpdatePlugins($transient)
+    {
+        $class = self::getAutoUpdateHookClass();
+        if ($class === null) {
+            return $transient;
+        }
+        return $class::checkUpdate($transient);
+    }
+
+    /**
+     *
+     * @param false|object|array $response
+     * @param string             $action
+     * @param object               $args
+     *
+     * @return mixed
+     */
+    public static function filterPluginsApi($response, $action, $args)
+    {
+        $class = self::getAutoUpdateHookClass();
+        if ($class === null) {
+            return $response;
+        }
+        return $class::checkInfo($response, $action, $args);
+    }
+
+    /**
+     */
+    public static function actionInPluginUpdateMessage()
+    {
+        $class = self::getAutoUpdateHookClass();
+        if ($class === null) {
+            return;
+        }
+        $class::addMessageOnPluginsPage();
+    }
+
+    /**
+     * @param bool|\WP_Error $reply
+     * @param string         $package
+     * @param \WP_Upgrader   $updater
+     * @param mixed          $extra
+     *
+     * @return bool|\WP_Error|string
+     */
+    public static function filterUpgraderPreDownload($reply, $package, $updater, $extra = null)
+    {
+        $class = self::getAutoUpdateHookClass();
+        if ($class === null) {
+            return $reply;
+        }
+        return $class::addMessageOnUpdate($reply, $package, $updater);
+    }
 }
 
 add_action('wp_ajax_amelia_remove_wpdt_promo_notice', array('AmeliaBooking\Plugin', 'amelia_remove_wpdt_promo_notice'));
@@ -708,7 +788,7 @@ register_uninstall_hook(__FILE__, array('AmeliaBooking\Plugin', 'deletion'));
 /** Activation hook for new site on multisite setup */
 add_action('wpmu_new_blog', array('AmeliaBooking\Infrastructure\WP\InstallActions\ActivationNewSiteMultisite', 'init'));
 
-/** Define the API for updating checking */
+/** Define the API for updating checking (callbacks on Plugin so hooks stay valid if AutoUpdateHook cannot load — e.g. partial delete) */
 
 /** Define the alternative response for information checking */
 
@@ -731,4 +811,12 @@ add_action( 'deleted_user', array('AmeliaBooking\Infrastructure\WP\UserService\U
 
 if (function_exists('is_plugin_active') && is_plugin_active('angie/angie.php')) {
     add_action('admin_enqueue_scripts', array('AmeliaBooking\Plugin', 'enqueueAngieMcpServer'));
+}
+
+if (class_exists(McpAdapter::class)) {
+    McpAdapter::instance();
+
+    add_action('mcp_adapter_init', array('\AmeliaBooking\Infrastructure\WP\MCP\AmeliaMcpServerRegistrar', 'init'));
+    add_action('wp_abilities_api_categories_init', array('\AmeliaBooking\Infrastructure\WP\MCP\AmeliaAbilitiesRegistrar', 'registerCategories'));
+    add_action('wp_abilities_api_init', array('\AmeliaBooking\Infrastructure\WP\MCP\AmeliaAbilitiesRegistrar', 'registerAbilities'));
 }

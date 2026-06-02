@@ -785,7 +785,16 @@ function updateBookingStatus(id, status) {
         params: { source: 'cabinet-provider' },
       })
     )
-    .then(() => {})
+    .then((result) => {
+      alertVisibility.value = true
+      alertMessage.value = amLabels.value.event_status_changed + (amLabels.value[result.data.data.booking.status]).toLowerCase()
+
+      if (attendeesContainer.value && alertContainer.value) {
+        setTimeout(function () {
+          useScrollTo(attendeesContainer.value, alertContainer.value.$el, 0, 300)
+        }, 500)
+      }
+    })
     .catch((e) => {
       console.log(e)
     })

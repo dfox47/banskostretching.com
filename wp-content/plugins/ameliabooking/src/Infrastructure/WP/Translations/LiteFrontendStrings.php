@@ -64,6 +64,7 @@ class LiteFrontendStrings
         return [
             'add_to_calendar'              => __('Add to Calendar', 'ameliabooking'),
             'amount'                       => __('Amount', 'ameliabooking'),
+            'and'                          => __('and', 'ameliabooking'),
             'all_services'                 => __('All Services', 'ameliabooking'),
             'all_locations'                => __('All Locations', 'ameliabooking'),
             'no_services_employees'        => __('It seems like there are no employees or services created, or no  employees are assigned to the service, at this moment.'),
@@ -72,6 +73,7 @@ class LiteFrontendStrings
             'add_employees_url'            => __('employees.'),
             'back'                         => __('Back', 'ameliabooking'),
             'base_price_colon'             => __('Base Price:', 'ameliabooking'),
+            'booking_canceled'             => __('Your booking has been canceled.', 'ameliabooking'),
             'booking_completed_approved'   => __('Thank you! Your booking is completed.', 'ameliabooking'),
             'bookings_limit_reached'       => __('Maximum bookings reached', 'ameliabooking'),
             'cancel'                       => __('Cancel', 'ameliabooking'),
@@ -79,6 +81,7 @@ class LiteFrontendStrings
             'capacity_colon'               => __('Capacity:', 'ameliabooking'),
             'closed'                       => __('Closed', 'ameliabooking'),
             'content_mode_tooltip'         => __('Don\'t use Text mode option if you already have HTML code in the description, since once this option is enabled the existing HTML tags could be lost.', 'ameliabooking'),
+            'created_on'                   => __('Created on', 'ameliabooking'),
             'enable_google_meet'           => __('Enable Google Meet', 'ameliabooking'),
             'enable_microsoft_teams'       => __('Enable Microsoft Teams', 'ameliabooking'),
             'full'                         => __('Full', 'ameliabooking'),

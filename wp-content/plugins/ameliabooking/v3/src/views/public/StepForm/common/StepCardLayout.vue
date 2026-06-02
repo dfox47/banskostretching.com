@@ -171,11 +171,7 @@ let langDetection = computed(() =>
 let amLabels = computed(() => {
   let computedLabels = reactive({ ...globalLabels })
 
-  if (
-    amSettings.customizedData &&
-    amSettings.customizedData.sbsNew &&
-    amSettings.customizedData.sbsNew.initStep.translations
-  ) {
+  if (amSettings.customizedData?.sbsNew?.initStep?.translations) {
     let customizedLabels =
       amSettings.customizedData.sbsNew.initStep.translations
     Object.keys(customizedLabels).forEach((labelKey) => {
@@ -198,11 +194,7 @@ provide('amLabels', amLabels)
 let bringingLabels = computed(() => {
   let computedLabels = reactive({ ...globalLabels })
 
-  if (
-    amSettings.customizedData &&
-    amSettings.customizedData.sbsNew &&
-    amSettings.customizedData.sbsNew.bringingAnyone.translations
-  ) {
+  if (amSettings.customizedData?.sbsNew?.bringingAnyone?.translations) {
     let customizedLabels =
       amSettings.customizedData.sbsNew.bringingAnyone.translations
     Object.keys(customizedLabels).forEach((labelKey) => {

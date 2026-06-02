@@ -1,12 +1,12 @@
 === Booking for Appointments and Events Calendar - Amelia ===
-Contributors: ameliabooking, wpDataTables, isidoramarkovic, jelenicdanijela, alexandergilmanov
+Contributors: ameliabooking, wpDataTables, ivyforms, isidoramarkovic, jelenicdanijela, alexandergilmanov
 Author URI: https://melograno.io/
 Tags: appointments, booking, event booking system, wpamelia, booking system, scheduling
 Donate link: https://wpamelia.com/
 Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.3
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -289,6 +289,18 @@ Installing Amelia Lite WordPress Booking Plugin is as easy as 1-2-3!
 
 
 == Changelog ==
+v2.4
+This update includes a couple of new features, improvements, bug fixes and a security fix. We strongly recommend updating to this version immediately.
+*Feature: AI Assistant integration – Added support for AI-powered booking management via the WordPress Abilities API & MCP adapter.
+*Feature: Booking CTA button – Added a customizable booking call-to-action shortcut for Gutenberg, Elementor and Divi 5 page builders.
+*Improvement: Added a validation message when entering a phone number without a country code in SMS Settings.
+*BugFix: Fixed an issue with old database servers not supporting certain field values.
+*BugFix: Fixed an issue with Event closing dates and UTC timezones.
+*BugFix: Fixed an incorrect notification type being sent on appointment cancellation.
+*BugFix: Fixed an issue with a missing label.
+*BugFix: Resolved security vulnerability.
+*Additional minor bug fixes and overall stability improvements.
+
 v2.3
 * BugFix: Fixed an issue where appointment status remained "Pending" after a successful payment
 * BugFix: Fixed an issue with service ordering being reset after editing the service name

@@ -119,6 +119,32 @@ class PackageCustomerRepository extends AbstractRepository
         }
     }
 
+    /**
+     * Returns token for given id
+     *
+     * @param $id
+     *
+     * @return array
+     * @throws QueryExecutionException
+     */
+    public function getToken($id)
+    {
+        try {
+            $statement = $this->connection->prepare(
+                "SELECT pc.token
+                FROM {$this->table} pc
+                WHERE pc.id = :id"
+            );
+
+            $statement->execute([':id' => $id]);
+
+            $row = $statement->fetch();
+        } catch (\Exception $e) {
+            throw new QueryExecutionException('Unable to return package customer from' . __CLASS__ . '. ' . $e->getMessage(), $e->getCode(), $e);
+        }
+
+        return $row;
+    }
 
     /**
      * @param Package $package

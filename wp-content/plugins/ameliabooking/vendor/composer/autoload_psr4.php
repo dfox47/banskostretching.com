@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'apimatic\\jsonmapper\\' => array($vendorDir . '/apimatic/jsonmapper/src'),
+    'WP\\McpSchema\\' => array($vendorDir . '/wordpress/php-mcp-schema/src'),
+    'WP\\MCP\\' => array($vendorDir . '/wordpress/mcp-adapter/includes'),
     'Unirest\\' => array($vendorDir . '/apimatic/unirest-php/src'),
     'Square\\' => array($vendorDir . '/square/square/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),

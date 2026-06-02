@@ -11,8 +11,8 @@ use AmeliaBooking\Application\Commands\CommandHandler;
 use AmeliaBooking\Application\Commands\CommandResult;
 use AmeliaBooking\Application\Common\Exceptions\AccessDeniedException;
 use AmeliaBooking\Application\Services\Booking\EventApplicationService;
+use AmeliaBooking\Application\Services\Calendar\CalendarProviderService;
 use AmeliaBooking\Application\Services\User\ProviderApplicationService;
-use AmeliaBooking\Domain\Collection\Collection;
 use AmeliaBooking\Domain\Common\Exceptions\InvalidArgumentException;
 use AmeliaBooking\Domain\Entity\Booking\Appointment\Appointment;
 use AmeliaBooking\Domain\Entity\Booking\Event\Event;
@@ -72,6 +72,12 @@ class GetCalendarEventsCommandHandler extends CommandHandler
             $timeZone = $providerAS->getTimeZone($user);
         }
 
+        /** @var CalendarProviderService $calendarProviderService */
+        $calendarProviderService = $this->container->get('application.calendar.provider.service');
+        $resourceTimeGridProviderIds = (($queryParams['view'] ?? '') === 'resourceTimeGridDay')
+            ? $calendarProviderService->getVisibleProviderIds($queryParams)
+            : [];
+
         $sortedItems = array_merge(
             $this->getAppointments($queryParams, $timeZone),
             $this->getEvents($queryParams, $timeZone),
@@ -112,7 +118,11 @@ class GetCalendarEventsCommandHandler extends CommandHandler
             if ($isAppointment) {
                 $filledDays[$itemStartDate]['events'][] = $this->appointmentFormatter($item, $user);
             } elseif ($isBlockTime) {
-                $filledDays[$itemStartDate]['events'][] = $this->blockTimeFormatter($item);
+                $filledDays[$itemStartDate]['events'][] = $this->blockTimeFormatter(
+                    $item,
+                    $queryParams,
+                    $resourceTimeGridProviderIds
+                );
             } else {
                 $filledDays[$itemStartDate]['events'][] = $this->eventFormatter($item['event'], $item['eventPeriod'], $queryParams);
             }
@@ -304,6 +314,7 @@ class GetCalendarEventsCommandHandler extends CommandHandler
                 $appointment->getInternalNotes()->getValue()
                 : '',
             'integrationCalendarType' => false,
+            'resourceId'              => $appointment->getProvider()->getId()->getValue(),
             'type'                    => $appointment->getBookings()->length() === 1
                 ? 'singleAppointment'
                 : 'groupAppointment',
@@ -339,6 +350,7 @@ class GetCalendarEventsCommandHandler extends CommandHandler
             'notes'              => '',
             'locationName'       => $eventEntity->getLocation() ? $eventEntity->getLocation()->getName()->getValue() : '',
             'employeeName'       => $eventEntity->getOrganizer() ? $eventEntity->getOrganizer()->getFullName() : '',
+            'resourceId'         => $eventEntity->getOrganizer() ? $eventEntity->getOrganizer()->getId()->getValue() : null,
         ];
 
         if (in_array($queryParams['view'], ['dayGridMonthSevenDays', 'dayGridMonth', 'dayGridMonthMobile'])) {
@@ -357,12 +369,15 @@ class GetCalendarEventsCommandHandler extends CommandHandler
         return $event;
     }
 
-    private function blockTimeFormatter(BlockTime $blockTime): array
-    {
+    private function blockTimeFormatter(
+        BlockTime $blockTime,
+        array $queryParams,
+        array $resourceTimeGridProviderIds
+    ): array {
         $startDate = $blockTime->getStartDate()->getValue();
         $endDate   = $blockTime->getEndDate()->getValue();
 
-        return [
+        $event = [
             'uuid'               => $blockTime->getId()->getValue(),
             'id'                 => $blockTime->getId()->getValue(),
             'title'              => $blockTime->getName()->getValue(),
@@ -374,6 +389,17 @@ class GetCalendarEventsCommandHandler extends CommandHandler
             'endWithoutBuffer'   => $endDate->format('Y-m-d H:i:s'),
             'timeZone'           => $startDate->getTimezone()->getName(),
             'employeeName'       => $blockTime->getUser() ? $blockTime->getUser()->getFullName() : BackendStrings::get('all_employees'),
+            'resourceId'         => $blockTime->getUser() ? $blockTime->getUser()->getId()->getValue() : null,
         ];
+
+        if (
+            ($queryParams['view'] ?? '') === 'resourceTimeGridDay' &&
+            $blockTime->getUser() === null &&
+            $resourceTimeGridProviderIds !== []
+        ) {
+            $event['resourceIds'] = array_map('strval', $resourceTimeGridProviderIds);
+        }
+
+        return $event;
     }
 }

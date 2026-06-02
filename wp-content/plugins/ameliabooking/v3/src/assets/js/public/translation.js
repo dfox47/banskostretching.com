@@ -43,8 +43,14 @@ function getNameTranslated (entity) {
 }
 
 function getTicketTranslated (entity) {
-  if (entity.translations && checkTranslations(entity, '')) {
-    return checkTranslations(entity, '')
+  if (entity.translations) {
+    const parsedTranslations = JSON.parse(entity.translations)
+    if (parsedTranslations.name) {
+      const translatedName = checkTranslations(entity, 'name')
+      if (translatedName) {
+        return translatedName
+      }
+    }
   }
 
   return entity.name

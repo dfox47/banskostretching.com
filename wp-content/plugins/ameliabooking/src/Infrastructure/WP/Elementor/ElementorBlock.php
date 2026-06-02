@@ -9,10 +9,12 @@ namespace AmeliaBooking\Infrastructure\WP\Elementor;
 
 use Elementor\AmeliaBookingElementorWidget;
 use Elementor\AmeliaStepBookingElementorWidget;
+use Elementor\AmeliaStepBookingButtonElementorWidget;
 use Elementor\AmeliaCatalogBookingElementorWidget;
 use Elementor\AmeliaCatalogElementorWidget;
 use Elementor\AmeliaEventsElementorWidget;
 use Elementor\AmeliaEventsListBookingElementorWidget;
+use Elementor\AmeliaEventsListBookingButtonElementorWidget;
 use Elementor\Plugin;
 
 /**
@@ -44,22 +46,26 @@ class ElementorBlock
     public function includes()
     {
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaStepBookingElementorWidget.php');
+        require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaStepBookingButtonElementorWidget.php');
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaCatalogBookingElementorWidget.php');
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaBookingElementorWidget.php');
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaCatalogElementorWidget.php');
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaEventsElementorWidget.php');
         require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaEventsListBookingElementorWidget.php');
+        require_once(AMELIA_PATH . '/src/Infrastructure/WP/Elementor/AmeliaEventsListBookingButtonElementorWidget.php');
     }
 
     public function register_widgets()
     {
         $this->includes();
         Plugin::instance()->widgets_manager->register(new AmeliaStepBookingElementorWidget());
+        Plugin::instance()->widgets_manager->register(new AmeliaStepBookingButtonElementorWidget());
         Plugin::instance()->widgets_manager->register(new AmeliaCatalogBookingElementorWidget());
         Plugin::instance()->widgets_manager->register(new AmeliaBookingElementorWidget());
         Plugin::instance()->widgets_manager->register(new AmeliaCatalogElementorWidget());
         Plugin::instance()->widgets_manager->register(new AmeliaEventsElementorWidget());
         Plugin::instance()->widgets_manager->register(new AmeliaEventsListBookingElementorWidget());
+        Plugin::instance()->widgets_manager->register(new AmeliaEventsListBookingButtonElementorWidget());
     }
 
     public function widget_styles()
