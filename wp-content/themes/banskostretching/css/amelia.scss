@@ -23,7 +23,8 @@
   #amelia-container {
     .am-ec {
       &__actions-price {
-        color: $c_secondary !important;
+        color: $c_primary !important;
+        font-size: 26px !important;
       }
 
       &__info-availability {
